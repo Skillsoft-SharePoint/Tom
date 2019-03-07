@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="LogoRedirect"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="3495e170-7d4b-4763-bf24-0c731fc75b41"
+        Properties="{&quot;testMessage&quot;:&quot;Component message&quot;}">
+    </ClientSideComponentInstance>
+</Elements>

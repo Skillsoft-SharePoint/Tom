@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "skill-soft-marketing-tiles-client-side-solution",
+    "id": "e977e711-2c3f-40a9-93ba-1e03cf616f58",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/skill-soft-marketing-tiles.sppkg"
+  }
+}

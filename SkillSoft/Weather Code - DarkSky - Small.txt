@@ -1,0 +1,1 @@
+<script type='text/javascript' src='https://darksky.net/widget/default-small/43.9251,-72.6663/us12/en.js?width=100%&height=70&title=Full Forecast&textColor=333333&bgColor=FFFFFF&transparency=false&skyColor=undefined&fontFamily=Default&customFont=&units=us'></script>

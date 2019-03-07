@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://skillsoft.sharepoint.com/sites/marketing/sitepages/home.aspx",
+      "customActions": {
+        "3495e170-7d4b-4763-bf24-0c731fc75b41": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "ServerConfigurtions Custom Actions"
+          }
+        }
+      }
+    },
+    "logoRedirect": {
+      "pageUrl": "https://skillsoft.sharepoint.com/sites/marketing/sitepages/home.aspx",
+      "customActions": {
+        "3495e170-7d4b-4763-bf24-0c731fc75b41": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "LogoRedirect Custom Actions"
+          }
+        }
+      }
+    }
+  }
+}

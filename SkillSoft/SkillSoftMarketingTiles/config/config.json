@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "skill-soft-marketing-tiles-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/skillSoftMarketingTiles/SkillSoftMarketingTilesWebPart.js",
+          "manifest": "./src/webparts/skillSoftMarketingTiles/SkillSoftMarketingTilesWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SkillSoftMarketingTilesWebPartStrings": "lib/webparts/skillSoftMarketingTiles/loc/{locale}.js"
+  }
+}

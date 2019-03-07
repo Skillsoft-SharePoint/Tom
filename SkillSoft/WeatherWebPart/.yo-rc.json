@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.1",
+    "libraryName": "weather-web-part",
+    "libraryId": "8255747c-5006-4d10-a5b1-6388fca19a8a",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}

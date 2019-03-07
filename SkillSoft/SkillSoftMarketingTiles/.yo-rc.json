@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.1",
+    "libraryName": "skill-soft-marketing-tiles",
+    "libraryId": "e977e711-2c3f-40a9-93ba-1e03cf616f58",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}

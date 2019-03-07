@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "skill-soft-weather-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/skillSoftWeatherWebPart/SkillSoftWeatherWebPartWebPart.js",
+          "manifest": "./src/webparts/skillSoftWeatherWebPart/SkillSoftWeatherWebPartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SkillSoftWeatherWebPartWebPartStrings": "lib/webparts/skillSoftWeatherWebPart/loc/{locale}.js"
+  }
+}

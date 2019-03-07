@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "logo-redirect-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/logoRedirect/LogoRedirectApplicationCustomizer.js",
+          "manifest": "./src/extensions/logoRedirect/LogoRedirectApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "LogoRedirectApplicationCustomizerStrings": "lib/extensions/logoRedirect/loc/{locale}.js"
+  }
+}
