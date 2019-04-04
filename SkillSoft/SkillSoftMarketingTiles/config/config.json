@@ -9,10 +9,19 @@
           "manifest": "./src/webparts/skillSoftMarketingTiles/SkillSoftMarketingTilesWebPart.manifest.json"
         }
       ]
+    },
+    "skill-soft-marketing-tiles-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/skillSoftMarketingTilesWebPart/SkillSoftMarketingTilesWebPartWebPart.js",
+          "manifest": "./src/webparts/skillSoftMarketingTilesWebPart/SkillSoftMarketingTilesWebPartWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "SkillSoftMarketingTilesWebPartStrings": "lib/webparts/skillSoftMarketingTiles/loc/{locale}.js"
+    "SkillSoftMarketingTilesWebPartStrings": "lib/webparts/skillSoftMarketingTiles/loc/{locale}.js",
+    "SkillSoftMarketingTilesWebPartWebPartStrings": "lib/webparts/skillSoftMarketingTilesWebPart/loc/{locale}.js"
   }
 }

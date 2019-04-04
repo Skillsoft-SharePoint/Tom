@@ -4,34 +4,42 @@ import {
   IPropertyPaneConfiguration,
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
+
+
 import { escape } from '@microsoft/sp-lodash-subset';
+
 
 import styles from './SkillSoftMarketingTilesWebPart.module.scss';
 import * as strings from 'SkillSoftMarketingTilesWebPartStrings';
+
 /*
 import { SPHttpClient, SPHttpClientResponse, ISPHttpClientOptions} from '@microsoft/sp-http';  
 */
 /**************** START - Get the items count from the SharePoint list  *****************/
 /*
-let currentWebUrl = this.context.pageContext.web.absoluteUrl; 
+//let currentWebUrl = this.context.pageContext.web.absoluteUrl; 
+let currentWebUrl = "https://skillsoft.sharepoint.com/sites/GlobalITServices/"; 
 */
 /**************** END - Get the items count from the SharePoint list  *****************/
+
 /**************** START - Get ALL ITEMS from the SharePoint list  *****************/
 /*
-let requestUrl = currentWebUrl.concat(“/_api/web/Lists/GetByTitle('YourListTitle')/ItemCount”)   
+let requestUrl = currentWebUrl.concat("/_api/web/Lists/GetByTitle('IT Systems Status')/ItemCount")   
   
 this.context.spHttpClient.get(requestUrl, SPHttpClient.configurations.v1)  
     .then((response: SPHttpClientResponse) => {  
         if (response.ok) {  
             response.json().then((responseJSON) => {  
                 if (responseJSON!=null && responseJSON.value!=null){  
-        let itemCount:number = parseInt(responseJSON.value.toString());  
+                  let itemCount:number = parseInt(responseJSON.value.toString());  
+                  console.log (itemCount);
                 }  
             });  
-        }  
-    });
-*/  
-/**************** END - Get ALL ITEMS from the SharePoint list  *****************/
+          }  
+      });
+  
+/*************** END - Get ALL ITEMS from the SharePoint list  *****************/
+
 
 export interface ISkillSoftMarketingTilesWebPartProps {
   description: string;
