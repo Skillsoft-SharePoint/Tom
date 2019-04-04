@@ -1,0 +1,882 @@
+
+#suiteBarLeft .ms-tableCell:before {
+    content: 'Nexus';
+    font-size: 1em;
+    padding-left: 20px;
+}
+
+.ms-core-brandingText {
+    display: none;
+}
+
+body {
+
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+* {
+    outline: none;
+}
+
+
+
+.ms-core-listMenu-horizontalBox .menu-item-text {
+    color: #fff !important;
+    font-size: 14.2px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+
+}
+
+.ms-core-listMenu-horizontalBox li.static > .ms-core-listMenu-item {
+    margin-right: 10px !important;
+    margin-left: 0px;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+/* Top ribbion Css ends */
+
+/* Main body CSS starts */; 
+#s4-bodyContainer {
+}
+
+#s4-titlerow {
+    background-color: black !important;
+    height: 60px;
+    padding-top: 5px !important;
+}
+
+#titleAreaBox {
+    /*max-width: 1200px !important;
+    margin: 0 auto !important;*/
+}
+
+#contentRow {
+  
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    padding-top: 5px !important;
+    
+}
+
+
+
+.clearall {
+    clear: both;
+}
+
+#siteIcon {
+    height: 32px !important;
+    /*line-height: 40px !important;*/
+    text-align: left;
+    
+}
+
+#siteLogo
+{
+    width: 20%;
+    margin-top: 10px;
+}
+    
+.ms-core-pageTitle
+{
+display:none !important;
+}
+
+/* Main body CSS ends */
+
+
+
+/* Homepage CSS starts */
+.Outerwrapper {
+    width: 100% !important;
+    float: left;
+    margin-bottom: 20px;
+}
+
+
+.Leftpanel {
+    width: 21%;
+    float: left;
+    margin-right: 20px;
+}
+
+.Leftpaneltop {
+    width: 100%;
+    height: 240px;
+    background-color: #fff;
+    border: 1px #e0e0e0 solid !important;
+}
+
+.Leftpanelmiddle {
+    width: 100%;
+    height: auto !important;
+    background-color: #fff;
+    border: 1px #e0e0e0 solid !important;
+}
+
+
+.Midpanel {
+    width: 65% !important;
+    float: left;
+    margin-right: 20px;
+   
+}
+
+.Midpaneltop {
+    width: 100%;
+	 height: auto !important;
+}
+
+.Midpanelmiddle {
+    width: 100%;
+     height: auto !important;
+}
+
+.Midpanelbottom {
+    width: 100%;
+    height: auto !important;
+}
+
+
+.Rightpanel {
+    width: 32% !important;
+    float: right;
+}
+
+.Rightpaneltop {
+    width: 99%;
+    height: 34px;
+    border-radius: 5px;
+}
+
+.Rightpanelmiddle {
+    width: 100%;
+    height: auto !important;
+
+    border: 1px #4c4c4c solid !important;
+}
+
+   
+
+.Rightpanelbottom {
+    width: 100%;
+    height: auto !important;
+   border: 1px #4c4c4c solid !important;
+}
+
+.RightpanelbottomLast {
+    width: 100%;
+     height: auto !important;
+   border: 1px #4c4c4c solid !important;
+}
+
+
+/* Homepage CSS ends */
+
+/* Common CSS Starts */
+.clearll {
+    clear: both !important;
+}
+
+.pt20 {
+    padding-top: 20px !important;
+}
+
+.ms-webpart-chrome-title {
+    background-color: #4c4c4c !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    height: 32px !important;
+    width:100%;
+    border: 1px solid #4c4c4c !important;
+    padding-top: 4px;
+    
+}
+.ms-webpart-titleText.ms-webpart-titleText, .ms-webpart-titleText > a {
+    color: #fff !important;
+    font-size: 16px !important;
+    margin-left: 10px !important;
+    font-weight: 400 !important;
+    margin-top: 4px;
+}
+
+
+.Leftpaneltop .ms-webpart-titleText.ms-webpart-titleText, .ms-webpart-titleText > a {
+    margin-top: 4px;
+}
+
+.Outerwrapper .ms-WPBody {
+
+    padding-left: 10px;
+
+}
+
+.Midpaneltop .ms-WPBody {
+    padding: 0px !important;
+}
+
+.ms-WPBorder {
+    border: 0px #cfcfcf solid !important;
+}
+
+.footer {
+    margin: 0 auto !important;
+    color: #666666 !important;
+    font-size: 12px !important;
+    text-align: center !important;
+}
+
+
+/* Common CSS ends */
+/* CSS for inner pages starts */
+
+/* horizontal menu css starts */
+
+
+.ms-core-listMenu-horizontalBox ul li:hover {
+   /*background-color: #C8102E !important;
+    border-radius: 5px 5px 0px 0px !important;
+    height: 35px;
+    margin-top: -5px !important;*/
+}
+
+.ms-core-listMenu-verticalBox .ms-core-listMenu-item, ul.dynamic .ms-core-listMenu-item
+{
+padding-top:5px;
+padding-bottom:5px;
+
+}
+
+ .ms-core-listMenu-horizontalBox ul li .menu-item-text {
+        font-weight:bold;
+    }
+
+
+    .ms-core-listMenu-horizontalBox ul li:hover .menu-item-text {
+        color: #C8102E !important;
+    }
+
+.ms-core-listMenu-horizontalBox ul li.selected {
+   /* background-color: #C8102E !important;
+    border-radius: 5px 5px 0px 0px !important;
+    height: 35px;
+    margin-top: -5px !important;*/
+}
+
+    .ms-core-listMenu-horizontalBox ul li.selected .menu-item-text {
+        color: #C8102E !important;
+
+        
+    }
+
+.ms-core-listMenu-horizontalBox ul li ul {
+   
+   background-color:black !important;
+    padding: 0px !important;
+   
+}
+
+    .ms-core-listMenu-horizontalBox ul li ul li.dynamic {
+        color: #fff !important;
+        border-radius: 0px !important;
+        border-bottom: 1px #cfcfcf solid !important;
+    }
+
+        .ms-core-listMenu-horizontalBox ul li ul li.dynamic .menu-item-text {
+            color: #fff !important;
+        }
+
+    .ms-core-listMenu-horizontalBox ul li ul li:hover {
+        background-color: #fff !important;
+        border-radius: 0px !important;
+        color: #000 !important;
+        margin-top: 0px !important;
+    }
+
+        .ms-core-listMenu-horizontalBox ul li ul li:hover .menu-item-text {
+            color: #000 !important;
+        }
+
+
+.ms-core-listMenu-horizontalBox ul.dynamic li.dynamic .menu-item-text{
+	margin-left:0px !important;
+	
+}
+
+li.static.dynamic-children ul.dynamic li.dynamic {
+   /* background: url('../Images/page-nas-icon.png') no-repeat right !important;*/
+    background-position: 11px 5px !important;
+    border-radius: 0px !important;
+   /* text-indent: 10px !important;*/ 
+    padding-right:10px;
+        padding-left:10px !important;
+text-align: left;
+}
+
+    li.static.dynamic-children ul.dynamic li.dynamic:hover {
+       /* background: url('../Images/page-nas-icon-hover.png') no-repeat left !important;*/
+        background-position: 11px 5px !important;
+        background-color: #C8102E !important;
+        color: #000 !important;
+        height: auto !important;
+       /* text-indent: 10px !important;*/
+         padding-left:10px !important;
+		text-align: left;
+    }
+
+/* horizontal menu css ends */
+#titleAreaRow {
+    width: 100% !important;
+}
+
+div#DeltaTopNavigation {
+    position: absolute;
+    width: 98%;
+    text-align: right;}
+
+.ms-navedit-editLinksText {
+    display: none;
+}
+
+
+/*Top Menu Start*/
+.ms-core-listMenu-horizontalBox .dynamic-children.additional-background{
+		 background: url('../Images/topdown-arrow.png') right no-repeat !important;
+
+}
+
+.ms-core-listMenu-horizontalBox .dynamic .dynamic-children.additional-background{
+	 background: url('../Images/menu-right.gif') right no-repeat !important;
+}
+
+
+ul#myTopNav li.static {
+    margin-right: 10px !important;
+}
+
+ul.dynamic {
+    background-color: #4f5153 !important;
+    padding: 0px !important;
+    margin-left: 0px !important;
+    width: 220px !important;
+}
+
+    ul.dynamic li ul {
+        padding: 0px !important;
+        margin-left: 0px !important;
+    }
+
+.ms-core-listMenu-horizontalBox ul li.static ul.dynamic li.dynamic ul.dynamic li.dynamic .menu-item-text {
+    color: #fff !important;
+}
+
+.ms-core-listMenu-horizontalBox ul li.static ul.dynamic li.dynamic ul.dynamic li.dynamic:hover .menu-item-text {
+    color: #000 !important;
+}
+
+ul.dynamic li {
+    border-bottom: 1px #cfcfcf solid !important;
+    min-height: 25px !important;
+    width: auto !important;
+}
+
+.ms-core-listMenu-horizontalBox ul li ul li.static:hover {
+    background-color: #C8102E !important;
+    border-radius: 5px 5px 0px 0px !important;
+    height: 35px !important;
+    color: #000 !important;
+}
+
+.ms-core-listMenu-horizontalBox ul.static li.static ul.dynamic li.dynamic .menu-item-text {
+    color: #fff !important;
+    font-weight: normal !important;
+}
+
+.ms-core-listMenu-horizontalBox ul.static li.static ul.dynamic li.dynamic:hover .menu-item-text {
+    color: #000 !important;
+    font-weight: normal !important;
+}
+
+.ms-core-listMenu-horizontalBox ul li ul li.static:hover .menu-item-text {
+    color: #000 !important;
+    font-weight: normal !important;
+}
+
+.ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:link, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected:visited, .ms-core-listMenu-horizontalBox .ms-core-listMenu-selected, .ms-tv-selected:link {
+    /*background-color: #C8102E !important;
+    border-radius: 5px 5px 0px 0px !important;
+    height: 30px !important;
+    color: #000 !important;*/
+}
+
+.ms-core-listMenu-horizontalBox ul li.selected a.selected .menu-item-text {
+    color: #C8102E !important;
+    font-weight: bold !important;
+}
+
+
+/*Top Menu End*/
+
+.Rightpaneltop .ms-WPBody {
+    padding: 4px !important;
+}
+/*.Rightpanelbottom .ms-WPBody{
+	padding:0px !important;
+}*/
+.Rightpanelbottom .ms-webpart-chrome-title {
+  
+    margin-bottom: 0px;
+}
+
+/* View List Webpart CSS */
+.ui-state-active,.ui-widget-header .ui-state-active{
+background:#d3d3d3 !important;}
+.ui-widget{
+    font-family: "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif !important;
+    font-size: 13px !important;}
+    
+.Midpanelmiddle .ms-WPBody {
+    padding: 0px !important;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active,.ui-state-default{
+font-weight:bold !important;
+font-size:14px !important;
+}
+.ui-accordion .ui-accordion-content{
+	padding:4px !important;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-top-right-radius: 0px !important;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    border-top-left-radius: 0px !important;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-bottom-right-radius: 0px !important;
+
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border-bottom-left-radius: 0px !important;
+
+}
+.ui-accordion-content{
+	height:auto !important;
+}
+/* View List Webpart CSS */	
+
+.ui-state-default .ui-icon {
+    background-image: url('../Images/ui-icons_454545_256x240.png') !important;
+}
+table.ui-accordion-content tr:nth-child(even){
+	background-color:#fbfbfb;
+text-align:left;
+height:22px;
+}
+table.ui-accordion-content tr:nth-child(odd){
+	background-color:#fff;
+text-align:left;
+height:22px;
+
+}
+
+
+
+.ms-core-listMenu-horizontalBox .dynamic-children.additional-background{
+	padding-right:10px !important;
+}
+
+/*top navigation text alignment*/
+.ms-core-listMenu-horizontalBox ul, .ms-core-listMenu-horizontalBox li, .ms-core-listMenu-horizontalBox .ms-core-listMenu-item, .ms-core-listMenu-horizontalBox > ul > li > table
+{
+	
+	text-align: left;
+}
+/*Hide left navigation*/
+#sideNavBox
+{  
+        display: none;  
+}  
+/* adjust position of content on site page */  
+#contentBox
+{  
+	
+	/*width:100% !important;*/
+	 margin-left: 20px!important; 
+} 
+
+/* Search box css starts */
+.ms-srch-sb-border {
+    background-color: #fff !important;
+    color: #a7a7a7 !important;
+     font-size: 14px !important;
+     /*width: 400px !important;*/
+     width:auto !important;
+}
+
+.ms-srch-sb-borderFocused {
+    background-color: #fff !important;
+    color:black !important;
+    border: 1px #ababab solid !important;
+    height: 32px !important;
+    font-size: 14px !important;
+     width: 400px !important;
+}
+
+.ms-mpSearchBox
+{
+     width: 400px !important;
+}
+
+/*Search box width adjustment*/
+
+.ms-srch-sbLarge>input
+{
+width: 350px !important;
+font-size: 18px !important;
+}
+
+/* Search box css ends */
+
+/*Second header css*/
+
+.secondheadercontainer
+{
+	background-color:#e0e0e0;
+    height: 100%; 
+}
+.secondheadersearch
+{
+ 	display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    line-height: 30px;
+    height: 100%;
+    width: 80%;
+	padding-bottom: 10px;
+}
+
+.secondheaderemail
+{
+    display: inline-block;
+    height: 100%;
+    padding-left: 0px; 
+    vertical-align: bottom;
+}
+
+.imgsecondheaderemail 
+{
+text-align: left;
+vertical-align: bottom;
+padding-left: 25px;
+}
+
+.headersecondheaderemail
+{
+padding-right: 10px;
+padding-bottom: 1px !important;
+padding-left: 10px;
+}
+
+.secondheaderhorizontalline
+{
+display:none !important;
+}
+
+.secondheaderweather
+{
+  display: inline-block;
+    text-align: left;
+    height: 100%;
+   margin-left: 5px; 
+}
+
+
+
+/*second header alignment*/
+
+
+/*webpart header css*/
+.ms-webpart-titleText.ms-webpart-titleText, .ms-webpart-titleText > a
+{
+font-weight:bold !important;
+}
+
+
+/*Hot News CSS*/
+
+
+.HotNewspanel{
+    width: 100%;
+    min-height:40px !important;
+ 	background-color: #C8102E;
+    /*height: 40px; */
+   
+}
+
+/*Home Page Content text alignment*/
+.viewNewsContent, .viewBlogContent, .viewNewOnConnectContent,.viewHRLatestNewsContent,.viewPayrollLatestNewsContent
+{
+    margin: 9px;
+    
+}
+
+/* iPad */
+.no-transition {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+}
+
+#myTopNav li:hover > .no-transition {
+    display: block;
+}
+
+/**/
+.Rightpanelbottom .slm-layout-main
+{
+padding-left: 5px !important;
+}
+
+.Rightpanelbottom .link-item, .link-item a, .link-item a:link
+{
+font-size: 13px !important;
+font-weight:bold !important;
+}
+
+
+.RightpanelbottomLast.link-item, .link-item a, .link-item a:link
+{
+font-size: 13px !important;
+font-weight:bold !important;
+word-break: break-word;
+word-break: break-all;
+}
+
+
+.Rightpanelbottom .slm-layout-main img
+{
+width:100% !important;
+height:10% !important;
+}
+
+.RightpanelbottomLast .ms-vhltr
+{
+display:none !important;
+}
+/*HR Home Page CSS Start*/
+
+#divHRandPayroll #divHRandPayrollContent p
+{
+	font-size: 14.5px;
+    color: black;
+
+}
+
+/*HR Home Page CSS Start*/
+
+/*Data Security Home Page CSS Start*/
+#divDataSecurity
+{
+padding-left: 20px;
+}
+
+
+#divHRGlobalContacts #divHRGlobalContactsContent p
+{
+	font-size: 14.5px;
+    color: black;
+
+}
+
+
+
+/*HR Global Contacts Home Page CSS End*/
+
+/*Payroll Global Contacts Home Page CSS Start*/
+
+
+#divPayrollGlobalContacts #divPayrollGlobalContactsContent p
+{
+	font-size: 14.5px;
+    color: black;
+
+}
+
+/*Payroll Global Contacts Home Page CSS End*/
+
+#divFloorPlan #divFloorPlanContent p
+{
+	font-size: 14.5px;
+    color: black;
+
+}
+
+
+/*Floor Plan Home Page CSS End*/
+
+
+#divEmployeeReferrals #divEmployeeReferralsContent p
+{
+	font-size: 14.5px;
+    color: black;
+
+}
+
+#divEmployeeReferrals #divEmployeeReferralsContent ul
+{
+	font-size: 14.5px;
+    color: black;
+
+}
+
+
+/*Employee Referral Home Page CSS End*/
+
+
+#divOnBoarding  #divOnBoardingContent p
+{
+	font-size: 14.5px;
+    color: black;
+
+}
+
+#divOnBoarding #divOnBoardingContent img
+{
+	width: 10%;
+	height: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*OnBoarding  Home Page CSS End*/
+
+
+#divTrainingandDevelopment  #divTrainingandDevelopmentContent p
+{
+	font-size: 14.5px;
+    color: black;
+
+}
+
+#divTrainingandDevelopment #divTrainingandDevelopmentContent img
+{
+	width: 10%;
+	height: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*TrainingandDevelopment Home Page CSS End*/
+
+
+/*Culture Home Page CSS Start*/
+
+
+#divCulture  #divCultureContent p
+{
+	font-size: 14.5px;
+    color: black;
+
+}
+
+#divCulture #divCultureContent img
+{
+    height: 100%;
+    max-width: 100%;
+    
+}
+/*Culture  Home Page CSS End*/
+
+/*Leadership Updates Home Page CSS Start*/
+
+
+#divLeadershipUpdates #divLeadershipUpdatesContent p
+{
+	font-size: 14.5px;
+    color: black;
+
+}
+
+/*Leadership Updates Home Page CSS End*/
+
+.divNewOnConnectViewAll
+{
+
+		padding-right: 15px;
+        display: inline-block;
+        font-size: 13px;
+        background-position: right 5px;
+        float: right;
+        font-weight:bold;
+
+}
+
+/*Today edit start*/
+/*Search box right alignment list views*/
+.Midpaneltop .ms-csrlistview-controldiv
+{
+text-align:right
+
+}
+
+.Midpanelmiddle .ms-csrlistview-controldiv
+{
+text-align:right
+
+}
+
+.ms-vh2
+ {
+ font-size: 10pt ! important; 
+color:#000000 !important;
+font-weight:bold;
+
+ }
+ 
+.ms-vh
+{
+font-size: 10pt ! important; 
+color:#000000 !important;
+font-weight:bold;
+}
+
+.ms-vh2-nograd
+{
+font-size: 10pt ! important; 
+color:#000000 !important;
+font-weight:bold;
+
+}
+.ms-vh2-nofilter, .ms-vh2-nofilter-notextalign, .ms-vh2-nofilter-perm, .ms-vh a, .ms-vh2, .ms-vh2 a
+{
+color:#000000 !important;
+}
+
+/*webpart width adjustment*/
+.Midpaneltop  table.ms-listviewtable
+{
+width:100%;
+}
+
+/*Today css update*/
+
+.ms-srch-siteSearchResults #SearchBox
+{
+display:none !important;
+}
+
+.ms-srch-siteSearchResults #UpScopeLinkTop
+{
+display:none !important;
+}
+

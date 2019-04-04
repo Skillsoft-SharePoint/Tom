@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.1",
+    "libraryName": "o-365-metrics",
+    "libraryId": "7b8db3ae-8710-418c-a660-2ad0ef1022af",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}

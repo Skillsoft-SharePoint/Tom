@@ -1,0 +1,33 @@
+function GetGeolocation() {
+
+navigator.geolocation.getCurrentPosition(GetCoords, GetError);
+
+}
+
+
+function GetCoords(position){
+
+  alert(position.coords.latitude);
+
+  alert(position.coords.longitude);
+
+  alert(position.coords.accuracy);
+
+ var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+geocoder.geocode({'latLng': latlng}, function(results, status) {
+  if (status == google.maps.GeocoderStatus.OK) {
+    if (results[1]) {
+      map.setZoom(11);
+      marker = new google.maps.Marker({
+          position: latlng,
+          map: map
+      });
+      infowindow.setContent(results[1].formatted_address);
+      infowindow.open(map, marker);
+    }
+  } else {
+    alert("Geocoder failed due to: " + status);
+  }
+});
+
+}

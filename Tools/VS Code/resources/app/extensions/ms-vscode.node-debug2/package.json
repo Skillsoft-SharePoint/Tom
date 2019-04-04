@@ -1,20 +1,18 @@
 {
   "name": "node-debug2",
   "displayName": "Node Debug",
-  "version": "1.31.6",
+  "version": "1.32.0",
   "publisher": "ms-vscode",
   "description": "%extension.description%",
   "icon": "images/node-debug-icon.png",
-  "categories": [
-    "Debuggers"
-  ],
+  "categories": ["Debuggers"],
   "author": {
     "name": "Microsoft Corporation"
   },
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "vscode-chrome-debug-core": "^6.7.42",
+    "vscode-chrome-debug-core": "^6.7.43",
     "vscode-debugadapter": "^1.33.0-pre.2",
     "vscode-nls": "^4.0.0"
   },
@@ -42,9 +40,7 @@
     "vscode-nls-dev": "^3.2.3"
   },
   "main": "./out/src/extension",
-  "activationEvents": [
-    "onCommand:extension.node-debug2.toggleSkippingFile"
-  ],
+  "activationEvents": ["onCommand:extension.node-debug2.toggleSkippingFile"],
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
     "build": "gulp build",
@@ -88,26 +84,17 @@
           "request": "launch",
           "name": "%extensionHost.launch.config.name%",
           "runtimeExecutable": "^\"\\${execPath}\"",
-          "args": [
-            "^\"--extensionDevelopmentPath=\\${workspaceFolder}\""
-          ],
-          "outFiles": [
-            "^\"\\${workspaceFolder}/out/**/*.js\""
-          ],
+          "args": ["^\"--extensionDevelopmentPath=\\${workspaceFolder}\""],
+          "outFiles": ["^\"\\${workspaceFolder}/out/**/*.js\""],
           "preLaunchTask": "npm"
         }
       }],
       "configurationAttributes": {
         "launch": {
-          "required": [
-            "args"
-          ],
+          "required": ["args"],
           "properties": {
             "runtimeExecutable": {
-              "type": [
-                "string",
-                "null"
-              ],
+              "type": ["string", "null"],
               "markdownDescription": "%extensionHost.launch.runtimeExecutable.description%",
               "default": "${execPath}"
             },
@@ -117,17 +104,12 @@
               "items": {
                 "type": "string"
               },
-              "default": [
-                "--extensionDevelopmentPath=${workspaceFolder}"
-              ]
+              "default": ["--extensionDevelopmentPath=${workspaceFolder}"]
             },
             "env": {
               "type": "object",
               "additionalProperties": {
-                "type": [
-                  "string",
-                  "null"
-                ]
+                "type": ["string", "null"]
               },
               "markdownDescription": "%extensionHost.launch.env.description%",
               "default": {}
@@ -143,10 +125,7 @@
               "default": true
             },
             "outDir": {
-              "type": [
-                "string",
-                "null"
-              ],
+              "type": ["string", "null"],
               "deprecationMessage": "%outDir.deprecationMessage%",
               "default": "${workspaceFolder}/out"
             },
@@ -156,9 +135,7 @@
               "items": {
                 "type": "string"
               },
-              "default": [
-                "${workspaceFolder}/out/**/*.js"
-              ]
+              "default": ["${workspaceFolder}/out/**/*.js"]
             },
             "smartStep": {
               "type": "boolean",
@@ -174,10 +151,7 @@
               "default": []
             },
             "trace": {
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "type": ["boolean", "string"],
               "description": "%node.trace.description%",
               "default": true
             },
@@ -197,9 +171,7 @@
       "aiKey": "AIF-d9b70cd4-b9f9-4d70-929b-a071c400b217",
       "configurationAttributes": {
         "launch": {
-          "required": [
-            "cwd"
-          ],
+          "required": ["cwd"],
           "properties": {
             "program": {
               "type": "string",
@@ -211,11 +183,7 @@
               "default": true
             },
             "console": {
-              "enum": [
-                "internalConsole",
-                "integratedTerminal",
-                "externalTerminal"
-              ],
+              "enum": ["internalConsole", "integratedTerminal", "externalTerminal"],
               "description": "%node.launch.console.description%",
               "default": "internalConsole"
             },
@@ -238,10 +206,7 @@
               "default": "${workspaceFolder}"
             },
             "runtimeExecutable": {
-              "type": [
-                "string",
-                "null"
-              ],
+              "type": ["string", "null"],
               "markdownDescription": "%node.launch.runtimeExecutable.description%",
               "default": null
             },
@@ -267,10 +232,7 @@
               "default": true
             },
             "outDir": {
-              "type": [
-                "string",
-                "null"
-              ],
+              "type": ["string", "null"],
               "deprecationMessage": "%outDir.deprecationMessage%",
               "default": null
             },
@@ -315,14 +277,8 @@
               "deprecationMessage": "%node.verboseDiagnosticLogging.deprecationMessage%"
             },
             "trace": {
-              "type": [
-                "boolean",
-                "string"
-              ],
-              "enum": [
-                "verbose",
-                true
-              ],
+              "type": ["boolean", "string"],
+              "enum": ["verbose", true],
               "default": true,
               "description": "%node.trace.description%"
             },
@@ -347,10 +303,7 @@
               "default": true
             },
             "outputCapture": {
-              "enum": [
-                "console",
-                "std"
-              ],
+              "enum": ["console", "std"],
               "description": "%node.launch.outputCapture.description%",
               "default": "console"
             },
@@ -394,10 +347,7 @@
               "default": true
             },
             "outDir": {
-              "type": [
-                "string",
-                "null"
-              ],
+              "type": ["string", "null"],
               "deprecationMessage": "%outDir.deprecationMessage%",
               "default": null
             },
@@ -415,18 +365,12 @@
               "default": true
             },
             "localRoot": {
-              "type": [
-                "string",
-                "null"
-              ],
+              "type": ["string", "null"],
               "description": "%node.attach.localRoot.description%",
               "default": null
             },
             "remoteRoot": {
-              "type": [
-                "string",
-                "null"
-              ],
+              "type": ["string", "null"],
               "description": "%node.attach.remoteRoot.description%",
               "default": null
             },
@@ -448,14 +392,8 @@
               "deprecationMessage": "%node.verboseDiagnosticLogging.deprecationMessage%"
             },
             "trace": {
-              "type": [
-                "boolean",
-                "string"
-              ],
-              "enum": [
-                "verbose",
-                true
-              ],
+              "type": ["boolean", "string"],
+              "enum": ["verbose", true],
               "default": true,
               "description": "%node.trace.description%"
             },

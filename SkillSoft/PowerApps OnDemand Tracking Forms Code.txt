@@ -1,0 +1,55 @@
+Protetive 336-30yr 207-20yr
+Prudential 630-30yr 406-20yr
+
+Leadership Advantage%202%20Quick%20Start%20Guide%20%20final.docx
+
+Choices('On Demand Tracking'.Element_x002d_Consulting_x0020_o)
+Choices('On Demand Tracking'.Element_x002d_Consulting_x0020_o)
+
+
+If(DataCardValue10.Selected.Value="Blended Learning Strategy Workshop",DataCardValue=4,0)
+
+
+If(DataCardValue10.Selected.Value="Blended Learning Strategy Workshop",Set(DataCardValue15,4));
+
+If(DataCardValue10.Selected.Value="Blended Learning Strategy Workshop", Set('# of Credits Purchased_DataCard1', 4));
+
+If(DataCardValue10.Selected.Value="Blended Learning Strategy Workshop", Set(DataCardValue15, 4));
+
+If(DataCardValue10.Selected.Value="Blended Learning Strategy Workshop", CreaditsPurchased=4,CreaditsPurchased=0));
+
+If(DataCardValue10.Selected.Value="Blended Learning Strategy Workshop", Set(CreaditsPurchased,4),Set(CreaditsPurchased,0));
+
+
+Switch( DataCardValue10.Selected.Value,"Blended Learning Strategy Workshop", Set(CreditsPurchased,4) [, Match2, Result2, ... [, DefaultResult ] ] )
+
+Current code:
+If(DataCardValue10.Selected.Value ="Blended Learning Strategy Workshop", Set(CreditsPurchased,4),Set(CreditsPurchased,9))
+
+Consulting On Demand:
+Switch(DataCardValue10.Selected.Value,
+"Blended Learning Strategy Workshop",Set(CreditsPurchased,4),
+"Platform Consulting",Set(CreditsPurchased,4),
+"Compliance Consulting",Set(CreditsPurchased,4),
+"Learning Strategy Consulting",Set(CreditsPurchased,4),
+"Custom Channel Strategy Consulting",Set(CreditsPurchased,8),
+"Measurement Workshop",Set(CreditsPurchased,8),
+"Tailored Business & Leadership Skills Workshop",Set(CreditsPurchased,8),
+Set(CreditsPurchased,0))
+
+Services On Demand
+
+Switch(DataCardValue12.Selected.Value,
+"Basic",Set(CreditsPurchased,2),
+"Intermediate",Set(CreditsPurchased,4),
+"Complex",Set(CreditsPurchased,8),
+Set(CreditsPurchased,0))
+
+Other than the three with subs
+Switch(DataCardValue12.Selected.Value,
+"Percipio Custom Channel deployment",Set(CreditsPurchased,2),
+"Compliance Campaign Kick-Start",Set(CreditsPurchased,2),
+"Advanced Compliance Module Administrator Training",Set(CreditsPurchased,2),
+"Learning Administration",Set(CreditsPurchased,2)
+Set(CreditsPurchased,0))
+

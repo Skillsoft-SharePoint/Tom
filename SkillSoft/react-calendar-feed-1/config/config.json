@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "celendar-feed-summary-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/celendarFeedSummary/CelendarFeedSummaryWebPart.js",
+          "manifest": "./src/webparts/celendarFeedSummary/CelendarFeedSummaryWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CelendarFeedSummaryWebPartStrings": "lib/webparts/celendarFeedSummary/loc/{locale}.js"
+  }
+}

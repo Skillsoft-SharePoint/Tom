@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "o-365-metrics-client-side-solution",
+    "id": "7b8db3ae-8710-418c-a660-2ad0ef1022af",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/o-365-metrics.sppkg"
+  }
+}

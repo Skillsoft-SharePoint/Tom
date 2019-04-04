@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "o-365-metrics-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/o365MetricsWebPart/O365MetricsWebPartWebPart.js",
+          "manifest": "./src/webparts/o365MetricsWebPart/O365MetricsWebPartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "O365MetricsWebPartWebPartStrings": "lib/webparts/o365MetricsWebPart/loc/{locale}.js"
+  }
+}

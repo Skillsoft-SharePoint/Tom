@@ -1,6 +1,9 @@
 //This has to go into Marketing Site Assest Lirary
+// is used in the onint function in LogoRedirectApplicationCustomizer.ts
     //alert("test");
     var LogoLink = document.querySelectorAll("a[href='https://skillsoft.sharepoint.com/sites/Marketing']");///Marketing
+    LogoLink[1].setAttribute('href','https://connect.int.skillsoft.com');
+
     /*var aLinks = document.querySelectorAll("a");
     var i;
     var x;
@@ -80,7 +83,7 @@
     }
     */
    
-    LogoLink[1].setAttribute('href','https://connect.int.skillsoft.com');
+    //LogoLink[1].setAttribute('href','https://connect.int.skillsoft.com');
     //alert("after update");
     //logoWrapper-56
     

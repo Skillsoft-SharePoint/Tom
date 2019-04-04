@@ -9,12 +9,8 @@
   },
   "aiKey": "AIF-d9b70cd4-b9f9-4d70-929b-a071c400b217",
   "enableProposedApi": true,
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "*"
-  ],
+  "categories": ["Other"],
+  "activationEvents": ["*"],
   "main": "./dist/main",
   "icon": "resources/icons/git.png",
   "scripts": {
@@ -795,31 +791,15 @@
           "default": true
         },
         "git.path": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "markdownDescription": "%config.path%",
           "default": null,
           "scope": "application"
         },
         "git.autoRepositoryDetection": {
-          "type": [
-            "boolean",
-            "string"
-          ],
-          "enum": [
-            true,
-            false,
-            "subFolders",
-            "openEditors"
-          ],
-          "enumDescriptions": [
-            "%config.autoRepositoryDetection.true%",
-            "%config.autoRepositoryDetection.false%",
-            "%config.autoRepositoryDetection.subFolders%",
-            "%config.autoRepositoryDetection.openEditors%"
-          ],
+          "type": ["boolean", "string"],
+          "enum": [true, false, "subFolders", "openEditors"],
+          "enumDescriptions": ["%config.autoRepositoryDetection.true%", "%config.autoRepositoryDetection.false%", "%config.autoRepositoryDetection.subFolders%", "%config.autoRepositoryDetection.openEditors%"],
           "description": "%config.autoRepositoryDetection%",
           "default": true
         },
@@ -833,9 +813,7 @@
           "scope": "resource",
           "description": "%config.autofetch%",
           "default": false,
-          "tags": [
-            "usesOnlineServices"
-          ]
+          "tags": ["usesOnlineServices"]
         },
         "git.autofetchPeriod": {
           "type": "number",
@@ -860,33 +838,15 @@
         },
         "git.countBadge": {
           "type": "string",
-          "enum": [
-            "all",
-            "tracked",
-            "off"
-          ],
-          "enumDescriptions": [
-            "%config.countBadge.all%",
-            "%config.countBadge.tracked%",
-            "%config.countBadge.off%"
-          ],
+          "enum": ["all", "tracked", "off"],
+          "enumDescriptions": ["%config.countBadge.all%", "%config.countBadge.tracked%", "%config.countBadge.off%"],
           "description": "%config.countBadge%",
           "default": "all"
         },
         "git.checkoutType": {
           "type": "string",
-          "enum": [
-            "all",
-            "local",
-            "tags",
-            "remote"
-          ],
-          "enumDescriptions": [
-            "%config.checkoutType.all%",
-            "%config.checkoutType.local%",
-            "%config.checkoutType.tags%",
-            "%config.checkoutType.remote%"
-          ],
+          "enum": ["all", "local", "tags", "remote"],
+          "enumDescriptions": ["%config.checkoutType.all%", "%config.checkoutType.local%", "%config.checkoutType.tags%", "%config.checkoutType.remote%"],
           "markdownDescription": "%config.checkoutType%",
           "default": "all"
         },
@@ -941,16 +901,8 @@
         },
         "git.postCommitCommand": {
           "type": "string",
-          "enum": [
-            "none",
-            "push",
-            "sync"
-          ],
-          "enumDescriptions": [
-            "%config.postCommitCommand.none%",
-            "%config.postCommitCommand.push%",
-            "%config.postCommitCommand.sync%"
-          ],
+          "enum": ["none", "push", "sync"],
+          "enumDescriptions": ["%config.postCommitCommand.none%", "%config.postCommitCommand.push%", "%config.postCommitCommand.sync%"],
           "markdownDescription": "%config.postCommitCommand%",
           "default": "none"
         },
@@ -966,11 +918,7 @@
         },
         "git.inputValidation": {
           "type": "string",
-          "enum": [
-            "always",
-            "warn",
-            "off"
-          ],
+          "enum": ["always", "warn", "off"],
           "default": "warn",
           "description": "%config.inputValidation%"
         },
@@ -980,11 +928,8 @@
           "description": "%config.inputValidationLength%"
         },
         "git.inputValidationSubjectLength": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "default": null,
+          "type": ["number", "null"],
+          "default": 50,
           "description": "%config.inputValidationSubjectLength%"
         },
         "git.detectSubmodules": {
@@ -1129,46 +1074,23 @@
     }],
     "languages": [{
       "id": "git-commit",
-      "aliases": [
-        "Git Commit Message",
-        "git-commit"
-      ],
-      "filenames": [
-        "COMMIT_EDITMSG",
-        "MERGE_MSG"
-      ],
+      "aliases": ["Git Commit Message", "git-commit"],
+      "filenames": ["COMMIT_EDITMSG", "MERGE_MSG"],
       "configuration": "./languages/git-commit.language-configuration.json"
     }, {
       "id": "git-rebase",
-      "aliases": [
-        "Git Rebase Message",
-        "git-rebase"
-      ],
-      "filenames": [
-        "git-rebase-todo"
-      ],
+      "aliases": ["Git Rebase Message", "git-rebase"],
+      "filenames": ["git-rebase-todo"],
       "configuration": "./languages/git-rebase.language-configuration.json"
     }, {
       "id": "diff",
-      "aliases": [
-        "Diff",
-        "diff"
-      ],
-      "extensions": [
-        ".patch",
-        ".diff",
-        ".rej"
-      ],
+      "aliases": ["Diff", "diff"],
+      "extensions": [".patch", ".diff", ".rej"],
       "configuration": "./languages/diff.language-configuration.json"
     }, {
       "id": "ignore",
-      "aliases": [
-        "Ignore",
-        "ignore"
-      ],
-      "filenames": [
-        ".gitignore"
-      ],
+      "aliases": ["Ignore", "ignore"],
+      "filenames": [".gitignore"],
       "configuration": "./languages/ignore.language-configuration.json"
     }],
     "grammars": [{
@@ -1190,9 +1112,7 @@
     }],
     "configurationDefaults": {
       "[git-commit]": {
-        "editor.rulers": [
-          72
-        ]
+        "editor.rulers": [72]
       }
     }
   },
@@ -1209,7 +1129,7 @@
     "@types/byline": "4.2.31",
     "@types/file-type": "^5.2.1",
     "@types/mocha": "2.2.43",
-    "@types/node": "^8.10.25",
+    "@types/node": "^10.12.21",
     "@types/which": "^1.0.28",
     "mocha": "^3.2.0"
   }

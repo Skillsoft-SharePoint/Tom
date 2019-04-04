@@ -11,7 +11,8 @@
       ]
     }
   },
-  "externals": {},
+  "externals": {
+  },
   "localizedResources": {
     "SkillSoftWeatherWebPartWebPartStrings": "lib/webparts/skillSoftWeatherWebPart/loc/{locale}.js"
   }

@@ -9,9 +9,7 @@
   },
   "enableProposedApi": true,
   "icon": "images/npm_icon.png",
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other"],
   "scripts": {
     "compile": "gulp compile-extension:npm",
     "watch": "gulp watch-extension:npm"
@@ -24,20 +22,14 @@
   },
   "devDependencies": {
     "@types/minimatch": "^3.0.3",
-    "@types/node": "^8.10.25"
+    "@types/node": "^10.12.21"
   },
   "main": "./dist/main",
-  "activationEvents": [
-    "onCommand:workbench.action.tasks.runTask",
-    "onLanguage:json",
-    "onView:npm"
-  ],
+  "activationEvents": ["onCommand:workbench.action.tasks.runTask", "onLanguage:json", "onView:npm"],
   "contributes": {
     "languages": [{
       "id": "ignore",
-      "filenames": [
-        ".npmignore"
-      ]
+      "filenames": [".npmignore"]
     }],
     "views": {
       "explorer": [{
@@ -148,10 +140,7 @@
       "properties": {
         "npm.autoDetect": {
           "type": "string",
-          "enum": [
-            "off",
-            "on"
-          ],
+          "enum": ["off", "on"],
           "default": "on",
           "scope": "resource",
           "description": "%config.npm.autoDetect%"
@@ -165,18 +154,12 @@
         "npm.packageManager": {
           "scope": "resource",
           "type": "string",
-          "enum": [
-            "npm",
-            "yarn"
-          ],
+          "enum": ["npm", "yarn"],
           "default": "npm",
           "description": "%config.npm.packageManager%"
         },
         "npm.exclude": {
-          "type": [
-            "string",
-            "array"
-          ],
+          "type": ["string", "array"],
           "items": {
             "type": "string"
           },
@@ -191,10 +174,7 @@
         },
         "npm.scriptExplorerAction": {
           "type": "string",
-          "enum": [
-            "open",
-            "run"
-          ],
+          "enum": ["open", "run"],
           "markdownDescription": "%config.npm.scriptExplorerAction%",
           "scope": "window",
           "default": "open"
@@ -204,9 +184,7 @@
           "description": "%config.npm.fetchOnlinePackageInfo%",
           "default": true,
           "scope": "window",
-          "tags": [
-            "usesOnlineServices"
-          ]
+          "tags": ["usesOnlineServices"]
         }
       }
     },
@@ -219,9 +197,7 @@
     }],
     "taskDefinitions": [{
       "type": "npm",
-      "required": [
-        "script"
-      ],
+      "required": ["script"],
       "properties": {
         "script": {
           "type": "string",

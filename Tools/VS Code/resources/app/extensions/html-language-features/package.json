@@ -10,11 +10,7 @@
     "vscode": "0.10.x"
   },
   "icon": "icons/html.png",
-  "activationEvents": [
-    "onLanguage:html",
-    "onLanguage:handlebars",
-    "onLanguage:razor"
-  ],
+  "activationEvents": ["onLanguage:html", "onLanguage:handlebars"],
   "main": "./client/dist/htmlMain",
   "scripts": {
     "compile": "gulp compile-extension:html-language-features-client compile-extension:html-language-features-server",
@@ -22,9 +18,7 @@
     "postinstall": "cd server && yarn install",
     "install-client-next": "yarn add vscode-languageclient@next"
   },
-  "categories": [
-    "Programming Languages"
-  ],
+  "categories": ["Programming Languages"],
   "contributes": {
     "configuration": {
       "id": "html",
@@ -54,19 +48,13 @@
           "description": "%html.format.wrapLineLength.desc%"
         },
         "html.format.unformatted": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "scope": "resource",
           "default": "wbr",
           "markdownDescription": "%html.format.unformatted.desc%"
         },
         "html.format.contentUnformatted": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "scope": "resource",
           "default": "pre,code,textarea",
           "markdownDescription": "%html.format.contentUnformatted.desc%"
@@ -84,10 +72,7 @@
           "description": "%html.format.preserveNewLines.desc%"
         },
         "html.format.maxPreserveNewLines": {
-          "type": [
-            "number",
-            "null"
-          ],
+          "type": ["number", "null"],
           "scope": "resource",
           "default": null,
           "markdownDescription": "%html.format.maxPreserveNewLines.desc%"
@@ -105,10 +90,7 @@
           "description": "%html.format.endWithNewline.desc%"
         },
         "html.format.extraLiners": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": ["string", "null"],
           "scope": "resource",
           "default": "head, body, /html",
           "markdownDescription": "%html.format.extraLiners.desc%"
@@ -117,39 +99,9 @@
           "type": "string",
           "scope": "resource",
           "default": "auto",
-          "enum": [
-            "auto",
-            "force",
-            "force-aligned",
-            "force-expand-multiline",
-            "aligned-multiple",
-            "preserve",
-            "preserve-aligned"
-          ],
-          "enumDescriptions": [
-            "%html.format.wrapAttributes.auto%",
-            "%html.format.wrapAttributes.force%",
-            "%html.format.wrapAttributes.forcealign%",
-            "%html.format.wrapAttributes.forcemultiline%",
-            "%html.format.wrapAttributes.alignedmultiple%",
-            "%html.format.wrapAttributes.preserve%",
-            "%html.format.wrapAttributes.preservealigned%"
-          ],
+          "enum": ["auto", "force", "force-aligned", "force-expand-multiline", "aligned-multiple", "preserve", "preserve-aligned"],
+          "enumDescriptions": ["%html.format.wrapAttributes.auto%", "%html.format.wrapAttributes.force%", "%html.format.wrapAttributes.forcealign%", "%html.format.wrapAttributes.forcemultiline%", "%html.format.wrapAttributes.alignedmultiple%", "%html.format.wrapAttributes.preserve%", "%html.format.wrapAttributes.preservealigned%"],
           "description": "%html.format.wrapAttributes.desc%"
-        },
-        "html.suggest.angular1": {
-          "deprecationMessage": "Angular 1 is obsolete and Angular completion will be removed.",
-          "type": "boolean",
-          "scope": "resource",
-          "default": false,
-          "description": "%html.suggest.angular1.desc%"
-        },
-        "html.suggest.ionic": {
-          "deprecationMessage": "Ionic 1 is obsolete and Ionic completion will be removed.",
-          "type": "boolean",
-          "scope": "resource",
-          "default": false,
-          "description": "%html.suggest.ionic.desc%"
         },
         "html.suggest.html5": {
           "type": "boolean",
@@ -178,11 +130,7 @@
         "html.trace.server": {
           "type": "string",
           "scope": "window",
-          "enum": [
-            "off",
-            "messages",
-            "verbose"
-          ],
+          "enum": ["off", "messages", "verbose"],
           "default": "off",
           "description": "%html.trace.server.desc%"
         }
@@ -195,6 +143,6 @@
     "vscode-nls": "^4.0.0"
   },
   "devDependencies": {
-    "@types/node": "^8.10.25"
+    "@types/node": "^10.12.21"
   }
 }

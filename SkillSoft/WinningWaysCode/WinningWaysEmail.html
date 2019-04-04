@@ -1,0 +1,587 @@
+<link rel="stylesheet" href="/Style%20Library/jquery-ui.css">
+<script language="javascript" type="text/javascript" src="/Style%20Library/Scripts/jquery-1.12.4.js"></script> 
+<script language="javascript" type="text/javascript" src="/Style%20Library/Scripts/moment.js"></script> 
+<script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
+<script type="text/javascript" src="/_layouts/15/sp.js"></script>
+<script type="text/javascript" src="/Style%20Library/Scripts/jquery-ui.js"></script>
+
+<script language="javascript" type="text/javascript">
+
+
+var clientContext='';
+var winningWaysListName= "Winning Ways";
+var winningWaysSendToConfigList='Winning Ways Send To Config List';
+var winningWaysRequestUri='';
+var emailFrom='';
+var emailTo=[];
+var SubjectOfEmail = 'Winning Ways - internal communication only'; 
+var Body = ''; 
+var winningWaysContent='';
+var bindAllTopics='';
+var winningWaysStatus="This Quarter";
+var winningWaysCount=0;
+var internalOrganizationArray=[];
+var internalOrganizationobjectArray=[];
+var winningWaysTable='';
+var wincombind='';
+var bindFirstColumn='';
+var bindSecondColumn='';
+var divContent='';
+var imagehtml='';
+var winningWaysBlogURL='';
+		
+    $(document).ready(function() {  
+    
+    	winningWaysBlogURL=_spPageContextInfo.siteAbsoluteUrl+"/WinningWaysBlog";
+    	$('#dpPublishedDate').val("");
+    	
+        SP.SOD.executeFunc('sp.js', 'SP.ClientContext', function () {
+              
+         $("#dpPublishedDate").datepicker({  
+            dateFormat:"yy-mm-dd"  
+         });
+   		
+   		getSendToDetails();
+   		
+	    $("#previewwinningWays").click(function()
+        {
+        if(winningWaysValidations())
+        {
+          previewWinningWays(); 
+        }
+          
+        });
+        
+        $("#sendwinningWays").click(function()
+        {
+        $("#previewwinningWays").click();
+        if(winningWaysValidations())
+        {
+        
+         if(confirm("Are you sure you want to send email, Please verify preview before send email."))
+        {
+        	 sendWinningWaysEmail();
+        }
+           else
+        {
+        return false;
+        }
+		}
+		
+        });
+ }); 
+  
+ }); 
+ 
+ 
+ function getSendToDetails()
+ {
+ 	emailFrom='';
+ 	emailTo=[];
+ 	 
+	$.ajax({
+    url: _spPageContextInfo.webAbsoluteUrl+ "/_api/web/currentuser",
+    type: 'GET',
+    dataType: 'json',
+    async: false,
+    headers: { "accept": "application/json; odata=verbose" },
+    success: function (data) 
+    {    
+	   if(data.d.Email.length>0)
+	   {
+			emailFrom=data.d.Email;
+	    }
+	 },
+    error: function ajaxError(response) {
+     
+        console.log("Error: getSendToDetails::"+response.status + ' ' + response.statusText);
+    }
+	});
+
+
+
+	var  sendToUserNameUri=_spPageContextInfo.webAbsoluteUrl +"/_api/web/lists/getbytitle('"+winningWaysSendToConfigList+"')/items?$select=Title,UserName/Title,UserName/EMail&$expand=UserName&$filter=ActiveStatus eq 'Active'&$orderby=UserName/Title asc";
+
+	$.ajax({
+    url: sendToUserNameUri,
+    type: 'GET',
+    dataType: 'json',
+    async: false,
+    headers: { "accept": "application/json; odata=verbose" },
+    success: function (data) 
+    {    
+	    var results=data.d.results;
+	    
+    	if(results.length>0)
+     	{
+        
+		$.each(results, function(index, userInfo)
+		{
+			if(results.length > 0)
+			{
+				emailTo.push(userInfo.UserName.EMail);
+
+			}
+			else if(results.length == 0)
+			{
+				alert("Please verify the list for enter the send To username: https://connect.int.skillsoft.com/Communications-Sessions/Lists/WinningWaysSendToConfigList/AllItems.aspx");
+
+			}
+			
+     	});
+	
+		}
+		else
+		{
+		alert("Please verify the Winning Ways Send To Config List");
+		return false;
+		
+		}
+    },
+    error: function ajaxError(response) {
+     
+        console.log("Error: getSendToDetails::"+response.status + ' ' + response.statusText);
+    }
+	});
+
+ }
+ 
+ function getChatterlinkfromWinningWaysBlog(chatterTitle)
+ {
+ 
+  
+var restapi= winningWaysBlogURL+"/_api/web/lists/GetByTitle('Posts')/items?$select=Title,ID,WinningWaysTitle&$filter=WinningWaysTitle eq '"+chatterTitle+"'";
+var chatterlink='';
+
+$.ajax({
+    url: restapi,
+    type: 'GET',
+    dataType: 'json',
+    async: false,
+    headers: { "accept": "application/json; odata=verbose" },
+    success: function(data)   
+        {  
+
+            for (var i = 0; i < data.d.results.length; i++)   
+            {  
+                chatterlink=data.d.results[i].ID;
+            }  
+        },  
+        error: function(data)  
+        {  
+              console.log(data);
+        }  
+    });  
+    
+return chatterlink;
+
+ }
+ 
+ function  previewWinningWays()
+ {
+
+	winningWaysCount=0;
+	bindAllTopics='';
+	Body='';
+	winningWaysTable='';
+	wincombind='';
+	bindFirstColumn='';
+	bindSecondColumn='';
+	divContent='';
+	
+
+	publishedDate=$('.dpPublishedDate').val().trim()+'T00%3a00%3a00';
+	//$expand=Collaborators/Id"
+	//winningWaysRequestUri=_spPageContextInfo.webAbsoluteUrl +"/_api/web/lists/getbytitle('"+winningWaysListName+"')/items?$select=ID,Title,VideoURL,Internal_x0020_Organization,Logo,Industry,CSD/Title&$expand=CSD,Chatter_x0020_Link,Published_x0020_Date,Status&$expand=CSD&$filter=(Status eq '"+winningWaysStatus+"') and (Published_x0020_Date eq datetime'"+publishedDate+"')";
+	winningWaysRequestUri=_spPageContextInfo.webAbsoluteUrl +"/_api/web/lists/getbytitle('"+winningWaysListName+"')/items?$select=ID,Title,VideoURL,Internal_x0020_Organization,Logo,Industry,CSD/Title,Chatter_x0020_Link,Published_x0020_Date,Status&$expand=CSD&$filter=(Status eq '"+winningWaysStatus+"') and (Published_x0020_Date eq datetime'"+publishedDate+"')";
+		
+ 	$.ajax({
+    url: winningWaysRequestUri,
+    type: 'GET',
+    dataType: 'json',
+    async: false,
+    headers: { "accept": "application/json; odata=verbose" },
+    success: function (data) 
+    {        
+     	winningWaysCount+=1;
+     	
+     	if(data.d.results.length>0)
+     	{
+     	var CSDMembers="";
+     	
+        result=data.d.results;
+        
+        internalOrganizationobjectArray=[];
+        internalOrganizationArray=[];
+        
+        $.each(result, function(i,result) {
+        
+		// add aloop here to get all the CSD's and put them in a series
+		// this was to handle Multiple CSD's
+		// added by Tom Barkley 03/11/2019
+		CSDMembers=""; //result[0].CSD.results[0].Title
+		$.each(result.CSD.results, function(x,CSDResult){
+			CSDMembers=CSDMembers + CSDResult.Title +"; ";
+		});
+		// End CSD loop 
+		
+		blogChatterLink=winningWaysBlogURL+"/Lists/Posts/Post.aspx?ID="+getChatterlinkfromWinningWaysBlog(result.Title)
+        
+		internalOrganizationArray.push(result.Internal_x0020_Organization);
+		internalOrganizationobjectArray.push({
+	    ID : result.ID, 
+	    InternalOrganization: isNullAndUndef(result.Internal_x0020_Organization),
+	    Logo:  isNullAndUndef(result.Logo),
+	    Industry:  isNullAndUndef(result.Industry),
+	    // Use the result from the above loop to populate this variable
+	    // added by Tom Barkley 03/11/2019
+	    // removed lAndUndef(result.CSD.Title),
+	    CSD: isNullAndUndef(CSDMembers),
+	    // End Mod
+	    VideoURL:isNullAndUndef(result.VideoURL),
+	    ChatterLink:blogChatterLink
+
+	    });		
+	    });		    
+	     
+    	internalOrganizationobjectArray=internalOrganizationobjectArray.sort();
+		
+		var internalOrganizations = {};
+
+		 $.each(internalOrganizationArray,function(i,ele){
+		   internalOrganizations [ele] = internalOrganizations [ele] + 1 || 1 ;
+		 });
+		 
+		
+		 var objectIndexCount=0;
+		 var bindFirstRow='';
+		 
+		 var trRowsCount='';
+		 
+		 $.each(internalOrganizations,function(internalOrganization,index)
+		 {
+		  
+		  trRowsCount=0;
+		  
+		    if((objectIndexCount%2)==0)
+		    {
+			
+	 		bindFirstColumn='<td class="tdContent" id="'+internalOrganization.replace(/\s/g, '')+'" style="border: 1pt solid #4c4c4c;" width="293" valign="top">'+
+			'<TABLE class=MsoNormalTable style="WIDTH: 100%; BORDER-COLLAPSE: collapse; text-size-adjust: none" cellSpacing=0 cellPadding=0 width="25%" border=0><TBODY><TR style="HEIGHT: 13.4pt; text-size-adjust: none">'+
+			'<TD style="HEIGHT: 13.4pt; BACKGROUND: #C8102E; PADDING-BOTTOM: 7.5pt; PADDING-TOP: 7.5pt; PADDING-LEFT: 7.5pt; PADDING-RIGHT: 7.5pt; text-size-adjust: none">'+
+			'<P class=MsoNormal style="TEXT-ALIGN: left;padding-left: 10pt;" align=center><STRONG><SPAN id="spanHeaderID" style="font-size: 11.5pt; COLOR: white;font-family:arial;">'+internalOrganization+'</SPAN></STRONG></P></TD></TR></TBODY></TABLE>'+bindContent(internalOrganization)+'</td>';
+				
+			}
+			else 
+			{
+				
+			 bindSecondColumn+='<tr id="trRowInningWaysContent'+objectIndexCount+'" style="mso-yfti-irow:'+objectIndexCount+';height:23px;">'+bindFirstColumn+'<td class="tdContent" id="'+internalOrganization.replace(/\s/g, '')+'" style="border: 1pt solid #4c4c4c;" width="293" valign="top">'+
+			'<TABLE class=MsoNormalTable style="WIDTH: 100%; BORDER-COLLAPSE: collapse; text-size-adjust: none" cellSpacing=0 cellPadding=0 width="25%" border=0><TBODY><TR style="HEIGHT: 13.4pt; text-size-adjust: none">'+
+			'<TD style="HEIGHT: 13.4pt; BACKGROUND: #C8102E; PADDING-BOTTOM: 7.5pt; PADDING-TOP: 7.5pt; PADDING-LEFT: 7.5pt; PADDING-RIGHT: 7.5pt; text-size-adjust: none">'+
+			'<P class=MsoNormal style="TEXT-ALIGN: left;padding-left: 10pt;" align=center><STRONG><SPAN id="spanHeaderID" style="font-size: 11.5pt; COLOR: white;font-family:arial;">'+internalOrganization+'</SPAN></STRONG></P></TD></TR></TBODY></TABLE>'+bindContent(internalOrganization)+'</td>';
+							
+			}
+			
+			if((Object.keys(internalOrganizations).length-1)==objectIndexCount && (objectIndexCount%2)==0)
+			{
+
+			bindSecondColumn+='<tr style="mso-yfti-irow:'+objectIndexCount+';height:23.35pt"><td colspan="2" class="tdContent" id="'+internalOrganization.replace(/\s/g, '')+'" style="border: 1pt solid #4c4c4c;" width="293" valign="top">'+
+			'<TABLE class=MsoNormalTable style="WIDTH: 100%; BORDER-COLLAPSE: collapse; text-size-adjust: none" cellSpacing=0 cellPadding=0 width="25%" border=0><TBODY><TR style="HEIGHT: 13.4pt; text-size-adjust: none">'+
+			'<TD style="HEIGHT: 13.4pt; BACKGROUND: #C8102E; PADDING-BOTTOM: 7.5pt; PADDING-TOP: 7.5pt; PADDING-LEFT: 7.5pt; PADDING-RIGHT: 7.5pt; text-size-adjust: none">'+
+			'<P class=MsoNormal style="TEXT-ALIGN: left;padding-left: 10pt;" align=center><STRONG><SPAN id="spanHeaderID" style="font-size: 11.5pt; COLOR: white;font-family:arial;">'+internalOrganization+'</SPAN></STRONG></P></TD></TR></TBODY></TABLE>'+bindContent(internalOrganization)+'</td></tr>';
+
+			}
+	
+			 objectIndexCount+=1;
+		  
+	  	  });
+	  	  
+	  	  
+	  	  wincombind=bindSecondColumn;
+      				   
+		  winningWaysTable='<table class="MsoNormalTable" id="tablewinningWaysContent" style="border-collapse: collapse; mso-yfti-tbllook: 1184; mso-padding-alt: 0in 0in 0in 0in;" border="0" cellspacing="0" cellpadding="0">'+
+							'<tbody id="bodyCal">'+wincombind+'</tbody></table>';
+					
+		  	   Body='<div class="WordSection1"><p class="MsoNormal">&nbsp;</p><p class="MsoNormal">&nbsp;</p><div align="center">'+
+		  	   		'<table class="MsoNormalTable" style="border:solid #F2F2F2 1.0pt;border-top:white;" cellspacing="0" cellpadding="0">'+
+					'<tbody>	<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;"><td colspan="3" valign="top" width="100%">'+
+					'<p class="MsoNormal"><img src="http://learn.skillsoft.com/rs/376-EUE-844/images/Email-Top-band.jpg" alt="01D320ADAF29F570" width="740" style="width: 100%;" border="0" /></p>'+
+					'</td></tr><tr style="mso-yfti-irow: 1;"><td style="width: 7.65in; padding: 0in 5.4pt 0in 5.4pt;" colspan="3" width="734"><p class="MsoNormal">&nbsp;</p></td></tr>'+
+					'<tr style="mso-yfti-irow: 2;"><td style="width: 7.65in; padding: 0in 5.4pt 0in 5.4pt;" colspan="3" width="734">'+
+					'<table class="MsoNormalTable" style="width: 99.02%; margin-left: .05pt; background: white; border-collapse: collapse; mso-yfti-tbllook: 1184; mso-padding-alt: 0in 0in 0in 0in;" border="0" width="99%" cellspacing="0" cellpadding="0">'+
+					'<tbody><tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes; height: 31.35pt;">'+
+					'<td style="width: 3.7%; padding: 0in 0in 0in 0in; height: 31.35pt;" width="3%"><p style="line-height: 105%;">&nbsp;</p></td>'+
+					'<td style="width: 92.62%; padding: 0in 0in 0in 0in; height: 31.35pt;" valign="top" width="92%">'+
+					'<table class="MsoNormalTable" style="width: 48.9%; border-collapse: collapse; mso-table-lspace: 2.25pt; mso-table-rspace: 2.25pt; mso-table-anchor-vertical: paragraph; mso-table-anchor-horizontal: column; mso-table-left: left; mso-padding-alt: 0in 0in 0in 0in;" border="0" width="48%" cellspacing="0" cellpadding="0" align="left">'+
+					'<tbody><tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-yfti-lastrow: yes; height: 31.35pt;"><td style="padding: 0in 0in 0in 0in; height: 31.35pt;" valign="top">'+
+					'<p style="line-height: 105%;"><img src="https://www.skillsoft.com/wp-content/themes/skillsoft/images/logo-skillsoft.png"  border="0" width="200" style="width: 100%; max-width: 300px;"></p>'+
+					'</td></tr></tbody></table></td><td style="width: 3.7%; padding: 0in 0in 0in 0in; height: 31.35pt;" width="3%">	<p class="MsoNormal">&nbsp;</p></td></tr>	</tbody></table></td></tr>'+
+					'<tr style="mso-yfti-irow: 3;"><td style="width: 7.65in; padding: 0in 5.4pt 0in 5.4pt;" colspan="3" valign="top" width="734"><p class="MsoNormal">&nbsp;</p>'+
+					'</td></tr><tr style="mso-yfti-irow: 4;"><td style="width: 40.1pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="53"><p class="MsoNormal">&nbsp;</p></td>'+
+					'<td style="width: 454.5pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="606">'+
+					'<p class="MsoNormal" style="text-align: center;margin-top: 5pt;line-height:19pt;" align="center"><strong><span style="font-size: 18.0pt;font-weight:bold;font-family:arial;">Global &ldquo;Winning Ways&rdquo;</span></strong></p>'+
+					'<p class="MsoNormal" style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;"><span style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;">Team,</span></p>'+
+					'<p class="MsoNormal" style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;line-height:18pt;"><span style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;line-height:18pt;">Check out the significant net new logos and renewals/upgrades below.  Additional information on each deal is posted on a new internal <a href="https://connect.int.skillsoft.com/WinningWaysBlog/default.aspx" target="_blank" style="font-size: 11.5pt;color:#52D0DD;font-family:arial;">blog</a>. You will also notice that some of the deals include a video summary of the win.</span></p>'+
+					'<p class="MsoNormal" style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;line-height:18pt;"><span style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;line-height:18pt;">While the CSD associated with each deal is identified below, I encourage you to use the blog as a place to call out other individuals who contributed to the wins and to congratulate your colleagues.</span></p>'+
+					''+winningWaysTable+''+
+					'<p class="MsoNormal">&nbsp;</p></td><td style="width: 56.2pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="75"><p class="MsoNormal">&nbsp;</p></td></tr><tr style="mso-yfti-irow: 5;">'+
+					'<td style="width: 40.1pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="53"><p class="MsoNormal">&nbsp;</p></td>'+
+					'<td style="width: 454.5pt; padding: 0in 5.4pt 0in 5.4pt;font-family: arial;line-height: 18pt;" valign="top" width="606">'+
+					'<p><span style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;line-height: 18pt;">Good selling, <br /> Chad </span></p>'+
+					'<p class="MsoNormal"><span style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;line-height: 18pt;">Chad Gaydos<br /> Skillsoft | mobile: </span><span style="font-size: 11.5pt;color:#4c4c4c;font-family: arial;line-height: 18pt;">770.335.4018<br /> Executive Vice President &ndash; Chief Operating Officer</span></p>'+
+					'</td><td style="width: 56.2pt; padding: 0in 5.4pt 0in 5.4pt;" valign="top" width="75"><p class="MsoNormal">&nbsp;</p></td></tr>'+
+					'<tr style="text-size-adjust: none;"><td style="padding: 0.15in 0in 0in 0in; text-size-adjust: none;"><span style="mso-bookmark: _MailOriginalBody;"  id="bodyContent1"></span></td></tr>'+					
+					'<tr style="mso-yfti-irow: 6;"><td colspan="3">'+
+					'<div align="center">'+
+					'<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%" style="width: 100.0%; background: #4c4c4c; border-collapse: collapse; text-size-adjust: none;" id="rfooter"><tbody>'+
+					'<tr style="height: 15.0pt; text-size-adjust: none;"><td colspan="3" style="padding: 0in 0in 0in 0in; height: 15.0pt; text-size-adjust: none;">'+
+					'<p align="center" style="margin: 0in; margin-bottom: .0001pt; text-align: center; text-size-adjust: none;"><span style="mso-bookmark: _MailOriginalBody;"><span style="font-size: 1.0pt; color: #4c4c4c;">&nbsp;</span><o:p></o:p></span></p>'+
+					'</td></tr><tr style="text-size-adjust: none;"><td width="4%" style="width: 4.0%; padding: 0in 0in 0in 0in; text-size-adjust: none;">'+
+					'<p class="MsoNormal" align="center" style="text-align: center;"><span style="mso-bookmark: _MailOriginalBody;"><span style="font-size: 1.0pt; color: #4c4c4c;">&nbsp;</span><o:p></o:p></span></p></td>'+
+					'<td width="92%" style="width: 92.0%; padding: 0in 0in 0in 0in; text-size-adjust: none;">'+
+					'<p align="center" style="margin: 0in; margin-bottom: .0001pt; text-align: center; text-size-adjust: none;"><span style="mso-bookmark: _MailOriginalBody;"></span>'+
+					'<a href="http://www.linkedin.com/company/skillsoft" target="_blank" rel="noopener"><span style="mso-bookmark: _MailOriginalBody;">'+
+					'<span style="color: windowtext; text-decoration: none;"><span style="font-size: 9.0pt; color: blue;">'+
+					'<img border="0" width="19" height="19" style="width: .1979in; height: .1979in;" id="_x0000_i1028" src="http://learn.skillsoft.com/rs/376-EUE-844/images/LinkedIn-Icon-footer-LP.png" alt="LinkedIn"></span></span></span></a>'+
+					'<span style="mso-bookmark: _MailOriginalBody;"><span style="font-size: 9.0pt; color: #6f6f6f;">&nbsp;&nbsp;&nbsp; </span></span><a href="https://twitter.com/skillsoft" target="_blank" rel="noopener">'+
+					'<span style="mso-bookmark: _MailOriginalBody;"><span style="color: windowtext; text-decoration: none;"><span style="font-size: 9.0pt; color: blue;">'+
+					'<img border="0" width="19" height="19" style="width: .1979in; height: .1979in;" id="_x0000_i1027" src="http://learn.skillsoft.com/rs/376-EUE-844/images/Twitter-Icon-footer-LP.png" alt="Twitter"></span></span></span></a>'+
+					'<span style="mso-bookmark: _MailOriginalBody;"><span style="font-size: 9.0pt; color: #6f6f6f;">&nbsp;&nbsp;&nbsp; </span></span><a href="https://www.facebook.com/skillsoft" target="_blank" rel="noopener">'+
+					'<span style="mso-bookmark: _MailOriginalBody;"><span style="color: windowtext; text-decoration: none;">'+
+					'<span style="font-size: 9.0pt; color: blue;">'+
+					'<img border="0" width="18" height="18" style="width: .1875in; height: .1875in;" id="_x0000_i1026" src="http://learn.skillsoft.com/rs/376-EUE-844/images/Facebook-Icon-footer-LP.png" alt="Facebook"></span></span></span></a>'+
+					'<span style="mso-bookmark: _MailOriginalBody;"><span style="font-size: 9.0pt; color: #6f6f6f;">&nbsp;&nbsp;&nbsp; </span><span style="color: blue;"><a href="http://feeds.feedburner.com/LearningRe-imagined" target="_blank" rel="noopener">'+
+					'<img border="0" width="19" height="19" style="width: .1979in; height: .1979in;" id="_x0000_i1025" src="http://learn.skillsoft.com/rs/376-EUE-844/images/RSS-Icon-footer-LP.png" alt="RSS"></a></span></span>'+
+					'<span style="mso-bookmark: _MailOriginalBody;"><span style="font-size: 9.0pt; color: #6f6f6f;"><br> <br> </span></span><span style="mso-bookmark: _MailOriginalBody;">'+
+					'<span style="font-family:arial;font-size: 10.0pt;color: white;">© 2018 Skillsoft Ireland Limited.</span><o:p></o:p></span></p></td>'+
+					'<td width="4%" style="width: 4.0%; padding: 0in 0in 0in 0in; text-size-adjust: none;">'+
+					'<p class="MsoNormal" align="center" style="text-align: center;"><span style="mso-bookmark: _MailOriginalBody;"><span style="font-size: 1.0pt;color: #4c4c4c;">&nbsp;</span><o:p></o:p></span></p>'+
+					'</td></tr><tr style="height: 15.0pt; text-size-adjust: none;"><td colspan="3" style="padding: 0in 0in 0in 0in; height: 15.0pt; text-size-adjust: none;">'+
+					'<p class="MsoNormal" align="center" style="text-align: center;"><span style="mso-bookmark: _MailOriginalBody;"><span style="font-size: 1.0pt;color: #4c4c4c;">&nbsp;</span><o:p></o:p></span></p>'+
+					'</td></tr></tbody></table></div></td></tr>'+
+					'</tbody></table></div>	<p class="MsoNormal">&nbsp;</p></div>';		
+					
+					
+			$('#divPreviewwinningWays').html(Body);
+			
+			// Change headerpositions for skillsoft and sumtotal in frist row
+			
+			if($("#divPreviewwinningWays #trRowInningWaysContent1 #spanHeaderID:first").text() != "Skillsoft NA Field")
+			{
+				var firstHeaderTdHTML=$("#divPreviewwinningWays #trRowInningWaysContent1 .tdContent:first").html();
+				var skillsoftHeaderTdHTML=$('td#SkillsoftNAField.tdContent').html();
+				
+				$("#divPreviewwinningWays #trRowInningWaysContent1 .tdContent:first").html(skillsoftHeaderTdHTML);
+				$('td#SkillsoftNAField.tdContent').html(firstHeaderTdHTML);
+				
+			}
+			
+			if($("#divPreviewwinningWays #trRowInningWaysContent1 #spanHeaderID:last").text() != "SumTotal NA Field")
+			{
+				var secondHeaderTdHTML=$("#divPreviewwinningWays #trRowInningWaysContent1 .tdContent:last").html();
+				var sumtotalHeaderTdHTML=$('td#SumTotalNAField.tdContent').html();
+				
+				$("#divPreviewwinningWays #trRowInningWaysContent1 .tdContent:last").html(sumtotalHeaderTdHTML);
+				$('td#SumTotalNAField.tdContent').html(secondHeaderTdHTML);
+					
+			}
+			
+			//
+			
+			$('#divWinningWaysEmail').html($('#divPreviewwinningWays').html());
+	 		$('#sendwinningWays').attr('disabled',false);
+					
+	        }
+	       else
+	        {
+	         $('#divPreviewwinningWays').html('<p style="font-weight:bold;color:red;padding-top:10px;">Invalid Published Date / All winningWays are may archived.</p>');
+	         $('#divWinningWaysEmail').html('');
+	         $('#sendwinningWays').attr('disabled','disabled');
+			
+	        }
+
+	
+	 	},
+	    error: function ajaxError(response)
+	    {
+	     
+	        console.log("Error: previewWinningWays::"+response.status + ' ' + response.statusText);
+	    }
+	    
+		});	
+
+ }
+
+
+function bindContent(content)
+{
+
+divContent='';
+var divBorderCount=0;
+var videoURL='';
+var videoHTML='';
+
+for (var i = 0; i < internalOrganizationobjectArray.length; i++) 
+{
+
+    if (internalOrganizationobjectArray[i].InternalOrganization == content) 
+    {
+        divBorderCount+=1;
+        
+    	if(internalOrganizationobjectArray[i].Logo.Url==undefined)
+		{
+		imagehtml='';
+		}
+		else
+		{
+		imagehtml='<img src="'+internalOrganizationobjectArray[i].Logo.Url+'" width="150" style="width: 100%; max-width: 150px;">';
+		}
+		
+		 if(internalOrganizationobjectArray[i].VideoURL.length>0)
+		 {
+		 
+		 videoURL=internalOrganizationobjectArray[i].VideoURL;
+
+		 videoHTML='</br><span style="font-weight:bold">Watch Video: </span><span style="font-size: 11.5pt; color: #4c4c4c;"><a href="'+videoURL+'" target="_blank" style="font-size: 11.5pt;font-size: 11.5pt;color:#52D0DD;" >Click here</a></span>';
+		 }
+		 else
+		 {
+		 videoHTML='';
+		 }
+
+		
+		if(divBorderCount==1)
+		{
+    	divContent='<div style="font-size: 11.5pt; color: #4c4c4c;margin-left:0px;margin-bottom:10px;margin:10px;line-height: 18pt;font-family:arial;">&nbsp;&nbsp;'+imagehtml+''+
+					'</br></br><span style="font-weight:bold;font-family:arial;">Industry: </span><span style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;">'+internalOrganizationobjectArray[i].Industry+'</span>'+
+					'</br><span style="font-weight:bold;font-family:arial;">CSD: </span><span style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;">'+internalOrganizationobjectArray[i].CSD+'</span>'+
+					 videoHTML+
+					'</br><span class="MsoNormal"><a href="'+internalOrganizationobjectArray[i].ChatterLink+'" target="_blank"><span style="font-size: 11.5pt;color:#52D0DD;">Read the details</span></a></br></div>';
+		}
+		else
+		{
+		
+		divContent+='<div style="border-top:solid windowtext 1.0pt;font-size: 11.5pt; color: #4c4c4c;margin-left:0px;margin-bottom:10px;;margin:10px;line-height: 18pt;font-family:arial;">'+imagehtml+''+
+					'</br></br><span style="font-weight:bold;font-family:arial;">Industry: </span><span style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;">'+internalOrganizationobjectArray[i].Industry+'</span>'+
+					'</br><span style="font-weight:bold;font-family:arial;">CSD: </span><span style="font-size: 11.5pt; color: #4c4c4c;font-family:arial;">'+internalOrganizationobjectArray[i].CSD+'</span>'+
+					videoHTML+
+					'<br><span class="MsoNormal"><a href="'+internalOrganizationobjectArray[i].ChatterLink+'" target="_blank"><span style="font-size: 11.5pt;color:#52D0DD;font-family:arial;margin-bottom:15pt;">Read the details</span></a></br></div>';
+		}
+		
+					
+    }
+}
+
+return divContent;
+
+}
+
+
+function winningWaysValidations()
+{
+
+	var publishedDate= $(".dpPublishedDate").val().trim();
+	$('#spanPublishedDateValidateMsg').text('');
+	
+	if (publishedDate=='')
+	{
+	$('#spanPublishedDateValidateMsg').text("Date Published must be Selected.");
+	return false;
+	}
+	else 
+	{
+		return true; 
+	}
+
+}
+
+ function sendWinningWaysEmail()
+ {
+ 	 	
+ 	 	if($('#divWinningWaysEmail').html().length>0 && emailFrom.length>0 && emailTo.length >0)
+ 	 	{
+
+ 	    $('#divWinningWaysEmail').css("width","45%");
+ 	   
+ 		var constructedURL = _spPageContextInfo.webAbsoluteUrl+ "/_api/SP.Utilities.Utility.SendEmail";
+    
+        $.ajax({  
+       contentType: "text/html; charset=utf-8",
+        url: constructedURL,  
+        type: "POST",  
+        data: JSON.stringify({  
+            'properties': {  
+                '__metadata': { 'type': 'SP.Utilities.EmailProperties' },  
+                'From': emailFrom,  
+                //'To': { 'results': [emailTo]}, 
+                'To': { 'results': emailTo},
+                'Body':$('#divWinningWaysEmail').html(),                              
+                'Subject': SubjectOfEmail   
+            }  
+        }  
+      ),  
+        headers: {  
+            "Accept": "application/json;odata=verbose",  
+            "content-type": "application/json;odata=verbose",  
+            "X-RequestDigest": $("#__REQUESTDIGEST").val()  
+        },  
+        success: function (data) {  
+            alert('Winning Ways Email Sent Successfully');  
+          },  
+        error: function (err) {  
+            alert('sendWinningWaysEmail(): Error in sending Email: ' + JSON.stringify(err));  
+          }  
+    }); 
+    }
+    else
+    {
+    alert("Invalid Published Date / All winningWays are may archived.");
+    }
+    
+ }
+  
+	
+ /*Array Unique */
+  function uniqueArray(list) {
+        var result = [];
+        $.each(list, function (i, e) {
+            if ($.inArray(e, result) == -1) result.push(e);
+        });
+        return result;
+    }
+  
+    
+</script>  
+
+
+
+<div id="divWeeklyCommunications">
+
+<table width="50%">
+
+<tr>
+<td style="vertical-align: text-bottom;width:20%"  >
+  <span>Date Published <span style="color:red">*</span></span>
+</td>
+<td style="padding-left:10px;">
+<input type="text" id="dpPublishedDate"  class="dpPublishedDate" style="width: 34%;">
+<p><span style="color:red" id="spanPublishedDateValidateMsg"></span></p>
+</td>
+</tr>
+
+<tr>
+<td>
+<span></span>
+</td>
+<td>
+<input type="button" text="Preview winningWays" id="previewwinningWays" title="Preview winningWays" value="Preview winningWays">
+<input type="button" text="Send winningWays" id="sendwinningWays" title="Generate winningWays" value="Send winningWays" disabled="disabled" >
+</td>
+</tr>
+
+</table >
+
+<div id="divPreviewwinningWays"></div>
+<div id="divWinningWaysEmail" style="display:none"></div>
+</div>
+

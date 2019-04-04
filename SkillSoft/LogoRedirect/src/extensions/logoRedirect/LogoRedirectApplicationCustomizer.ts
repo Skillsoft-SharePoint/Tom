@@ -33,56 +33,52 @@ export default class LogoRedirectApplicationCustomizer
   extends BaseApplicationCustomizer<ILogoRedirectApplicationCustomizerProperties> {
     //newer
     //private _externalJsUrl: string = "https://sharepointnutsandbolts.azurewebsites.net/scripts/SPFxGlobalScript.js";
+
+    /* The following line has a the changelinks.js file. tis location on the tennat is where it pulls from, the file
+    in this project is located in the src/extensions/LogoRedirect/Loc folder */
     private _externalJsUrl: string = "https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/changeLink.js";
 
+    @override
+    public onInit(): Promise<void> {
+      Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
-  @override
-  public onInit(): Promise<void> {
-    Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
+      //newer
+      let scriptTag: HTMLScriptElement = document.createElement("script");
+      scriptTag.src =this._externalJsUrl; // this._externalJsUrl;
+      scriptTag.type = "text/javascript";
+      scriptTag.id = "test";
+      //scriptTag.innerHTML="alert('test');";
+      //scriptTag.innerHTML='var LogoLink = document.querySelectorAll("[href=https://skillsoft.sharepoint.com/sites/Marketing]);LogoLink[1].setAttribute(&dquohref&dquo,&dquohttps://connect.int.skillsoft.com&dquo);';
+      
+      document.getElementsByTagName("head")[0].appendChild(scriptTag);
+            
+      //Dialog.alert(`${test[0].innerHTML.toString()}`);
+      // new function
+      /*
+      console.log("Available placeholders: ",
+        this.context.placeholderProvider.placeholderNames.join(", "));
 
-    //newer
-    
-    let scriptTag: HTMLScriptElement = document.createElement("script");
-    scriptTag.src =this._externalJsUrl; // this._externalJsUrl;
-    scriptTag.type = "text/javascript";
-    scriptTag.id = "test";
-    //scriptTag.innerHTML="alert('test');";
-    //scriptTag.innerHTML='var LogoLink = document.querySelectorAll("[href=https://skillsoft.sharepoint.com/sites/Marketing]);LogoLink[1].setAttribute(&dquohref&dquo,&dquohttps://connect.int.skillsoft.com&dquo);';
-    //scriptTag.innerHTML=this._externalJsUrl.toString();
-    //Dialog.alert(`${scriptTag.innerHTML.toString()}`);
-    document.getElementsByTagName("head")[0].appendChild(scriptTag);
-    //Dialog.alert(`JS URL : ${this._externalJsUrl} :`);
-    //Dialog.alert(` innerHTML= ${document.getElementsByTagName("head")[0].innerHTML.toString()}`);
-    //let test =  document.getElementsByTagName("head");
-    let JSscript = "";
-    
-    //Dialog.alert(`${test[0].innerHTML.toString()}`);
-    // new function
-    /*
-    console.log("Available placeholders: ",
-      this.context.placeholderProvider.placeholderNames.join(", "));
+        // top placeholder..
+      let topPlaceholder: PlaceholderContent = this.context.placeholderProvider.tryCreateContent(PlaceholderName.Top);
+      if (topPlaceholder) {
+        topPlaceholder.domElement.innerHTML = `<div id="new header">
+                    <div id="new inner div">
+                      <i aria-hidden="true"></i>&nbsp; ${escape(HEADER_TEXT)}
+                    </div>
+                  </div>`;
+      }
+      */
 
-       // top placeholder..
-    let topPlaceholder: PlaceholderContent = this.context.placeholderProvider.tryCreateContent(PlaceholderName.Top);
-    if (topPlaceholder) {
-      topPlaceholder.domElement.innerHTML = `<div id="new header">
-                  <div id="new inner div">
-                    <i aria-hidden="true"></i>&nbsp; ${escape(HEADER_TEXT)}
-                  </div>
-                </div>`;
-    }
-    */
-
-    //Old function
+      //Old function
+      /*
+      let message: string = this.properties.testMessage;
+      if (!message) {
+        message = '(No properties were provided.)';
+      }
+      */
+      //Dialog.alert(`Hello from ${strings.Title}:\n\n${message}`);
+      
     
-    let message: string = this.properties.testMessage;
-    if (!message) {
-      message = '(No properties were provided.)';
-    }
-    
-    //Dialog.alert(`Hello from ${strings.Title}:\n\n${message}`);
-    
-  
-    return Promise.resolve<void>(); //org had no <void>
+      return Promise.resolve<void>(); //org had no <void>
   }
 }

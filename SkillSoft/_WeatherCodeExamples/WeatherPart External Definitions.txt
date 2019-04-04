@@ -1,0 +1,15 @@
+src\webparts\skillSoftWeatherWebPart\loc
+
+
+    "jquery-ui": {
+      "path": "https://code.jquery.com/ui/1.12.1/jquery-ui.min.js",
+      "globalName": "jQueryUI"
+    },
+    "GEOScript": {
+    "path": "https://localhost:5432/geolocation.js",
+    "globalName": "geoScript" 
+    },
+    "jquery": {
+      "path": "https://code.jquery.com/jquery-1.12.4.min.js",
+      "globalName": "jQuery"
+    }
