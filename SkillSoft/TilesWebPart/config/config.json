@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "tiles-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/tilesWebPart/TilesWebPartWebPart.js",
+          "manifest": "./src/webparts/tilesWebPart/TilesWebPartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TilesWebPartWebPartStrings": "lib/webparts/tilesWebPart/loc/{locale}.js"
+  }
+}

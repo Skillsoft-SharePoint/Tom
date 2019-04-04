@@ -6,18 +6,18 @@ import {
 } from '@microsoft/sp-webpart-base';
 import { escape } from '@microsoft/sp-lodash-subset';
 
-import styles from './SkillSoftMarketingTilesWebPartWebPart.module.scss';
-import * as strings from 'SkillSoftMarketingTilesWebPartWebPartStrings';
+import styles from './TilesWebPartWebPart.module.scss';
+import * as strings from 'TilesWebPartWebPartStrings';
 
-export interface ISkillSoftMarketingTilesWebPartWebPartProps {
+export interface ITilesWebPartWebPartProps {
   description: string;
 }
 
-export default class SkillSoftMarketingTilesWebPartWebPart extends BaseClientSideWebPart<ISkillSoftMarketingTilesWebPartWebPartProps> {
+export default class TilesWebPartWebPart extends BaseClientSideWebPart<ITilesWebPartWebPartProps> {
 
   public render(): void {
     this.domElement.innerHTML = `
-      <div class="${ styles.skillSoftMarketingTilesWebPart }">
+      <div class="${ styles.tilesWebPart }">
         <div class="${ styles.container }">
           <div class="${ styles.row }">
             <div class="${ styles.column }">
