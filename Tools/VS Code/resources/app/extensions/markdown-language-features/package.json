@@ -116,6 +116,12 @@
 			}, {
 				"command": "markdown.preview.toggleLock",
 				"when": "markdownPreviewFocus"
+			}, {
+				"command": "markdown.preview.refresh",
+				"when": "editorLangId == markdown"
+			}, {
+				"command": "markdown.preview.refresh",
+				"when": "markdownPreviewFocus"
 			}]
 		},
 		"keybindings": [{

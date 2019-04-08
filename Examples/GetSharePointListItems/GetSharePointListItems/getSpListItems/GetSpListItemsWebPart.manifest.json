@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "0795466b-8dc6-4e6c-b9e1-e38fe9c390c1",
+  "alias": "GetSpListItemsWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "0795466b-8dc6-4e6c-b9e1-e38fe9c390c1",
+    "group": { "default": "Under Development" },
+    "title": { "default": "GetSPListItems" },
+    "description": { "default": "This WebPart will retrieve list items form SharePoint List and display in a table" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "GetSPListItems"
+    }
+  }]
+}
