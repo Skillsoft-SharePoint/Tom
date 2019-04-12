@@ -32,7 +32,9 @@ export interface ISPLists {
   value: ISPList[];  
 }  
 export interface ISPList {  
-  TileTitle: string;  
+  TileTitle: string;
+  TileLink: string;  
+  TileImage: string;
   TileColcor: string;  
 }    
 // import classes
@@ -48,9 +50,9 @@ export default class TilesWebPartWebPart extends BaseClientSideWebPart<ITilesWeb
         const listData: ISPLists = {  
             value:  
             [  
-                { TileTitle: 'Test One', TileColcor: 'Green' },  
-                { TileTitle: 'Test Two', TileColcor: 'Red' },  
-                { TileTitle: 'Test Three', TileColcor: 'Blue'  }  
+                { TileTitle: 'Test One', TileLink: 'link one', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Green' },  
+                { TileTitle: 'Test Two', TileLink: 'link two', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Red' },  
+                { TileTitle: 'Test Three', TileLink: 'link three ', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Blue'  }  
             ]  
             };  
         return listData;  
@@ -58,7 +60,7 @@ export default class TilesWebPartWebPart extends BaseClientSideWebPart<ITilesWeb
   }   
 
   private _getListData(): Promise<ISPLists> {  
-    return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists/GetByTitle('EmployeeList')/Items`, SPHttpClient.configurations.v1)  
+    return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists/GetByTitle('TileList')/Items`, SPHttpClient.configurations.v1)  
         .then((response:SPHttpClientResponse) => {
           debugger;  
           return response.json();  
@@ -82,15 +84,39 @@ export default class TilesWebPartWebPart extends BaseClientSideWebPart<ITilesWeb
 
   private _renderList(items: ISPList[]): void {  
     let html: string = '<table class="TFtable" border=1 width=100% style="border-collapse: collapse;">';  
-    html += `<th>Tile Title</th><th>Tile Color</th>`;  
+    html += `<!-- <th>Complete Tile</th><th>Tile Title</th><th>Link</th><th>Tile Color</th> -->`; 
+    let x=0; 
     items.forEach((item: ISPList) => {  
-      html += `  
+      x += 1;
+      /*html += `  
           <tr>  
-              <td>${item.TileTitle}</td>  
+              <td>${item.TileTitle}</td>
+              <td>${item.TileLink}</td>  
               <td>${item.TileColcor}</td>  
           </tr>  
+          `;*/
+
+      //build tiles
+      //<tr> -- </tr> every 4th <td> -- </td>
+      if (x === 1) {html += `<tr>`};
+      html += `  
+           
+              <td width='25%'>
+                  <a href='${item.TileLink}'>
+                    <img width='100%' src='${item.TileImage}'>
+                    </img>
+                  </a>
+              </td> 
+              <!--
+                <td>${item.TileTitle} iteration : ${x} </td>
+                <td>${item.TileLink}</td>  
+                <td>${item.TileColcor}</td>  
+              -->
           `;  
+         
+      if (x === 4){x=0};    
     });  
+    if (x=1){html += `<tr>`};
     html += `</table>`;  
     const listContainer: Element = this.domElement.querySelector('#spListContainer');  
     listContainer.innerHTML = html;  
