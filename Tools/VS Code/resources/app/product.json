@@ -676,14 +676,14 @@
 		"atlassian.atlascode"
 	],
 	"experimentsUrl": "https://az764295.vo.msecnd.net/experiments/vscode-experiments.json",
-	"commit": "0dd516dd412d42323fc3464531b1c715d51c4c1a",
-	"date": "2019-04-04T15:14:28.026Z",
+	"commit": "51b0b28134d51361cf996d2f0a1c698247aeabd8",
+	"date": "2019-04-11T08:27:14.102Z",
 	"checksums": {
-		"vs/workbench/workbench.main.js": "jFEuP6iG1E9W8MQGpAlo3g",
+		"vs/workbench/workbench.main.js": "t6msGUybSa6gEecr2NonOA",
 		"vs/workbench/workbench.main.css": "nwBEYJ8Wy6bIWrTxUR9+2A",
 		"vs/code/electron-browser/workbench/workbench.html": "Y8BvBQi1xSh2Vfn5IrTtGw",
-		"vs/code/electron-browser/workbench/workbench.js": "Ze4VxwzORJ5pH7firyq6Gw"
+		"vs/code/electron-browser/workbench/workbench.js": "8YAbONNLLI/Z+wc8N1fkLA"
 	},
-	"settingsSearchBuildId": 1330000478800,
+	"settingsSearchBuildId": 1330100478980,
 	"target": "user"
 }

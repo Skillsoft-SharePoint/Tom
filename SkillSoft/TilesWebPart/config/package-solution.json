@@ -1,9 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "tiles-web-part-client-side-solution",
+    "name": "SkillSoft Tiles Webpart",
     "id": "01bb9cbb-e33b-4ca3-a1f2-14cd82c7853b",
-    "version": "1.0.0.0",
+    "version": "3.0.0.0",
     "includeClientSideAssets": true
   },
   "paths": {

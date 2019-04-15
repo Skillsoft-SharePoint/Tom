@@ -946,6 +946,24 @@
 			"vscode.extension.contributes.localizations.translations.id.pattern",
 			"vscode.extension.contributes.localizations.translations.path"
 		],
+		"vs/workbench/contrib/preferences/browser/keybindingsEditorContribution": [
+			"defineKeybinding.start",
+			"defineKeybinding.kbLayoutErrorMessage",
+			{
+				"key": "defineKeybinding.kbLayoutLocalAndUSMessage",
+				"comment": [
+					"Please translate maintaining the stars (*) around the placeholders such that they will be rendered in bold.",
+					"The placeholders will contain a keyboard combination e.g. Ctrl+Shift+/"
+				]
+			},
+			{
+				"key": "defineKeybinding.kbLayoutLocalMessage",
+				"comment": [
+					"Please translate maintaining the stars (*) around the placeholder such that it will be rendered in bold.",
+					"The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/"
+				]
+			}
+		],
 		"vs/workbench/contrib/files/browser/files.contribution": [
 			"showExplorerViewlet",
 			"explore",
@@ -1037,24 +1055,6 @@
 				"key": "miViewExplorer",
 				"comment": [
 					"&& denotes a mnemonic"
-				]
-			}
-		],
-		"vs/workbench/contrib/preferences/browser/keybindingsEditorContribution": [
-			"defineKeybinding.start",
-			"defineKeybinding.kbLayoutErrorMessage",
-			{
-				"key": "defineKeybinding.kbLayoutLocalAndUSMessage",
-				"comment": [
-					"Please translate maintaining the stars (*) around the placeholders such that they will be rendered in bold.",
-					"The placeholders will contain a keyboard combination e.g. Ctrl+Shift+/"
-				]
-			},
-			{
-				"key": "defineKeybinding.kbLayoutLocalMessage",
-				"comment": [
-					"Please translate maintaining the stars (*) around the placeholder such that it will be rendered in bold.",
-					"The placeholder will contain a keyboard combination e.g. Ctrl+Shift+/"
 				]
 			}
 		],
@@ -2218,6 +2218,12 @@
 				]
 			}
 		],
+		"vs/workbench/contrib/codeEditor/browser/toggleMultiCursorModifier": [
+			"toggleLocation",
+			"miMultiCursorAlt",
+			"miMultiCursorCmd",
+			"miMultiCursorCtrl"
+		],
 		"vs/workbench/contrib/codeEditor/browser/toggleRenderControlCharacter": [
 			"toggleRenderControlCharacters",
 			{
@@ -2226,12 +2232,6 @@
 					"&& denotes a mnemonic"
 				]
 			}
-		],
-		"vs/workbench/contrib/codeEditor/browser/toggleMultiCursorModifier": [
-			"toggleLocation",
-			"miMultiCursorAlt",
-			"miMultiCursorCmd",
-			"miMultiCursorCtrl"
 		],
 		"vs/workbench/contrib/codeEditor/browser/toggleRenderWhitespace": [
 			"toggleRenderWhitespace",
@@ -3092,6 +3092,7 @@
 			"terminal.ansiColor"
 		],
 		"vs/workbench/contrib/format/browser/formatActionsMultiple": [
+			"nullFormatterDescription",
 			"miss",
 			"config.needed",
 			"config.bad",
@@ -3304,14 +3305,14 @@
 			"ariaCompositeToolbarLabel",
 			"titleTooltip"
 		],
+		"vs/workbench/browser/parts/editor/editorWidgets": [
+			"openWorkspace"
+		],
 		"vs/workbench/contrib/preferences/browser/keybindingWidgets": [
 			"defineKeybinding.oneExists",
 			"defineKeybinding.existing",
 			"defineKeybinding.initial",
 			"defineKeybinding.chordsTo"
-		],
-		"vs/workbench/browser/parts/editor/editorWidgets": [
-			"openWorkspace"
 		],
 		"vs/workbench/browser/actions/workspaceCommands": [
 			"addFolderToWorkspace",
@@ -3443,11 +3444,11 @@
 			"app.extensions.json.unwantedRecommendations",
 			"app.extension.identifier.errorMessage"
 		],
-		"vs/workbench/contrib/extensions/electron-browser/extensionsActivationProgress": [
-			"activation"
-		],
 		"vs/workbench/contrib/extensions/electron-browser/runtimeExtensionsInput": [
 			"extensionsInputName"
+		],
+		"vs/workbench/contrib/extensions/electron-browser/extensionsActivationProgress": [
+			"activation"
 		],
 		"vs/workbench/contrib/extensions/electron-browser/extensionsDependencyChecker": [
 			"extensions",
@@ -3721,14 +3722,6 @@
 			"saveElevatedSudo",
 			"overwrite"
 		],
-		"vs/workbench/contrib/stats/node/workspaceStats": [
-			"never again",
-			"workspaceFound",
-			"openWorkspace",
-			"workspacesFound",
-			"selectWorkspace",
-			"selectToOpen"
-		],
 		"vs/platform/theme/common/colorRegistry": [
 			"foreground",
 			"errorForeground",
@@ -3846,6 +3839,14 @@
 			"overviewRulerCommonContentForeground",
 			"overviewRulerFindMatchForeground",
 			"overviewRulerSelectionHighlightForeground"
+		],
+		"vs/workbench/contrib/stats/node/workspaceStats": [
+			"never again",
+			"workspaceFound",
+			"openWorkspace",
+			"workspacesFound",
+			"selectWorkspace",
+			"selectToOpen"
 		],
 		"vs/workbench/contrib/search/browser/searchPanel": [
 			"search"
@@ -5243,6 +5244,9 @@
 			"breakpointAdded",
 			"breakpointRemoved"
 		],
+		"vs/base/browser/ui/findinput/findInput": [
+			"defaultLabel"
+		],
 		"vs/workbench/contrib/debug/common/debugModel": [
 			"notAvailable",
 			"startDebugFirst",
@@ -5260,9 +5264,6 @@
 				]
 			},
 			"breakpointDirtydHover"
-		],
-		"vs/base/browser/ui/findinput/findInput": [
-			"defaultLabel"
 		],
 		"vs/workbench/contrib/extensions/electron-browser/extensionTipsService": [
 			"neverShowAgain",
@@ -5641,6 +5642,14 @@
 		"vs/workbench/browser/parts/notifications/notificationsToasts": [
 			"notificationsToast"
 		],
+		"vs/workbench/services/preferences/common/keybindingsEditorModel": [
+			"default",
+			"user",
+			"cat.title",
+			"cat.title",
+			"meta",
+			"option"
+		],
 		"vs/workbench/services/preferences/common/preferencesModels": [
 			"commonlyUsed",
 			"validations.exclusiveMax",
@@ -5654,14 +5663,6 @@
 			"validations.regex",
 			"validations.expectedNumeric",
 			"defaultKeybindingsHeader"
-		],
-		"vs/workbench/services/preferences/common/keybindingsEditorModel": [
-			"default",
-			"user",
-			"cat.title",
-			"cat.title",
-			"meta",
-			"option"
 		],
 		"vs/workbench/contrib/extensions/electron-browser/extensionsViews": [
 			"extensions",
@@ -6490,11 +6491,11 @@
 		"vs/workbench/api/node/extHost.api.impl": [
 			"extensionsLog"
 		],
-		"vs/base/browser/ui/menu/menubar": [
-			"mMore"
-		],
 		"vs/workbench/browser/parts/editor/binaryDiffEditor": [
 			"metadataDiff"
+		],
+		"vs/base/browser/ui/menu/menubar": [
+			"mMore"
 		],
 		"vs/workbench/contrib/preferences/browser/settingsLayout": [
 			"commonlyUsed",
@@ -6536,6 +6537,13 @@
 			"externalCommand",
 			"Maven"
 		],
+		"vs/workbench/contrib/tasks/browser/quickOpen": [
+			"entryAriaLabel",
+			"recentlyUsed",
+			"configured",
+			"detected",
+			"customizeTask"
+		],
 		"vs/workbench/contrib/tasks/node/processRunnerDetector": [
 			"TaskSystemDetector.noGulpTasks",
 			"TaskSystemDetector.noJakeTasks",
@@ -6545,13 +6553,6 @@
 			"TaskSystemDetector.noProgram",
 			"TaskSystemDetector.buildTaskDetected",
 			"TaskSystemDetector.testTaskDetected"
-		],
-		"vs/workbench/contrib/tasks/browser/quickOpen": [
-			"entryAriaLabel",
-			"recentlyUsed",
-			"configured",
-			"detected",
-			"customizeTask"
 		],
 		"vs/workbench/contrib/tasks/electron-browser/runAutomaticTasks": [
 			"tasks.run.allowAutomatic",
@@ -8216,6 +8217,12 @@
 			"Id should be `vscode` or in format `publisherId.extensionName` for translating VS code or an extension respectively.",
 			"A relative path to a file containing translations for the language."
 		],
+		"vs/workbench/contrib/preferences/browser/keybindingsEditorContribution": [
+			"Define Keybinding",
+			"You won't be able to produce this key combination under your current keyboard layout.",
+			"**{0}** for your current keyboard layout (**{1}** for US standard).",
+			"**{0}** for your current keyboard layout."
+		],
 		"vs/workbench/contrib/files/browser/files.contribution": [
 			"Show Explorer",
 			"Explorer",
@@ -8269,12 +8276,6 @@
 			"Controls whether file decorations should use colors.",
 			"Controls whether file decorations should use badges.",
 			"&&Explorer"
-		],
-		"vs/workbench/contrib/preferences/browser/keybindingsEditorContribution": [
-			"Define Keybinding",
-			"You won't be able to produce this key combination under your current keyboard layout.",
-			"**{0}** for your current keyboard layout (**{1}** for US standard).",
-			"**{0}** for your current keyboard layout."
 		],
 		"vs/workbench/contrib/terminal/browser/terminalPanel": [
 			"Use 'monospace'",
@@ -9010,15 +9011,15 @@
 			"View: Toggle Minimap",
 			"Toggle &&Minimap"
 		],
-		"vs/workbench/contrib/codeEditor/browser/toggleRenderControlCharacter": [
-			"View: Toggle Control Characters",
-			"Toggle &&Control Characters"
-		],
 		"vs/workbench/contrib/codeEditor/browser/toggleMultiCursorModifier": [
 			"Toggle Multi-Cursor Modifier",
 			"Switch to Alt+Click for Multi-Cursor",
 			"Switch to Cmd+Click for Multi-Cursor",
 			"Switch to Ctrl+Click for Multi-Cursor"
+		],
+		"vs/workbench/contrib/codeEditor/browser/toggleRenderControlCharacter": [
+			"View: Toggle Control Characters",
+			"Toggle &&Control Characters"
 		],
 		"vs/workbench/contrib/codeEditor/browser/toggleRenderWhitespace": [
 			"View: Toggle Render Whitespace",
@@ -9722,6 +9723,7 @@
 			"'{0}' ANSI color in the terminal."
 		],
 		"vs/workbench/contrib/format/browser/formatActionsMultiple": [
+			"None",
 			"Extension '{0}' cannot format '{1}'",
 			"There are multiple formatters for {0}-files. Select a default formatter to continue.",
 			"Extension '{0}' is configured as formatter but not available. Select a different default formatter to continue.",
@@ -9904,14 +9906,14 @@
 			"{0} actions",
 			"{0} ({1})"
 		],
+		"vs/workbench/browser/parts/editor/editorWidgets": [
+			"Open Workspace"
+		],
 		"vs/workbench/contrib/preferences/browser/keybindingWidgets": [
 			"1 existing command has this keybinding",
 			"{0} existing commands have this keybinding",
 			"Press desired key combination and then press ENTER.",
 			"chord to"
-		],
-		"vs/workbench/browser/parts/editor/editorWidgets": [
-			"Open Workspace"
 		],
 		"vs/workbench/browser/actions/workspaceCommands": [
 			"Add Folder to Workspace...",
@@ -10038,11 +10040,11 @@
 			"List of extensions recommended by VS Code that should not be recommended for users of this workspace. The identifier of an extension is always '${publisher}.${name}'. For example: 'vscode.csharp'.",
 			"Expected format '${publisher}.${name}'. Example: 'vscode.csharp'."
 		],
-		"vs/workbench/contrib/extensions/electron-browser/extensionsActivationProgress": [
-			"Activating Extensions..."
-		],
 		"vs/workbench/contrib/extensions/electron-browser/runtimeExtensionsInput": [
 			"Running Extensions"
+		],
+		"vs/workbench/contrib/extensions/electron-browser/extensionsActivationProgress": [
+			"Activating Extensions..."
 		],
 		"vs/workbench/contrib/extensions/electron-browser/extensionsDependencyChecker": [
 			"Extensions",
@@ -10280,14 +10282,6 @@
 			"Retry as Sudo...",
 			"Overwrite"
 		],
-		"vs/workbench/contrib/stats/node/workspaceStats": [
-			"Don't Show Again",
-			"This folder contains a workspace file '{0}'. Do you want to open it? [Learn more]({1}) about workspace files.",
-			"Open Workspace",
-			"This folder contains multiple workspace files. Do you want to open one? [Learn more]({0}) about workspace files.",
-			"Select Workspace",
-			"Select a workspace to open"
-		],
 		"vs/platform/theme/common/colorRegistry": [
 			"Overall foreground color. This color is only used if not overridden by a component.",
 			"Overall foreground color for error messages. This color is only used if not overridden by a component.",
@@ -10405,6 +10399,14 @@
 			"Common ancestor overview ruler foreground for inline merge-conflicts.",
 			"Overview ruler marker color for find matches. The color must not be opaque so as not to hide underlying decorations.",
 			"Overview ruler marker color for selection highlights. The color must not be opaque so as not to hide underlying decorations."
+		],
+		"vs/workbench/contrib/stats/node/workspaceStats": [
+			"Don't Show Again",
+			"This folder contains a workspace file '{0}'. Do you want to open it? [Learn more]({1}) about workspace files.",
+			"Open Workspace",
+			"This folder contains multiple workspace files. Do you want to open one? [Learn more]({0}) about workspace files.",
+			"Select Workspace",
+			"Select a workspace to open"
 		],
 		"vs/workbench/contrib/search/browser/searchPanel": [
 			"Search"
@@ -11430,6 +11432,9 @@
 			"Added breakpoint, line {0}, file {1}",
 			"Removed breakpoint, line {0}, file {1}"
 		],
+		"vs/base/browser/ui/findinput/findInput": [
+			"input"
+		],
 		"vs/workbench/contrib/debug/common/debugModel": [
 			"not available",
 			"Please start a debug session to evaluate expressions",
@@ -11437,9 +11442,6 @@
 			"Paused",
 			"Running",
 			"Unverified breakpoint. File is modified, please restart debug session."
-		],
-		"vs/base/browser/ui/findinput/findInput": [
-			"input"
 		],
 		"vs/workbench/contrib/extensions/electron-browser/extensionTipsService": [
 			"Don't Show Again",
@@ -11789,6 +11791,14 @@
 		"vs/workbench/browser/parts/notifications/notificationsToasts": [
 			"Notification Toast"
 		],
+		"vs/workbench/services/preferences/common/keybindingsEditorModel": [
+			"Default",
+			"User",
+			"{0}: {1}",
+			"{0}: {1}",
+			"meta",
+			"option"
+		],
 		"vs/workbench/services/preferences/common/preferencesModels": [
 			"Commonly Used",
 			"Value must be strictly less than {0}.",
@@ -11802,14 +11812,6 @@
 			"Value must match regex `{0}`.",
 			"Value must be a number.",
 			"Override key bindings by placing them into your key bindings file."
-		],
-		"vs/workbench/services/preferences/common/keybindingsEditorModel": [
-			"Default",
-			"User",
-			"{0}: {1}",
-			"{0}: {1}",
-			"meta",
-			"option"
 		],
 		"vs/workbench/contrib/extensions/electron-browser/extensionsViews": [
 			"Extensions",
@@ -12348,11 +12350,11 @@
 		"vs/workbench/api/node/extHost.api.impl": [
 			"Extension Host"
 		],
-		"vs/base/browser/ui/menu/menubar": [
-			"..."
-		],
 		"vs/workbench/browser/parts/editor/binaryDiffEditor": [
 			"{0} ↔ {1}"
+		],
+		"vs/base/browser/ui/menu/menubar": [
+			"..."
 		],
 		"vs/workbench/contrib/preferences/browser/settingsLayout": [
 			"Commonly Used",
@@ -12394,6 +12396,13 @@
 			"Example to run an arbitrary external command",
 			"Executes common maven commands"
 		],
+		"vs/workbench/contrib/tasks/browser/quickOpen": [
+			"{0}, tasks",
+			"recently used tasks",
+			"configured tasks",
+			"detected tasks",
+			"Configure Task"
+		],
 		"vs/workbench/contrib/tasks/node/processRunnerDetector": [
 			"Running gulp --tasks-simple didn't list any tasks. Did you run npm install?",
 			"Running jake --tasks didn't list any tasks. Did you run npm install?",
@@ -12403,13 +12412,6 @@
 			"Program {0} was not found. Message is {1}",
 			"Build task named '{0}' detected.",
 			"Test task named '{0}' detected."
-		],
-		"vs/workbench/contrib/tasks/browser/quickOpen": [
-			"{0}, tasks",
-			"recently used tasks",
-			"configured tasks",
-			"detected tasks",
-			"Configure Task"
 		],
 		"vs/workbench/contrib/tasks/electron-browser/runAutomaticTasks": [
 			"This folder has tasks ({0}) defined in 'tasks.json' that run automatically when you open this folder. Do you allow automatic tasks to run when you open this folder?",
