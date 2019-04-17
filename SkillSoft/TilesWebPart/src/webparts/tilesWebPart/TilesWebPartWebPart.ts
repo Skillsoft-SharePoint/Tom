@@ -51,7 +51,7 @@ export default class TilesWebPartWebPart extends BaseClientSideWebPart<ITilesWeb
             value:  
             [  
                 { TileTitle: 'Test One', TileLink: 'link one', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Green' },  
-                { TileTitle: 'Test Two', TileLink: 'link two', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Red' },  
+                { TileTitle: 'Test Two', TileLink: 'blank', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Red' },  
                 { TileTitle: 'Test Three', TileLink: 'link three ', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Blue'  }  
             ]  
             };  
@@ -83,11 +83,14 @@ export default class TilesWebPartWebPart extends BaseClientSideWebPart<ITilesWeb
   }     
 
   private _renderList(items: ISPList[]): void {  
-    let html: string = '<table class="TFtable" border=1 width=100% style="border-collapse: collapse;">';  
+    let html: string = '<table class="TFtable" width=100% style="border-collapse: collapse;">';  
     html += `<!-- <th>Complete Tile</th><th>Tile Title</th><th>Link</th><th>Tile Color</th> -->`; 
     let x=0; 
+    
+
     items.forEach((item: ISPList) => {  
       x += 1;
+      let href: string = '';
       /*html += `  
           <tr>  
               <td>${item.TileTitle}</td>
@@ -99,13 +102,24 @@ export default class TilesWebPartWebPart extends BaseClientSideWebPart<ITilesWeb
       //build tiles
       //<tr> -- </tr> every 4th <td> -- </td>
       if (x === 1) {html += `<tr>`};
+      if (item.TileLink === 'blank') {
+        href +=`<img width='100%' src='${item.TileImage}'>`
+      } else {
+        href += `<a href='${item.TileLink}'>
+                  <img width='100%' src='${item.TileImage}'>
+                  </img>
+                </a>`
+      }
       html += `  
            
               <td width='25%'>
+                  ${href}
+                  <!--
                   <a href='${item.TileLink}'>
                     <img width='100%' src='${item.TileImage}'>
                     </img>
                   </a>
+                  -->
               </td> 
               <!--
                 <td>${item.TileTitle} iteration : ${x} </td>
