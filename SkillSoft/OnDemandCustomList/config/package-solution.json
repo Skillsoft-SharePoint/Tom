@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "onDemand-Site-custom-list-",
+    "id": "db8b03b1-d430-46bc-9c55-3a8de2a4318f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/onDemand-Site-custom-list.sppkg"
+  }
+}

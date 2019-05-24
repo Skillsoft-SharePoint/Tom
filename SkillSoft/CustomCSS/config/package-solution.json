@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "Inject Custom CSS",
+    "id": "b4f99323-7575-417b-920a-d6e43addf7b6",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "features": [
+      {
+        "title": "Inject Custom CSS",
+        "description": "Allow use of a custom .css file in the Site Assets library (custom.css)",
+        "id": "e8caedc0-f559-4fae-9f17-e34c17579f60",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml",
+            "clientsideinstance.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/custom-css.sppkg"
+  }
+}

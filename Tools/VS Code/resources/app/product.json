@@ -628,7 +628,7 @@
 	"checksumFailMoreInfoUrl": "https://go.microsoft.com/fwlink/?LinkId=828886",
 	"electronRepository": "Microsoft/vscode-electron-prebuilt",
 	"dependencies": {
-		"vsda": "git+https://monacotools.visualstudio.com/DefaultCollection/_git/vscode-debug-handshake#56d1294699f381fb20d7fedd6556ddf42a474073"
+		"vsda": "git+https://monacotools.visualstudio.com/DefaultCollection/_git/vscode-debug-handshake#31bf016d04d013bb9b86117232e53e3ebb015c27"
 	},
 	"settingsSearchUrl": "https://bingsettingssearch.trafficmanager.net/api/Search",
 	"surveys": [
@@ -676,14 +676,14 @@
 		"atlassian.atlascode"
 	],
 	"experimentsUrl": "https://az764295.vo.msecnd.net/experiments/vscode-experiments.json",
-	"commit": "51b0b28134d51361cf996d2f0a1c698247aeabd8",
-	"date": "2019-04-11T08:27:14.102Z",
+	"commit": "a622c65b2c713c890fcf4fbf07cf34049d5fe758",
+	"date": "2019-05-15T21:59:37.030Z",
 	"checksums": {
-		"vs/workbench/workbench.main.js": "t6msGUybSa6gEecr2NonOA",
-		"vs/workbench/workbench.main.css": "nwBEYJ8Wy6bIWrTxUR9+2A",
-		"vs/code/electron-browser/workbench/workbench.html": "Y8BvBQi1xSh2Vfn5IrTtGw",
-		"vs/code/electron-browser/workbench/workbench.js": "8YAbONNLLI/Z+wc8N1fkLA"
+		"vs/workbench/workbench.main.js": "To3FKOVoEI8FPYaMHNjIMQ",
+		"vs/workbench/workbench.main.css": "/pupCRNrXKWER3RRkIrl/Q",
+		"vs/code/electron-browser/workbench/workbench.html": "T31TI+IFKL4EsCW7IO3Hlw",
+		"vs/code/electron-browser/workbench/workbench.js": "qDJl6o1YrW+53Aw3VCaPvg"
 	},
-	"settingsSearchBuildId": 1330100478980,
+	"settingsSearchBuildId": 1340000491150,
 	"target": "user"
 }

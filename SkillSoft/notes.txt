@@ -1,0 +1,46 @@
+Forms#https://skillsoft.sharepoint.com/sites/HREMEA/SitePages/Forms.aspx
+
+Forms#https://skillsoft.sharepoint.com/sites/HREMEA/SitePages/Forms.aspx
+Forms#https://skillsoft.sharepoint.com/sites/HREMEA/SitePages/Forms.aspx
+
+Forms	Item	sites/HREMEA/Lists/Contents List
+
+../../SitePages/Policies.aspx
+../../SitePages/Policies.aspx
+../../SitePages/Forms.aspx
+../../SitePages/Benefits.aspx
+../../SitePages/HolidaySchedule.aspx
+../../SitePages/CommunityRelations.aspx
+../../SitePages/EducationalAssistance.aspx
+Educational Assistance
+
+https://skillsoft.sharepoint.com/sites/HREMEA/_layouts/15/listform.aspx?PageType=4&ListId=58589e8a-8524-49d5-8b64-bb06952babac&ID=1&ContentTypeID=0x01001EB42F2FC24ACD4D9093F5BEA8DEF8EB
+
+substring(variables('CompleteURL'),0,variables('Index'))
+
+
+substring(variables{'CompleteURL'),0,variables('Index'))
+
+https://skillsoft.sharepoint.com/sites/HRIndia/_layouts/15/viewlsts.aspx
+https://skillsoft.sharepoint.com/sites/HRIndia/_layouts/15/viewlsts.aspx
+
+Polices/Procedures
+Forms
+Benefits
+Holiday Schedule
+Community Relations
+Education Assistance
+
+/Style Library/Nexus/HTML/HomePage_HR_India.html
+
+/HRAPAC/INDIAVIDEOS/WeCare_FY19.mp4
+/HRAPAC/INDIAVIDEOS/WeCare_FY19/Preview Images/WeCare_FY19_mp4.png
+https://web.microsoftstream.com/embed/video/81e44073-0c95-4a11-99d2-e3fae6517c89?autoplay=false&amp;showinfo=false
+
+https://skillsoft.sharepoint.com/sites/HRIndia/SiteAssets/
+https://skillsoft.sharepoint.com/sites/HRIndia/SiteAssets/WeCare_FY19.mp4
+https://skillsoft.sharepoint.com/sites/HRAPAC/SiteAssets/__sitelogo____sitelogo__SkillsoftNexus_logo_2Color_white_rgb.png
+
+https://skillsoft.sharepoint.com/sites/MarketingTechDev/SiteAssets/__sitelogo____sitelogo__SkillsoftNexus_logo_2Color_white_rgb.png
+
+

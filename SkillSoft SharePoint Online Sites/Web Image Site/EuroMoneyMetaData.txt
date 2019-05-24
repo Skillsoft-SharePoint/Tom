@@ -1,0 +1,31 @@
+Description	Filename	Keywords	Product Title
+A twenty cent coin	euro0029.jpg	European Union|euro0029.jpg|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A two cent coin	euro0030.jpg	euro0030.jpg|European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A selection of Euro coins and notes	euro0021.jpg	European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro|euro0021.jpg	Euro Money
+A Euro coin	euro0028.jpg	European Union|Money|Euro Money|euro0028.jpg|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A stack of Euro coins	euro0022.jpg	European Union|Money|Euro Money|EU|Europe|Cash|euro0022.jpg|European|Photo_Volumes|Currency|Euro	Euro Money
+A stack of Euro coins with a five Euro note in the background	euro0023.jpg	European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|euro0023.jpg|Currency|Euro	Euro Money
+A two Euro coin	euro0024.jpg	European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro|euro0024.jpg	Euro Money
+A fifty cent coin	euro0025.jpg	European Union|Money|Euro Money|euro0025.jpg|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A selection of Euro coins	euro0019.jpg	European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro|euro0019.jpg	Euro Money
+A selection of Euro coins	euro0018.jpg	European Union|Money|Euro Money|euro0018.jpg|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A selection of Euro coins and notes	euro0020.jpg	European Union|Money|Euro Money|EU|Europe|Cash|euro0020.jpg|European|Photo_Volumes|Currency|Euro	Euro Money
+A five cent coin	euro0027.jpg	euro0027.jpg|European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A one cent coin	euro0026.jpg	European Union|euro0026.jpg|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+Euro notes	euro0016.jpg	European Union|Money|Euro Money|euro0016.jpg|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+Euro notes	euro0014.jpg	European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|euro0014.jpg|Euro	Euro Money
+Euro notes	euro0017.jpg	European Union|Money|Euro Money|euro0017.jpg|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+Euro notes	euro0015.jpg	European Union|Money|Euro Money|EU|euro0015.jpg|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+Euro notes	euro0012.jpg	European Union|Money|Euro Money|euro0012.jpg|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+Euro notes	euro0013.jpg	euro0013.jpg|European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A selection of Euro coins and notes	euro0009.jpg	euro0009.jpg|European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A selection of Euro coins and notes	euro0010.jpg	euro0010.jpg|European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A selection of Euro coins and notes	euro0006.jpg	European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro|euro0006.jpg	Euro Money
+A selection of Euro coins and notes	euro0008.jpg	European Union|Money|Euro Money|EU|Europe|Cash|euro0008.jpg|European|Photo_Volumes|Currency|Euro	Euro Money
+A selection of Euro coins	euro0005.jpg	European Union|Money|Euro Money|euro0005.jpg|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+Euro notes	euro0011.jpg	European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|euro0011.jpg|Currency|Euro	Euro Money
+A selection of Euro coins and notes	euro0007.jpg	European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro|euro0007.jpg	Euro Money
+A selection of Euro coins	euro0004.jpg	European Union|euro0004.jpg|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A selection of Euro coins	euro0003.jpg	European Union|Money|Euro Money|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro|euro0003.jpg	Euro Money
+A selection of Euro coins	euro0002.jpg	European Union|Money|Euro Money|euro0002.jpg|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money
+A selection of Euro coins	euro0001.jpg	European Union|Money|Euro Money|euro0001.jpg|EU|Europe|Cash|European|Photo_Volumes|Currency|Euro	Euro Money

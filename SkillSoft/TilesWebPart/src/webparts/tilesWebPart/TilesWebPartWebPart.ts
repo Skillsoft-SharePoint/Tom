@@ -33,7 +33,7 @@ export interface ISPLists {
 }  
 export interface ISPList {  
   TileTitle: string;
-  TileLink: string;  
+  "TileLink": string;  
   TileImage: string;
   TileColcor: string;  
 }    
@@ -51,7 +51,7 @@ export default class TilesWebPartWebPart extends BaseClientSideWebPart<ITilesWeb
             value:  
             [  
                 { TileTitle: 'Test One', TileLink: 'link one', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Green' },  
-                { TileTitle: 'Test Two', TileLink: 'blank', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Red' },  
+                { TileTitle: 'Test Two', "TileLink": 'blank', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Red' },  
                 { TileTitle: 'Test Three', TileLink: 'link three ', TileImage: 'https://skillsoft.sharepoint.com/sites/Marketing/SiteAssets/AccountBasedMarketing.png', TileColcor: 'Blue'  }  
             ]  
             };  
@@ -142,18 +142,7 @@ export default class TilesWebPartWebPart extends BaseClientSideWebPart<ITilesWeb
     this.domElement.innerHTML = `  
       <div >  
           <div class="${styles.container}">  
-              <!-- 
-              <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">  
-                <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">  
-                  <span class="ms-font-xl ms-fontColor-white" style="font-size:28px"></span>  
-                
-                  <p class="ms-font-l ms-fontColor-white" style="text-align: center"></p>  
-                </div>  
-              </div>  
-              <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">  
-              <div style="background-color:Black;color:white;text-align: center;font-weight: bold;font-size:18px;"></div>  
-              <br>  
-              -->
+              
             <div id="spListContainer" />  
           </div>  
         </div>  

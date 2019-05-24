@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://skillsoft.sharepoint.com/sites/HRUS/SitePages/US-Policies-Procedures.aspx",
+      "customActions": {
+        "fedf91da-311a-4a00-807e-86626ac1529a": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "customCss": {
+      "pageUrl": "https://skillsoft.sharepoint.com/sites/HRUS/SitePages/US-Policies-Procedures.aspx",
+      "customActions": {
+        "fedf91da-311a-4a00-807e-86626ac1529a": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}

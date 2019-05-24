@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "on-demand-custom-list-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/onDemandCustomListPart/OnDemandCustomListPartWebPart.js",
+          "manifest": "./src/webparts/onDemandCustomListPart/OnDemandCustomListPartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "OnDemandCustomListPartWebPartStrings": "lib/webparts/onDemandCustomListPart/loc/{locale}.js"
+  }
+}

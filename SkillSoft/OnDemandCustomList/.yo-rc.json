@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.1",
+    "libraryName": "on-demand-custom-list",
+    "libraryId": "db8b03b1-d430-46bc-9c55-3a8de2a4318f",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}

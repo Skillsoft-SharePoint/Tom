@@ -56,7 +56,7 @@
           "type": ["string", "null"],
           "default": null,
           "description": "%typescript.npm%",
-          "scope": "application"
+          "scope": "machine"
         },
         "typescript.check.npmIsInstalled": {
           "type": "boolean",
@@ -97,7 +97,7 @@
           },
           "default": [],
           "description": "%typescript.tsserver.pluginPaths%",
-          "scope": "application"
+          "scope": "machine"
         },
         "typescript.tsserver.trace": {
           "type": "string",
