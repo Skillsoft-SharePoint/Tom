@@ -96,34 +96,32 @@ export default class OnDemandCustomListPartWebPart extends BaseClientSideWebPart
           x += 1;
           let href: string = '';
           
-          //<tr> -- </tr> every 4th <td> -- </td>
-          if (x === 1) {html += `<tr>`};
-          /*
-          if (item.TileLink === 'blank') {
-            href +=`<img width='100%' src='${item.TileImage}'>`
-          } else {
-            href += `<a href='${item.TileLink}'>
-                      <img width='100%' src='${item.TileImage}'>
-                      </img>
-                    </a>`
-          }
-          */
+          // Row Start
+          html += `<tr>`;
+          
+          // Cell Start
           html += `  
-              
                   <td width='25%'>
                       ${item["# of Credits Purchased"]}
                   </td> 
-                  <td>${item["# of Credits for this Element"]} iteration : ${x} </td>
-                  <td>${item.Comments}</td>  
-                  <td>${item["Credit Remaining"]}</td>  
-                  
+                  <td width='25%'>
+                    ${item["# of Credits for this Element"]} iteration : ${x} 
+                  </td>
+                  <td width='25%'>
+                    ${item.Comments}
+                  </td>  
+                  <td width='25%'>
+                    ${item["Credit Remaining"]}
+                  </td>  
               `;  
-            
-          if (x === 4){x=0};    
+          // Cell End
+
+          html += `<tr>`;  
+          // Row End    
         });
         // End Loop //
           
-        if (x=1){html += `<tr>`};
+       
         html += `</table>`;  
         const listContainer: Element = this.domElement.querySelector('#spListContainer');  
         listContainer.innerHTML = html;  
