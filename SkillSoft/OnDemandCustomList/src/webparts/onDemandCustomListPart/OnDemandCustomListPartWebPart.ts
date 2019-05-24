@@ -13,12 +13,22 @@ import { escape } from '@microsoft/sp-lodash-subset';
 import styles from './OnDemandCustomListPartWebPart.module.scss';
 import * as strings from 'OnDemandCustomListPartWebPartStrings';
 
+/*************** Jquery interface */
+import * as jQuery from 'jquery';
+import 'jqueryui';
+/*************** End jQuery interface */
+
+/*************** Start CSS Interface */
+import { SPComponentLoader } from '@microsoft/sp-loader';
+
+
 /*************** File Interface */
 // create interface
 export interface ISPLists {  
   value: ISPList[];  
 }  
 export interface ISPList {  
+  "Customer": string;
   "# of Credits for this Element": number;
   "# of Credits Purchased": number;  
   "Comments": string;
@@ -27,33 +37,45 @@ export interface ISPList {
 // import classes
 import MockHttpClient from './MockHTTPSClient'; 
 import { SPHttpClient , SPHttpClientResponse } from '@microsoft/sp-http';
-
+import { constructor } from 'jquery';
 /*************** End File Interface */
 
 export interface IOnDemandCustomListPartWebPartProps {
   description: string;
 }
 
+let finalhtml: string = '';
+
 export default class OnDemandCustomListPartWebPart extends BaseClientSideWebPart<IOnDemandCustomListPartWebPartProps> {
+  
+
+  /********** Get Jquer css file */
+  public constructor() {
+    super();
+  
+    SPComponentLoader.loadCss('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
+  }
+  /********** End get jQuery CSS */
+
 
   /********** Start open files, then render the items */
-
-  //Set Up Test Data for Debugging//
+  //Set Up Debug Data for Debugging//
       private _getMockListData(): Promise<ISPLists> {  
         return MockHttpClient.get(this.context.pageContext.web.absoluteUrl).then(() => {  
             const listData: ISPLists = {  
                 value:  
                 [  
-                    { ["# of Credits Purchased"]: 8 , ["# of Credits for this Element"]: 4, Comments: 'Test One', ["Credit Remaining"]: 4 },  
-                    { ["# of Credits Purchased"]: 10 , ["# of Credits for this Element"]: 5, Comments: 'Test Two', ["Credit Remaining"]: 5 },  
-                    { ["# of Credits Purchased"]: 12 , ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6 },  
+                    
+                    { ["Customer"]: 'Customer One', ["# of Credits Purchased"]: 8 , ["# of Credits for this Element"]: 4, Comments: 'Test One', ["Credit Remaining"]: 4 },  
+                    { ["Customer"]: 'Customer Two', ["# of Credits Purchased"]: 10 , ["# of Credits for this Element"]: 5, Comments: 'Test Two', ["Credit Remaining"]: 5 },  
+                    { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12 , ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6 },  
                    
                 ]  
                 };  
             return listData;  
         }) as Promise<ISPLists>;  
       }   
-  //End Test Data//
+  //End Debug Data//
 
   // Get Actual Data from List //
       private _getListData(): Promise<ISPLists> {  
@@ -81,20 +103,48 @@ export default class OnDemandCustomListPartWebPart extends BaseClientSideWebPart
       }  
     }     
   // Endcheck for Debug or Live //
-
+  
   // Build HTML from data //
       private _renderList(items: ISPList[]): void {  
         // Start Table //
-        let html: string = '<table class="TFtable" width=100% style="border-collapse: collapse;">';  
+        let html: string = '';
+        let div: string ='';
+        let table: string = '';
+        let customer: string = '';
+        //html += `<h3>Section 1</h3>`;
+        //html += `<div>`;
+        // Start Table
+        table += `<table class="TFtable" width=100% style="border-collapse: collapse;">`;  
         // Table Header //
-        html += `<!-- <th>Complete Tile</th><th>Tile Title</th><th>Link</th><th>Tile Color</th> -->`; 
+        table += ` <th  align="left">
+                    Credits Purchased</th><th>Credits Used
+                  </th>
+                  <th  align="left">
+                    Credit Reaming
+                  </th>
+                  <th  align="left">
+                    Comemnts
+                  </th>`; 
         
         // Loop Variables // 
-        let x=0; 
+        let x: number = 0; 
+        let divCount: number = 0;
+        let tableCount: number = 0;
+
+        html += `<div class="accordion">`
         // Start Loop //
         items.forEach((item: ISPList) => {  
           x += 1;
-          let href: string = '';
+          //let href: string = '';
+          //html += `<div class="accordion">`
+
+          // Set Table start HTML
+          if (customer !== item.Customer){
+           
+            html += `<h3> ${item.Customer} </h3><div>`
+            html += table
+          }
+          //if (x===1 || ){html += table;};
           
           // Row Start
           html += `<tr>`;
@@ -105,60 +155,89 @@ export default class OnDemandCustomListPartWebPart extends BaseClientSideWebPart
                       ${item["# of Credits Purchased"]}
                   </td> 
                   <td width='25%'>
-                    ${item["# of Credits for this Element"]} iteration : ${x} 
+                    ${item["# of Credits for this Element"]}
                   </td>
                   <td width='25%'>
-                    ${item.Comments}
+                    ${item["Credit Remaining"]}
                   </td>  
                   <td width='25%'>
-                    ${item["Credit Remaining"]}
+                    ${item.Comments}
                   </td>  
               `;  
           // Cell End
 
           html += `<tr>`;  
-          // Row End    
+          // Row End   
+
+          if (customer !== item.Customer){
+            html += `</table></div>`
+          }
+          
+          // Set Current Customer
+          customer = item.Customer;
+
         });
         // End Loop //
+
+        html += `</div>`;
           
        
-        html += `</table>`;  
-        const listContainer: Element = this.domElement.querySelector('#spListContainer');  
-        listContainer.innerHTML = html;  
+        //html += `</table>`;  
+        //const listContainer: Element = this.domElement.querySelector('#spListContainer');  
+        //listContainer.innerHTML = html;  
+        
+        this.domElement.innerHTML = html;
+
+        const accordionOptions: JQueryUI.AccordionOptions = {
+          animate: true,
+          collapsible: false,
+          icons: {
+            header: 'ui-icon-circle-arrow-e',
+            activeHeader: 'ui-icon-circle-arrow-s'
+          }
+        };
+    
+        jQuery('.accordion', this.domElement).accordion(accordionOptions);
+
+        
       }
   //End Build HTML from Data //   
  /********** End open files, then render the items */
 
 // Render
   public render(): void {
+    /*
+    const accordionOptions: JQueryUI.AccordionOptions = {
+      animate: true,
+      collapsible: false,
+      icons: {
+        header: 'ui-icon-circle-arrow-e',
+        activeHeader: 'ui-icon-circle-arrow-s'
+      }
+    };
+
+    jQuery('.accordion', this.domElement).accordion(accordionOptions);
+    */
+    
+    /*
     this.domElement.innerHTML = `
     <div >  
       <div class="${styles.container}">  
-
             <div id="spListContainer" />  
           </div>  
         </div>  
     </div>`;  
+*/
+    
+
     this._renderListAsync();  
   }
-  /*
-  <!-- 
-              <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">  
-                <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">  
-                  <span class="ms-font-xl ms-fontColor-white" style="font-size:28px"></span>  
-                
-                  <p class="ms-font-l ms-fontColor-white" style="text-align: center"></p>  
-                </div>  
-              </div>  
-              <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">  
-              <div style="background-color:Black;color:white;text-align: center;font-weight: bold;font-size:18px;"></div>  
-              <br>  
-              -->
-  */
+
 
   protected get dataVersion(): Version {
     return Version.parse('1.0');
   }
+
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
