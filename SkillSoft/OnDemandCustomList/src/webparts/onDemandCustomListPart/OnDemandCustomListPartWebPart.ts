@@ -120,7 +120,7 @@ export default class OnDemandCustomListPartWebPart extends BaseClientSideWebPart
                     Credits Purchased</th><th>Credits Used
                   </th>
                   <th  align="left">
-                    Credit Reaming
+                    Credit Remaining
                   </th>
                   <th  align="left">
                     Comemnts
@@ -130,8 +130,10 @@ export default class OnDemandCustomListPartWebPart extends BaseClientSideWebPart
         let x: number = 0; 
         let divCount: number = 0;
         let tableCount: number = 0;
-
+        
+        // Start list div
         html += `<div class="accordion">`
+
         // Start Loop //
         items.forEach((item: ISPList) => {  
           x += 1;
@@ -146,7 +148,7 @@ export default class OnDemandCustomListPartWebPart extends BaseClientSideWebPart
           }
           //if (x===1 || ){html += table;};
           
-          // Row Start
+          // Data Row Start
           html += `<tr>`;
           
           // Cell Start
@@ -157,17 +159,33 @@ export default class OnDemandCustomListPartWebPart extends BaseClientSideWebPart
                   <td width='25%'>
                     ${item["# of Credits for this Element"]}
                   </td>
-                  <td width='25%'>
+                  <td width='30%'>
                     ${item["Credit Remaining"]}
                   </td>  
-                  <td width='25%'>
+                  <td width='20%'>
                     ${item.Comments}
                   </td>  
               `;  
           // Cell End
 
-          html += `<tr>`;  
-          // Row End   
+          html += `</tr>`;  
+          // Data Row End   
+
+          html += `
+                  <tr id='test row'>
+                      <td>
+                        Total Credits : ${item["# of Credits Purchased"]}
+                      </td> 
+                      <td>
+                        Credits Used : ${item["# of Credits for this Element"]}
+                      </td>
+                      <td>
+                        Credits Remaining : ${item["Credit Remaining"]}
+                      </td>
+                      <td>
+                        <!-- Empty -->
+                      </td>
+                  </tr>`;
 
           if (customer !== item.Customer){
             html += `</table></div>`
@@ -178,7 +196,8 @@ export default class OnDemandCustomListPartWebPart extends BaseClientSideWebPart
 
         });
         // End Loop //
-
+        
+        // End list div
         html += `</div>`;
           
        
