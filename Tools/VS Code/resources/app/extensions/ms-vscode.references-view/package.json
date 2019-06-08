@@ -3,7 +3,7 @@
   "displayName": "Reference Search View",
   "icon": "media/icon.png",
   "description": "Reference Search results as separate, stable view in the sidebar",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "publisher": "ms-vscode",
   "engines": {
     "vscode": "^1.30.0"
@@ -48,6 +48,14 @@
       "command": "references-view.find",
       "title": "Find All References",
       "category": "References"
+    }, {
+      "command": "references-view.clearHistory",
+      "title": "Clear History",
+      "category": "References",
+      "icon": {
+        "dark": "./media/action-clear-dark.svg",
+        "light": "./media/action-clear.svg"
+      }
     }, {
       "command": "references-view.clear",
       "title": "Clear",
@@ -106,6 +114,10 @@
         "command": "references-view.clear",
         "group": "navigation",
         "when": "view == references-view.tree && reference-list.hasResult"
+      }, {
+        "command": "references-view.clearHistory",
+        "group": "navigation",
+        "when": "reference-list.hasHistory && !reference-list.hasResult"
       }],
       "view/item/context": [{
         "command": "references-view.remove",
@@ -157,6 +169,9 @@
       }, {
         "command": "references-view.clear",
         "when": "reference-list.hasResult"
+      }, {
+        "command": "references-view.clearHistory",
+        "when": "reference-list.isActive"
       }, {
         "command": "references-view.refresh",
         "when": "reference-list.hasResult"

@@ -1,5 +1,5 @@
 {
-  "name": "on-demand-custom-list",
+  "name": "on-demand-credit-list",
   "version": "0.0.1",
   "private": true,
   "engines": {
@@ -12,15 +12,11 @@
   },
   "dependencies": {
     "@microsoft/sp-core-library": "1.7.1",
+    "@microsoft/sp-webpart-base": "1.7.1",
     "@microsoft/sp-lodash-subset": "1.7.1",
     "@microsoft/sp-office-ui-fabric-core": "1.7.1",
-    "@microsoft/sp-webpart-base": "1.7.1",
-    "@types/es6-promise": "0.0.33",
-    "@types/jquery": "^2.0.53",
-    "@types/jqueryui": "^1.12.7",
     "@types/webpack-env": "1.13.1",
-    "jquery": "^2.2.4",
-    "jqueryui": "^1.11.1"
+    "@types/es6-promise": "0.0.33"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "1.7.1",

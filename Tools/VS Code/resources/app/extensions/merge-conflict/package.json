@@ -96,6 +96,13 @@
           "type": "boolean",
           "description": "%config.autoNavigateNextConflictEnabled%",
           "default": false
+        },
+        "merge-conflict.diffViewPosition": {
+          "type": "string",
+          "enum": ["Current", "Beside", "Below"],
+          "description": "%config.diffViewPosition%",
+          "enumDescriptions": ["%config.diffViewPosition.current%", "%config.diffViewPosition.beside%", "%config.diffViewPosition.below%"],
+          "default": "Current"
         }
       }
     }

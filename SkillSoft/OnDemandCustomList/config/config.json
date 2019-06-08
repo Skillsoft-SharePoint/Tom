@@ -2,17 +2,17 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "on-demand-custom-list-part-web-part": {
+    "on-demand-credit-list-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/onDemandCustomListPart/OnDemandCustomListPartWebPart.js",
-          "manifest": "./src/webparts/onDemandCustomListPart/OnDemandCustomListPartWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/onDemandCreditList/OnDemandCreditListWebPart.js",
+          "manifest": "./src/webparts/onDemandCreditList/OnDemandCreditListWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "OnDemandCustomListPartWebPartStrings": "lib/webparts/onDemandCustomListPart/loc/{locale}.js"
+    "OnDemandCreditListWebPartStrings": "lib/webparts/onDemandCreditList/loc/{locale}.js"
   }
 }

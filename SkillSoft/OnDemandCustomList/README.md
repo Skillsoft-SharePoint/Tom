@@ -1,4 +1,4 @@
-## on-demand-custom-list
+## on-demand-credit-list
 
 This is where you include your WebPart documentation.
 

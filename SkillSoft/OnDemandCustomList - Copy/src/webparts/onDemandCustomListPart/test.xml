@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xml:base="https://skillsoft.sharepoint.com/sites/ondemandrequests/_api/" 
+    xmlns="http://www.w3.org/2005/Atom" 
+    xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" 
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" 
+    xmlns:georss="http://www.georss.org/georss" 
+    xmlns:gml="http://www.opengis.net/gml">
+    <id>70b42e88-b151-4bff-81d8-c3bc187ee316</id>
+    <title />
+    <updated>2019-05-29T20:48:22Z</updated>
+    <entry m:etag="&quot;43&quot;">
+        <id>d1ee4406-77e6-4714-a111-5a2762bed29d</id>
+        <category term="SP.Data.On_x0020_Demand_x0020_TrackingListItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link rel="edit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FirstUniqueAncestorSecurableObject" type="application/atom+xml;type=entry" title="FirstUniqueAncestorSecurableObject" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/FirstUniqueAncestorSecurableObject" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/RoleAssignments" type="application/atom+xml;type=feed" title="RoleAssignments" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/RoleAssignments" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/AttachmentFiles" type="application/atom+xml;type=feed" title="AttachmentFiles" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/AttachmentFiles" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ContentType" type="application/atom+xml;type=entry" title="ContentType" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/ContentType" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/GetDlpPolicyTip" type="application/atom+xml;type=entry" title="GetDlpPolicyTip" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/GetDlpPolicyTip" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsHtml" type="application/atom+xml;type=entry" title="FieldValuesAsHtml" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/FieldValuesAsHtml" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsText" type="application/atom+xml;type=entry" title="FieldValuesAsText" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/FieldValuesAsText" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesForEdit" type="application/atom+xml;type=entry" title="FieldValuesForEdit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/FieldValuesForEdit" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/File" type="application/atom+xml;type=entry" title="File" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/File" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Folder" type="application/atom+xml;type=entry" title="Folder" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/Folder" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/LikedByInformation" type="application/atom+xml;type=entry" title="LikedByInformation" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/LikedByInformation" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ParentList" type="application/atom+xml;type=entry" title="ParentList" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/ParentList" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Properties" type="application/atom+xml;type=entry" title="Properties" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/Properties" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Versions" type="application/atom+xml;type=feed" title="Versions" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(3)/Versions" />
+        <title />
+        <updated>2019-05-29T20:48:22Z</updated>
+        <author>
+            <name />
+        </author>
+        <content type="application/xml">
+            <m:properties>
+                <d:FileSystemObjectType m:type="Edm.Int32">0</d:FileSystemObjectType>
+                <d:Id m:type="Edm.Int32">3</d:Id>
+                <d:ServerRedirectedEmbedUri m:null="true" />
+                <d:ServerRedirectedEmbedUrl></d:ServerRedirectedEmbedUrl>
+                <d:ContentTypeId>0x0100642D370DD29C8040AF6A571E7DF427D1</d:ContentTypeId>
+                <d:Title m:null="true" />
+                <d:ComplianceAssetId m:null="true" />
+                <d:CustomerId m:type="Edm.Int32">2</d:CustomerId>
+                <d:SOW_x0020_Received>Yes</d:SOW_x0020_Received>
+                <d:Opportunity_x0020_ID>O-626924</d:Opportunity_x0020_ID>
+                <d:Region m:null="true" />
+                <d:Customer_x0020_Success_x0020_ManId m:type="Edm.Int32">20</d:Customer_x0020_Success_x0020_ManId>
+                <d:Customer_x0020_Success_x0020_ManStringId>20</d:Customer_x0020_Success_x0020_ManStringId>
+                <d:Customer_x0020_Sales_x0020_DirecId m:type="Edm.Int32">21</d:Customer_x0020_Sales_x0020_DirecId>
+                <d:Customer_x0020_Sales_x0020_DirecStringId>21</d:Customer_x0020_Sales_x0020_DirecStringId>
+                <d:Service_x0020_Type>Services on Demand</d:Service_x0020_Type>
+                <d:Element_x002d_Consulting_x0020_o>N/A</d:Element_x002d_Consulting_x0020_o>
+                <d:Element_x002d_Services_x0020_on_>N/A</d:Element_x002d_Services_x0020_on_>
+                <d:LOE_x0020__x002d__x0020_Services>N/A</d:LOE_x0020__x002d__x0020_Services>
+                <d:LOE_x0020__x002d__x0020_Services0>N/A</d:LOE_x0020__x002d__x0020_Services0>
+                <d:LOE_x0020__x002d__x0020_Services1>N/A</d:LOE_x0020__x002d__x0020_Services1>
+                <d:OData__x0023__x0020_of_x0020_Credits_x m:type="Edm.Double">4</d:OData__x0023__x0020_of_x0020_Credits_x>
+                <d:Credit_x0020_Remaining m:type="Edm.Double">2</d:Credit_x0020_Remaining>
+                <d:Status>Not Started</d:Status>
+                <d:Project_x0020_OwnerId m:type="Edm.Int32">23</d:Project_x0020_OwnerId>
+                <d:Project_x0020_OwnerStringId>23</d:Project_x0020_OwnerStringId>
+                <d:Start_x0020_Date m:type="Edm.DateTime">2018-12-21T08:00:00Z</d:Start_x0020_Date>
+                <d:Anticipated_x0020_End_x0020_Date m:type="Edm.DateTime">2019-12-20T08:00:00Z</d:Anticipated_x0020_End_x0020_Date>
+                <d:Comments>&lt;div class="ExternalClass2CBFE41DC72E4C9190267A9E296FFE38"&gt;Assigned by Steve Nicoll to Charlene McGovern-Chase on January 10, 2019; was on hold due to client not being ready to engage; Tara confirmed that Vicki Shelves contacted 'Services@skillsoft.com' on Jan 30th to advise that the client is ready to engage now; Debbie H has claimed this. Assigned to Robbyn McGrath (TCF National Bank - Imp. Consultant - Image Mapping - Update to Graphic - Update Only (204332)); completed Feb 4th.&lt;/div&gt;</d:Comments>
+                <d:OData__x0023__x0020_of_x0020_Credits_x0 m:type="Edm.Double">2</d:OData__x0023__x0020_of_x0020_Credits_x0>
+                <d:L_x002d_Customer>TCF National Bank</d:L_x002d_Customer>
+                <d:L_x002d_CreditsForElement>2</d:L_x002d_CreditsForElement>
+                <d:L_x002d_CreditsPurchased>4</d:L_x002d_CreditsPurchased>
+                <d:L_x002d_CreditRemaining>2</d:L_x002d_CreditRemaining>
+                <d:L_x002d_CustomerSalesDirector>Emily Krolak</d:L_x002d_CustomerSalesDirector>
+                <d:L_x002d_CustomerSuccessManager>Emily Krolak</d:L_x002d_CustomerSuccessManager>
+                <d:L_x002d_ElementConsultingDemand>N/A</d:L_x002d_ElementConsultingDemand>
+                <d:L_x002d_ElementServicesDemand>N/A</d:L_x002d_ElementServicesDemand>
+                <d:L_x002d_LOELearnerExperience>N/A</d:L_x002d_LOELearnerExperience>
+                <d:L_x002d_LOEMarketing>N/A</d:L_x002d_LOEMarketing>
+                <d:L_x002d_LOEReporting>N/A</d:L_x002d_LOEReporting>
+                <d:ID m:type="Edm.Int32">3</d:ID>
+                <d:Modified m:type="Edm.DateTime">2019-05-29T20:44:57Z</d:Modified>
+                <d:Created m:type="Edm.DateTime">2019-03-29T13:21:56Z</d:Created>
+                <d:AuthorId m:type="Edm.Int32">19</d:AuthorId>
+                <d:EditorId m:type="Edm.Int32">18</d:EditorId>
+                <d:OData__UIVersionString>1.0</d:OData__UIVersionString>
+                <d:Attachments m:type="Edm.Boolean">false</d:Attachments>
+                <d:GUID m:type="Edm.Guid">4fa59067-5ebe-463c-a2dc-d434b1478266</d:GUID>
+            </m:properties>
+        </content>
+    </entry>
+    <entry m:etag="&quot;60&quot;">
+        <id>cdf414d4-f3c8-4e08-8528-b4d32bc8ac83</id>
+        <category term="SP.Data.On_x0020_Demand_x0020_TrackingListItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link rel="edit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FirstUniqueAncestorSecurableObject" type="application/atom+xml;type=entry" title="FirstUniqueAncestorSecurableObject" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/FirstUniqueAncestorSecurableObject" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/RoleAssignments" type="application/atom+xml;type=feed" title="RoleAssignments" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/RoleAssignments" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/AttachmentFiles" type="application/atom+xml;type=feed" title="AttachmentFiles" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/AttachmentFiles" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ContentType" type="application/atom+xml;type=entry" title="ContentType" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/ContentType" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/GetDlpPolicyTip" type="application/atom+xml;type=entry" title="GetDlpPolicyTip" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/GetDlpPolicyTip" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsHtml" type="application/atom+xml;type=entry" title="FieldValuesAsHtml" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/FieldValuesAsHtml" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsText" type="application/atom+xml;type=entry" title="FieldValuesAsText" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/FieldValuesAsText" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesForEdit" type="application/atom+xml;type=entry" title="FieldValuesForEdit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/FieldValuesForEdit" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/File" type="application/atom+xml;type=entry" title="File" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/File" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Folder" type="application/atom+xml;type=entry" title="Folder" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/Folder" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/LikedByInformation" type="application/atom+xml;type=entry" title="LikedByInformation" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/LikedByInformation" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ParentList" type="application/atom+xml;type=entry" title="ParentList" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/ParentList" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Properties" type="application/atom+xml;type=entry" title="Properties" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/Properties" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Versions" type="application/atom+xml;type=feed" title="Versions" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(4)/Versions" />
+        <title />
+        <updated>2019-05-29T20:48:22Z</updated>
+        <author>
+            <name />
+        </author>
+        <content type="application/xml">
+            <m:properties>
+                <d:FileSystemObjectType m:type="Edm.Int32">0</d:FileSystemObjectType>
+                <d:Id m:type="Edm.Int32">4</d:Id>
+                <d:ServerRedirectedEmbedUri m:null="true" />
+                <d:ServerRedirectedEmbedUrl></d:ServerRedirectedEmbedUrl>
+                <d:ContentTypeId>0x0100642D370DD29C8040AF6A571E7DF427D1</d:ContentTypeId>
+                <d:Title m:null="true" />
+                <d:ComplianceAssetId m:null="true" />
+                <d:CustomerId m:type="Edm.Int32">6</d:CustomerId>
+                <d:SOW_x0020_Received>Yes</d:SOW_x0020_Received>
+                <d:Opportunity_x0020_ID>O-567940</d:Opportunity_x0020_ID>
+                <d:Region>APAC</d:Region>
+                <d:Customer_x0020_Success_x0020_ManId m:type="Edm.Int32">24</d:Customer_x0020_Success_x0020_ManId>
+                <d:Customer_x0020_Success_x0020_ManStringId>24</d:Customer_x0020_Success_x0020_ManStringId>
+                <d:Customer_x0020_Sales_x0020_DirecId m:type="Edm.Int32">25</d:Customer_x0020_Sales_x0020_DirecId>
+                <d:Customer_x0020_Sales_x0020_DirecStringId>25</d:Customer_x0020_Sales_x0020_DirecStringId>
+                <d:Service_x0020_Type>Services on Demand</d:Service_x0020_Type>
+                <d:Element_x002d_Consulting_x0020_o>N/A</d:Element_x002d_Consulting_x0020_o>
+                <d:Element_x002d_Services_x0020_on_>N/A</d:Element_x002d_Services_x0020_on_>
+                <d:LOE_x0020__x002d__x0020_Services>N/A</d:LOE_x0020__x002d__x0020_Services>
+                <d:LOE_x0020__x002d__x0020_Services0>N/A</d:LOE_x0020__x002d__x0020_Services0>
+                <d:LOE_x0020__x002d__x0020_Services1>N/A</d:LOE_x0020__x002d__x0020_Services1>
+                <d:OData__x0023__x0020_of_x0020_Credits_x m:type="Edm.Double">12</d:OData__x0023__x0020_of_x0020_Credits_x>
+                <d:Credit_x0020_Remaining m:type="Edm.Double">8</d:Credit_x0020_Remaining>
+                <d:Status>Not Started</d:Status>
+                <d:Project_x0020_OwnerId m:type="Edm.Int32">26</d:Project_x0020_OwnerId>
+                <d:Project_x0020_OwnerStringId>26</d:Project_x0020_OwnerStringId>
+                <d:Start_x0020_Date m:type="Edm.DateTime">2119-12-31T08:00:00Z</d:Start_x0020_Date>
+                <d:Anticipated_x0020_End_x0020_Date m:type="Edm.DateTime">2020-01-30T08:00:00Z</d:Anticipated_x0020_End_x0020_Date>
+                <d:Comments>&lt;div class="ExternalClass890DB521C2F54441B72396F7C2674317"&gt;Showing in SSAS as SS_PROF_SVCS_ENGMN; not SVCS_ON_DEMAND&lt;/div&gt;</d:Comments>
+                <d:OData__x0023__x0020_of_x0020_Credits_x0 m:type="Edm.Double">4</d:OData__x0023__x0020_of_x0020_Credits_x0>
+                <d:L_x002d_Customer>Rizing LLC</d:L_x002d_Customer>
+                <d:L_x002d_CreditsForElement>4</d:L_x002d_CreditsForElement>
+                <d:L_x002d_CreditsPurchased>12</d:L_x002d_CreditsPurchased>
+                <d:L_x002d_CreditRemaining>8</d:L_x002d_CreditRemaining>
+                <d:L_x002d_CustomerSalesDirector>Zack Harvey</d:L_x002d_CustomerSalesDirector>
+                <d:L_x002d_CustomerSuccessManager>Zack Harvey</d:L_x002d_CustomerSuccessManager>
+                <d:L_x002d_ElementConsultingDemand>N/A</d:L_x002d_ElementConsultingDemand>
+                <d:L_x002d_ElementServicesDemand>N/A</d:L_x002d_ElementServicesDemand>
+                <d:L_x002d_LOELearnerExperience>N/A</d:L_x002d_LOELearnerExperience>
+                <d:L_x002d_LOEMarketing>N/A</d:L_x002d_LOEMarketing>
+                <d:L_x002d_LOEReporting>N/A</d:L_x002d_LOEReporting>
+                <d:ID m:type="Edm.Int32">4</d:ID>
+                <d:Modified m:type="Edm.DateTime">2019-05-29T20:44:57Z</d:Modified>
+                <d:Created m:type="Edm.DateTime">2019-03-29T13:26:35Z</d:Created>
+                <d:AuthorId m:type="Edm.Int32">19</d:AuthorId>
+                <d:EditorId m:type="Edm.Int32">18</d:EditorId>
+                <d:OData__UIVersionString>1.0</d:OData__UIVersionString>
+                <d:Attachments m:type="Edm.Boolean">false</d:Attachments>
+                <d:GUID m:type="Edm.Guid">e2c37dc5-f774-45e2-b533-845aeab9c920</d:GUID>
+            </m:properties>
+        </content>
+    </entry>
+    <entry m:etag="&quot;42&quot;">
+        <id>fdde1cb5-f4e1-4b44-aaa4-d839b9baf3ba</id>
+        <category term="SP.Data.On_x0020_Demand_x0020_TrackingListItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link rel="edit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FirstUniqueAncestorSecurableObject" type="application/atom+xml;type=entry" title="FirstUniqueAncestorSecurableObject" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/FirstUniqueAncestorSecurableObject" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/RoleAssignments" type="application/atom+xml;type=feed" title="RoleAssignments" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/RoleAssignments" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/AttachmentFiles" type="application/atom+xml;type=feed" title="AttachmentFiles" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/AttachmentFiles" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ContentType" type="application/atom+xml;type=entry" title="ContentType" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/ContentType" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/GetDlpPolicyTip" type="application/atom+xml;type=entry" title="GetDlpPolicyTip" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/GetDlpPolicyTip" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsHtml" type="application/atom+xml;type=entry" title="FieldValuesAsHtml" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/FieldValuesAsHtml" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsText" type="application/atom+xml;type=entry" title="FieldValuesAsText" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/FieldValuesAsText" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesForEdit" type="application/atom+xml;type=entry" title="FieldValuesForEdit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/FieldValuesForEdit" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/File" type="application/atom+xml;type=entry" title="File" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/File" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Folder" type="application/atom+xml;type=entry" title="Folder" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/Folder" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/LikedByInformation" type="application/atom+xml;type=entry" title="LikedByInformation" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/LikedByInformation" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ParentList" type="application/atom+xml;type=entry" title="ParentList" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/ParentList" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Properties" type="application/atom+xml;type=entry" title="Properties" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/Properties" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Versions" type="application/atom+xml;type=feed" title="Versions" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(5)/Versions" />
+        <title />
+        <updated>2019-05-29T20:48:22Z</updated>
+        <author>
+            <name />
+        </author>
+        <content type="application/xml">
+            <m:properties>
+                <d:FileSystemObjectType m:type="Edm.Int32">0</d:FileSystemObjectType>
+                <d:Id m:type="Edm.Int32">5</d:Id>
+                <d:ServerRedirectedEmbedUri m:null="true" />
+                <d:ServerRedirectedEmbedUrl></d:ServerRedirectedEmbedUrl>
+                <d:ContentTypeId>0x0100642D370DD29C8040AF6A571E7DF427D1</d:ContentTypeId>
+                <d:Title m:null="true" />
+                <d:ComplianceAssetId m:null="true" />
+                <d:CustomerId m:type="Edm.Int32">8</d:CustomerId>
+                <d:SOW_x0020_Received>Yes</d:SOW_x0020_Received>
+                <d:Opportunity_x0020_ID xml:space="preserve">O-638918 </d:Opportunity_x0020_ID>
+                <d:Region>NORTH AMERICA</d:Region>
+                <d:Customer_x0020_Success_x0020_ManId m:type="Edm.Int32">27</d:Customer_x0020_Success_x0020_ManId>
+                <d:Customer_x0020_Success_x0020_ManStringId>27</d:Customer_x0020_Success_x0020_ManStringId>
+                <d:Customer_x0020_Sales_x0020_DirecId m:type="Edm.Int32">28</d:Customer_x0020_Sales_x0020_DirecId>
+                <d:Customer_x0020_Sales_x0020_DirecStringId>28</d:Customer_x0020_Sales_x0020_DirecStringId>
+                <d:Service_x0020_Type>Services on Demand</d:Service_x0020_Type>
+                <d:Element_x002d_Consulting_x0020_o>N/A</d:Element_x002d_Consulting_x0020_o>
+                <d:Element_x002d_Services_x0020_on_>N/A</d:Element_x002d_Services_x0020_on_>
+                <d:LOE_x0020__x002d__x0020_Services>N/A</d:LOE_x0020__x002d__x0020_Services>
+                <d:LOE_x0020__x002d__x0020_Services0>N/A</d:LOE_x0020__x002d__x0020_Services0>
+                <d:LOE_x0020__x002d__x0020_Services1>N/A</d:LOE_x0020__x002d__x0020_Services1>
+                <d:OData__x0023__x0020_of_x0020_Credits_x m:type="Edm.Double">4</d:OData__x0023__x0020_of_x0020_Credits_x>
+                <d:Credit_x0020_Remaining m:type="Edm.Double">0</d:Credit_x0020_Remaining>
+                <d:Status>Not Started</d:Status>
+                <d:Project_x0020_OwnerId m:type="Edm.Int32">29</d:Project_x0020_OwnerId>
+                <d:Project_x0020_OwnerStringId>29</d:Project_x0020_OwnerStringId>
+                <d:Start_x0020_Date m:type="Edm.DateTime">2019-03-31T07:00:00Z</d:Start_x0020_Date>
+                <d:Anticipated_x0020_End_x0020_Date m:type="Edm.DateTime">2020-03-30T07:00:00Z</d:Anticipated_x0020_End_x0020_Date>
+                <d:Comments>&lt;div class="ExternalClassF3E72A8F52564D7EB88F88A367A9056D"&gt;Assigned by Debbie Harn to Christa MacDonald on Mar 11th (Endurance Services Limited - Imp. Consultant - Service Engagement - Learner Experience (206340))&lt;/div&gt;</d:Comments>
+                <d:OData__x0023__x0020_of_x0020_Credits_x0 m:type="Edm.Double">4</d:OData__x0023__x0020_of_x0020_Credits_x0>
+                <d:L_x002d_Customer>Endurance Services Limited</d:L_x002d_Customer>
+                <d:L_x002d_CreditsForElement>4</d:L_x002d_CreditsForElement>
+                <d:L_x002d_CreditsPurchased>4</d:L_x002d_CreditsPurchased>
+                <d:L_x002d_CreditRemaining>0</d:L_x002d_CreditRemaining>
+                <d:L_x002d_CustomerSalesDirector>Mike Strom</d:L_x002d_CustomerSalesDirector>
+                <d:L_x002d_CustomerSuccessManager>Mike Strom</d:L_x002d_CustomerSuccessManager>
+                <d:L_x002d_ElementConsultingDemand>N/A</d:L_x002d_ElementConsultingDemand>
+                <d:L_x002d_ElementServicesDemand>N/A</d:L_x002d_ElementServicesDemand>
+                <d:L_x002d_LOELearnerExperience>N/A</d:L_x002d_LOELearnerExperience>
+                <d:L_x002d_LOEMarketing>N/A</d:L_x002d_LOEMarketing>
+                <d:L_x002d_LOEReporting>N/A</d:L_x002d_LOEReporting>
+                <d:ID m:type="Edm.Int32">5</d:ID>
+                <d:Modified m:type="Edm.DateTime">2019-05-29T20:44:58Z</d:Modified>
+                <d:Created m:type="Edm.DateTime">2019-03-29T13:34:56Z</d:Created>
+                <d:AuthorId m:type="Edm.Int32">19</d:AuthorId>
+                <d:EditorId m:type="Edm.Int32">18</d:EditorId>
+                <d:OData__UIVersionString>1.0</d:OData__UIVersionString>
+                <d:Attachments m:type="Edm.Boolean">false</d:Attachments>
+                <d:GUID m:type="Edm.Guid">6b3dff95-11a8-4be3-abad-9cbd9d8d6e60</d:GUID>
+            </m:properties>
+        </content>
+    </entry>
+    <entry m:etag="&quot;40&quot;">
+        <id>6533389d-98e0-4a0e-9251-5d71623ed3e2</id>
+        <category term="SP.Data.On_x0020_Demand_x0020_TrackingListItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link rel="edit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FirstUniqueAncestorSecurableObject" type="application/atom+xml;type=entry" title="FirstUniqueAncestorSecurableObject" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/FirstUniqueAncestorSecurableObject" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/RoleAssignments" type="application/atom+xml;type=feed" title="RoleAssignments" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/RoleAssignments" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/AttachmentFiles" type="application/atom+xml;type=feed" title="AttachmentFiles" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/AttachmentFiles" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ContentType" type="application/atom+xml;type=entry" title="ContentType" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/ContentType" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/GetDlpPolicyTip" type="application/atom+xml;type=entry" title="GetDlpPolicyTip" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/GetDlpPolicyTip" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsHtml" type="application/atom+xml;type=entry" title="FieldValuesAsHtml" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/FieldValuesAsHtml" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsText" type="application/atom+xml;type=entry" title="FieldValuesAsText" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/FieldValuesAsText" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesForEdit" type="application/atom+xml;type=entry" title="FieldValuesForEdit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/FieldValuesForEdit" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/File" type="application/atom+xml;type=entry" title="File" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/File" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Folder" type="application/atom+xml;type=entry" title="Folder" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/Folder" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/LikedByInformation" type="application/atom+xml;type=entry" title="LikedByInformation" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/LikedByInformation" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ParentList" type="application/atom+xml;type=entry" title="ParentList" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/ParentList" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Properties" type="application/atom+xml;type=entry" title="Properties" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/Properties" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Versions" type="application/atom+xml;type=feed" title="Versions" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(6)/Versions" />
+        <title />
+        <updated>2019-05-29T20:48:22Z</updated>
+        <author>
+            <name />
+        </author>
+        <content type="application/xml">
+            <m:properties>
+                <d:FileSystemObjectType m:type="Edm.Int32">0</d:FileSystemObjectType>
+                <d:Id m:type="Edm.Int32">6</d:Id>
+                <d:ServerRedirectedEmbedUri m:null="true" />
+                <d:ServerRedirectedEmbedUrl></d:ServerRedirectedEmbedUrl>
+                <d:ContentTypeId>0x0100642D370DD29C8040AF6A571E7DF427D1</d:ContentTypeId>
+                <d:Title m:null="true" />
+                <d:ComplianceAssetId m:null="true" />
+                <d:CustomerId m:type="Edm.Int32">5</d:CustomerId>
+                <d:SOW_x0020_Received>Yes</d:SOW_x0020_Received>
+                <d:Opportunity_x0020_ID>O-575503</d:Opportunity_x0020_ID>
+                <d:Region>APAC</d:Region>
+                <d:Customer_x0020_Success_x0020_ManId m:type="Edm.Int32">24</d:Customer_x0020_Success_x0020_ManId>
+                <d:Customer_x0020_Success_x0020_ManStringId>24</d:Customer_x0020_Success_x0020_ManStringId>
+                <d:Customer_x0020_Sales_x0020_DirecId m:type="Edm.Int32">30</d:Customer_x0020_Sales_x0020_DirecId>
+                <d:Customer_x0020_Sales_x0020_DirecStringId>30</d:Customer_x0020_Sales_x0020_DirecStringId>
+                <d:Service_x0020_Type>Consulting on Demand</d:Service_x0020_Type>
+                <d:Element_x002d_Consulting_x0020_o>N/A</d:Element_x002d_Consulting_x0020_o>
+                <d:Element_x002d_Services_x0020_on_>N/A</d:Element_x002d_Services_x0020_on_>
+                <d:LOE_x0020__x002d__x0020_Services>N/A</d:LOE_x0020__x002d__x0020_Services>
+                <d:LOE_x0020__x002d__x0020_Services0>N/A</d:LOE_x0020__x002d__x0020_Services0>
+                <d:LOE_x0020__x002d__x0020_Services1>N/A</d:LOE_x0020__x002d__x0020_Services1>
+                <d:OData__x0023__x0020_of_x0020_Credits_x m:type="Edm.Double">4</d:OData__x0023__x0020_of_x0020_Credits_x>
+                <d:Credit_x0020_Remaining m:type="Edm.Double">4</d:Credit_x0020_Remaining>
+                <d:Status>Not Started</d:Status>
+                <d:Project_x0020_OwnerId m:type="Edm.Int32">15</d:Project_x0020_OwnerId>
+                <d:Project_x0020_OwnerStringId>15</d:Project_x0020_OwnerStringId>
+                <d:Start_x0020_Date m:type="Edm.DateTime">2019-03-02T08:00:00Z</d:Start_x0020_Date>
+                <d:Anticipated_x0020_End_x0020_Date m:type="Edm.DateTime">2020-03-01T08:00:00Z</d:Anticipated_x0020_End_x0020_Date>
+                <d:Comments>&lt;div class="ExternalClass33B2A53B6DAF4B29A15D0EADC6645041"&gt;Line item in SSAS and SFDC indicates Services on Demand; Beck confirming with CSD and client - may need to create a change order for the additional $2k if the client does in fact want COD&lt;/div&gt;</d:Comments>
+                <d:OData__x0023__x0020_of_x0020_Credits_x0 m:type="Edm.Double">0</d:OData__x0023__x0020_of_x0020_Credits_x0>
+                <d:L_x002d_Customer>Department of Infrastructure &amp; Regional Development</d:L_x002d_Customer>
+                <d:L_x002d_CreditsForElement>0</d:L_x002d_CreditsForElement>
+                <d:L_x002d_CreditsPurchased>4</d:L_x002d_CreditsPurchased>
+                <d:L_x002d_CreditRemaining>4</d:L_x002d_CreditRemaining>
+                <d:L_x002d_CustomerSalesDirector>Paul Hardy</d:L_x002d_CustomerSalesDirector>
+                <d:L_x002d_CustomerSuccessManager>Paul Hardy</d:L_x002d_CustomerSuccessManager>
+                <d:L_x002d_ElementConsultingDemand>N/A</d:L_x002d_ElementConsultingDemand>
+                <d:L_x002d_ElementServicesDemand>N/A</d:L_x002d_ElementServicesDemand>
+                <d:L_x002d_LOELearnerExperience>N/A</d:L_x002d_LOELearnerExperience>
+                <d:L_x002d_LOEMarketing>N/A</d:L_x002d_LOEMarketing>
+                <d:L_x002d_LOEReporting>N/A</d:L_x002d_LOEReporting>
+                <d:ID m:type="Edm.Int32">6</d:ID>
+                <d:Modified m:type="Edm.DateTime">2019-05-29T20:44:58Z</d:Modified>
+                <d:Created m:type="Edm.DateTime">2019-03-29T13:42:34Z</d:Created>
+                <d:AuthorId m:type="Edm.Int32">19</d:AuthorId>
+                <d:EditorId m:type="Edm.Int32">18</d:EditorId>
+                <d:OData__UIVersionString>1.0</d:OData__UIVersionString>
+                <d:Attachments m:type="Edm.Boolean">false</d:Attachments>
+                <d:GUID m:type="Edm.Guid">25fc22d2-38ac-4499-a201-91fddbd803bf</d:GUID>
+            </m:properties>
+        </content>
+    </entry>
+    <entry m:etag="&quot;41&quot;">
+        <id>9f3eb041-4007-477d-9463-b298dbefa231</id>
+        <category term="SP.Data.On_x0020_Demand_x0020_TrackingListItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link rel="edit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FirstUniqueAncestorSecurableObject" type="application/atom+xml;type=entry" title="FirstUniqueAncestorSecurableObject" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/FirstUniqueAncestorSecurableObject" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/RoleAssignments" type="application/atom+xml;type=feed" title="RoleAssignments" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/RoleAssignments" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/AttachmentFiles" type="application/atom+xml;type=feed" title="AttachmentFiles" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/AttachmentFiles" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ContentType" type="application/atom+xml;type=entry" title="ContentType" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/ContentType" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/GetDlpPolicyTip" type="application/atom+xml;type=entry" title="GetDlpPolicyTip" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/GetDlpPolicyTip" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsHtml" type="application/atom+xml;type=entry" title="FieldValuesAsHtml" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/FieldValuesAsHtml" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsText" type="application/atom+xml;type=entry" title="FieldValuesAsText" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/FieldValuesAsText" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesForEdit" type="application/atom+xml;type=entry" title="FieldValuesForEdit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/FieldValuesForEdit" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/File" type="application/atom+xml;type=entry" title="File" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/File" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Folder" type="application/atom+xml;type=entry" title="Folder" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/Folder" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/LikedByInformation" type="application/atom+xml;type=entry" title="LikedByInformation" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/LikedByInformation" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ParentList" type="application/atom+xml;type=entry" title="ParentList" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/ParentList" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Properties" type="application/atom+xml;type=entry" title="Properties" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/Properties" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Versions" type="application/atom+xml;type=feed" title="Versions" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(8)/Versions" />
+        <title />
+        <updated>2019-05-29T20:48:22Z</updated>
+        <author>
+            <name />
+        </author>
+        <content type="application/xml">
+            <m:properties>
+                <d:FileSystemObjectType m:type="Edm.Int32">0</d:FileSystemObjectType>
+                <d:Id m:type="Edm.Int32">8</d:Id>
+                <d:ServerRedirectedEmbedUri m:null="true" />
+                <d:ServerRedirectedEmbedUrl></d:ServerRedirectedEmbedUrl>
+                <d:ContentTypeId>0x0100642D370DD29C8040AF6A571E7DF427D1</d:ContentTypeId>
+                <d:Title m:null="true" />
+                <d:ComplianceAssetId m:null="true" />
+                <d:CustomerId m:type="Edm.Int32">2</d:CustomerId>
+                <d:SOW_x0020_Received>Yes</d:SOW_x0020_Received>
+                <d:Opportunity_x0020_ID>O-626924</d:Opportunity_x0020_ID>
+                <d:Region m:null="true" />
+                <d:Customer_x0020_Success_x0020_ManId m:type="Edm.Int32">20</d:Customer_x0020_Success_x0020_ManId>
+                <d:Customer_x0020_Success_x0020_ManStringId>20</d:Customer_x0020_Success_x0020_ManStringId>
+                <d:Customer_x0020_Sales_x0020_DirecId m:type="Edm.Int32">21</d:Customer_x0020_Sales_x0020_DirecId>
+                <d:Customer_x0020_Sales_x0020_DirecStringId>21</d:Customer_x0020_Sales_x0020_DirecStringId>
+                <d:Service_x0020_Type>Services on Demand</d:Service_x0020_Type>
+                <d:Element_x002d_Consulting_x0020_o>N/A</d:Element_x002d_Consulting_x0020_o>
+                <d:Element_x002d_Services_x0020_on_>N/A</d:Element_x002d_Services_x0020_on_>
+                <d:LOE_x0020__x002d__x0020_Services>N/A</d:LOE_x0020__x002d__x0020_Services>
+                <d:LOE_x0020__x002d__x0020_Services0>N/A</d:LOE_x0020__x002d__x0020_Services0>
+                <d:LOE_x0020__x002d__x0020_Services1>N/A</d:LOE_x0020__x002d__x0020_Services1>
+                <d:OData__x0023__x0020_of_x0020_Credits_x m:type="Edm.Double">4</d:OData__x0023__x0020_of_x0020_Credits_x>
+                <d:Credit_x0020_Remaining m:type="Edm.Double">2</d:Credit_x0020_Remaining>
+                <d:Status>Not Started</d:Status>
+                <d:Project_x0020_OwnerId m:type="Edm.Int32">32</d:Project_x0020_OwnerId>
+                <d:Project_x0020_OwnerStringId>32</d:Project_x0020_OwnerStringId>
+                <d:Start_x0020_Date m:type="Edm.DateTime">2018-12-21T08:00:00Z</d:Start_x0020_Date>
+                <d:Anticipated_x0020_End_x0020_Date m:type="Edm.DateTime">2019-12-20T08:00:00Z</d:Anticipated_x0020_End_x0020_Date>
+                <d:Comments>&lt;div class="ExternalClassD19599FDF34E46FE89350B7F57380895"&gt;CSD advised that client added ACM (with no compliance); Steve Nicoll advised these 2 credits would be used for implementation and assigned it to Jaimy Jodouin on April 25, 2019 &lt;/div&gt;</d:Comments>
+                <d:OData__x0023__x0020_of_x0020_Credits_x0 m:type="Edm.Double">2</d:OData__x0023__x0020_of_x0020_Credits_x0>
+                <d:L_x002d_Customer>TCF National Bank</d:L_x002d_Customer>
+                <d:L_x002d_CreditsForElement>2</d:L_x002d_CreditsForElement>
+                <d:L_x002d_CreditsPurchased>4</d:L_x002d_CreditsPurchased>
+                <d:L_x002d_CreditRemaining>2</d:L_x002d_CreditRemaining>
+                <d:L_x002d_CustomerSalesDirector>Emily Krolak</d:L_x002d_CustomerSalesDirector>
+                <d:L_x002d_CustomerSuccessManager>Emily Krolak</d:L_x002d_CustomerSuccessManager>
+                <d:L_x002d_ElementConsultingDemand>N/A</d:L_x002d_ElementConsultingDemand>
+                <d:L_x002d_ElementServicesDemand>N/A</d:L_x002d_ElementServicesDemand>
+                <d:L_x002d_LOELearnerExperience>N/A</d:L_x002d_LOELearnerExperience>
+                <d:L_x002d_LOEMarketing>N/A</d:L_x002d_LOEMarketing>
+                <d:L_x002d_LOEReporting>N/A</d:L_x002d_LOEReporting>
+                <d:ID m:type="Edm.Int32">8</d:ID>
+                <d:Modified m:type="Edm.DateTime">2019-05-29T20:44:59Z</d:Modified>
+                <d:Created m:type="Edm.DateTime">2019-05-03T19:54:34Z</d:Created>
+                <d:AuthorId m:type="Edm.Int32">19</d:AuthorId>
+                <d:EditorId m:type="Edm.Int32">18</d:EditorId>
+                <d:OData__UIVersionString>1.0</d:OData__UIVersionString>
+                <d:Attachments m:type="Edm.Boolean">false</d:Attachments>
+                <d:GUID m:type="Edm.Guid">8bc07edd-0619-4c85-a108-70145d310e2f</d:GUID>
+            </m:properties>
+        </content>
+    </entry>
+    <entry m:etag="&quot;41&quot;">
+        <id>5cdfb2c9-89f6-42b5-ad0a-1d87b6bda6cd</id>
+        <category term="SP.Data.On_x0020_Demand_x0020_TrackingListItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+        <link rel="edit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FirstUniqueAncestorSecurableObject" type="application/atom+xml;type=entry" title="FirstUniqueAncestorSecurableObject" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/FirstUniqueAncestorSecurableObject" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/RoleAssignments" type="application/atom+xml;type=feed" title="RoleAssignments" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/RoleAssignments" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/AttachmentFiles" type="application/atom+xml;type=feed" title="AttachmentFiles" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/AttachmentFiles" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ContentType" type="application/atom+xml;type=entry" title="ContentType" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/ContentType" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/GetDlpPolicyTip" type="application/atom+xml;type=entry" title="GetDlpPolicyTip" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/GetDlpPolicyTip" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsHtml" type="application/atom+xml;type=entry" title="FieldValuesAsHtml" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/FieldValuesAsHtml" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesAsText" type="application/atom+xml;type=entry" title="FieldValuesAsText" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/FieldValuesAsText" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/FieldValuesForEdit" type="application/atom+xml;type=entry" title="FieldValuesForEdit" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/FieldValuesForEdit" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/File" type="application/atom+xml;type=entry" title="File" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/File" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Folder" type="application/atom+xml;type=entry" title="Folder" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/Folder" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/LikedByInformation" type="application/atom+xml;type=entry" title="LikedByInformation" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/LikedByInformation" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ParentList" type="application/atom+xml;type=entry" title="ParentList" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/ParentList" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Properties" type="application/atom+xml;type=entry" title="Properties" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/Properties" />
+        <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Versions" type="application/atom+xml;type=feed" title="Versions" href="Web/Lists(guid'd00f4fcb-f8da-4dc1-b105-437e1b79292c')/Items(9)/Versions" />
+        <title />
+        <updated>2019-05-29T20:48:22Z</updated>
+        <author>
+            <name />
+        </author>
+        <content type="application/xml">
+            <m:properties>
+                <d:FileSystemObjectType m:type="Edm.Int32">0</d:FileSystemObjectType>
+                <d:Id m:type="Edm.Int32">9</d:Id>
+                <d:ServerRedirectedEmbedUri m:null="true" />
+                <d:ServerRedirectedEmbedUrl></d:ServerRedirectedEmbedUrl>
+                <d:ContentTypeId>0x0100642D370DD29C8040AF6A571E7DF427D1</d:ContentTypeId>
+                <d:Title m:null="true" />
+                <d:ComplianceAssetId m:null="true" />
+                <d:CustomerId m:type="Edm.Int32">10</d:CustomerId>
+                <d:SOW_x0020_Received>Yes</d:SOW_x0020_Received>
+                <d:Opportunity_x0020_ID>O-519485</d:Opportunity_x0020_ID>
+                <d:Region>NORTH AMERICA</d:Region>
+                <d:Customer_x0020_Success_x0020_ManId m:type="Edm.Int32">33</d:Customer_x0020_Success_x0020_ManId>
+                <d:Customer_x0020_Success_x0020_ManStringId>33</d:Customer_x0020_Success_x0020_ManStringId>
+                <d:Customer_x0020_Sales_x0020_DirecId m:type="Edm.Int32">34</d:Customer_x0020_Sales_x0020_DirecId>
+                <d:Customer_x0020_Sales_x0020_DirecStringId>34</d:Customer_x0020_Sales_x0020_DirecStringId>
+                <d:Service_x0020_Type>Services on Demand</d:Service_x0020_Type>
+                <d:Element_x002d_Consulting_x0020_o>N/A</d:Element_x002d_Consulting_x0020_o>
+                <d:Element_x002d_Services_x0020_on_>N/A</d:Element_x002d_Services_x0020_on_>
+                <d:LOE_x0020__x002d__x0020_Services>N/A</d:LOE_x0020__x002d__x0020_Services>
+                <d:LOE_x0020__x002d__x0020_Services0>N/A</d:LOE_x0020__x002d__x0020_Services0>
+                <d:LOE_x0020__x002d__x0020_Services1>N/A</d:LOE_x0020__x002d__x0020_Services1>
+                <d:OData__x0023__x0020_of_x0020_Credits_x m:type="Edm.Double">28</d:OData__x0023__x0020_of_x0020_Credits_x>
+                <d:Credit_x0020_Remaining m:type="Edm.Double">24</d:Credit_x0020_Remaining>
+                <d:Status>Not Started</d:Status>
+                <d:Project_x0020_OwnerId m:type="Edm.Int32">35</d:Project_x0020_OwnerId>
+                <d:Project_x0020_OwnerStringId>35</d:Project_x0020_OwnerStringId>
+                <d:Start_x0020_Date m:type="Edm.DateTime">2019-03-18T07:00:00Z</d:Start_x0020_Date>
+                <d:Anticipated_x0020_End_x0020_Date m:type="Edm.DateTime">2020-01-24T08:00:00Z</d:Anticipated_x0020_End_x0020_Date>
+                <d:Comments>&lt;div class="ExternalClass49078CDA98D8456685B76E8B3AB25BE7"&gt;Awaiting assignment details from Christine; have initiated conversation with acct team to confirm these 4 credits&lt;/div&gt;</d:Comments>
+                <d:OData__x0023__x0020_of_x0020_Credits_x0 m:type="Edm.Double">4</d:OData__x0023__x0020_of_x0020_Credits_x0>
+                <d:L_x002d_Customer>Cogeco Peer 1 (USA) Inc.</d:L_x002d_Customer>
+                <d:L_x002d_CreditsForElement>4</d:L_x002d_CreditsForElement>
+                <d:L_x002d_CreditsPurchased>28</d:L_x002d_CreditsPurchased>
+                <d:L_x002d_CreditRemaining>24</d:L_x002d_CreditRemaining>
+                <d:L_x002d_CustomerSalesDirector>Nancy Safar</d:L_x002d_CustomerSalesDirector>
+                <d:L_x002d_CustomerSuccessManager>Nancy Safar</d:L_x002d_CustomerSuccessManager>
+                <d:L_x002d_ElementConsultingDemand>N/A</d:L_x002d_ElementConsultingDemand>
+                <d:L_x002d_ElementServicesDemand>N/A</d:L_x002d_ElementServicesDemand>
+                <d:L_x002d_LOELearnerExperience>N/A</d:L_x002d_LOELearnerExperience>
+                <d:L_x002d_LOEMarketing>N/A</d:L_x002d_LOEMarketing>
+                <d:L_x002d_LOEReporting>N/A</d:L_x002d_LOEReporting>
+                <d:ID m:type="Edm.Int32">9</d:ID>
+                <d:Modified m:type="Edm.DateTime">2019-05-29T20:44:57Z</d:Modified>
+                <d:Created m:type="Edm.DateTime">2019-05-09T19:38:07Z</d:Created>
+                <d:AuthorId m:type="Edm.Int32">19</d:AuthorId>
+                <d:EditorId m:type="Edm.Int32">18</d:EditorId>
+                <d:OData__UIVersionString>1.0</d:OData__UIVersionString>
+                <d:Attachments m:type="Edm.Boolean">false</d:Attachments>
+                <d:GUID m:type="Edm.Guid">c53792d3-e22d-447a-8ae4-9f190c51a65e</d:GUID>
+            </m:properties>
+        </content>
+    </entry>
+</feed>
