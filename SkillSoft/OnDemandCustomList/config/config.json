@@ -11,7 +11,7 @@
       ]
     }
   },
-  "externals": {},
+  "externals": { },
   "localizedResources": {
     "OnDemandCreditListWebPartStrings": "lib/webparts/onDemandCreditList/loc/{locale}.js"
   }
