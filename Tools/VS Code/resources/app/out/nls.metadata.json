@@ -2613,13 +2613,6 @@
 				]
 			}
 		],
-		"vs/workbench/contrib/externalTerminal/electron-browser/externalTerminalService": [
-			"console.title",
-			"mac.terminal.script.failed",
-			"mac.terminal.type.not.supported",
-			"press.any.key",
-			"linux.term.failed"
-		],
 		"vs/workbench/contrib/snippets/browser/snippetsFile": [
 			"source.workspaceSnippetGlobal",
 			"source.userSnippetGlobal",
@@ -2642,6 +2635,13 @@
 			"schema.workbenchColors",
 			"schema.tokenColors.path",
 			"schema.colors"
+		],
+		"vs/workbench/contrib/externalTerminal/electron-browser/externalTerminalService": [
+			"console.title",
+			"mac.terminal.script.failed",
+			"mac.terminal.type.not.supported",
+			"press.any.key",
+			"linux.term.failed"
 		],
 		"vs/base/browser/ui/keybindingLabel/keybindingLabel": [
 			"unbound"
@@ -2750,9 +2750,6 @@
 			"config.property.languageDefault",
 			"config.property.duplicate"
 		],
-		"vs/workbench/api/electron-browser/mainThreadWebview": [
-			"errorMessage"
-		],
 		"vs/editor/contrib/goToDefinition/goToDefinitionCommands": [
 			"noResultWord",
 			"generic.noResults",
@@ -2831,6 +2828,9 @@
 			"invalid.url",
 			"missing.url",
 			"label"
+		],
+		"vs/workbench/api/electron-browser/mainThreadWebview": [
+			"errorMessage"
 		],
 		"vs/workbench/services/files/electron-browser/diskFileSystemProvider": [
 			"binFailed",
@@ -3441,6 +3441,22 @@
 			"versionSpecificity2",
 			"versionMismatch"
 		],
+		"vs/editor/contrib/folding/folding": [
+			"unfoldAction.label",
+			"unFoldRecursivelyAction.label",
+			"foldAction.label",
+			"foldRecursivelyAction.label",
+			"foldAllBlockComments.label",
+			"foldAllMarkerRegions.label",
+			"unfoldAllMarkerRegions.label",
+			"foldAllAction.label",
+			"unfoldAllAction.label",
+			"foldLevelAction.label"
+		],
+		"vs/base/browser/ui/aria/aria": [
+			"repeated",
+			"repeatedNtimes"
+		],
 		"vs/workbench/api/common/jsonValidationExtensionPoint": [
 			"contributes.jsonValidation",
 			"contributes.jsonValidation.fileMatch",
@@ -3476,22 +3492,6 @@
 		],
 		"vs/workbench/api/browser/mainThreadProgress": [
 			"manageExtension"
-		],
-		"vs/editor/contrib/folding/folding": [
-			"unfoldAction.label",
-			"unFoldRecursivelyAction.label",
-			"foldAction.label",
-			"foldRecursivelyAction.label",
-			"foldAllBlockComments.label",
-			"foldAllMarkerRegions.label",
-			"unfoldAllMarkerRegions.label",
-			"foldAllAction.label",
-			"unfoldAllAction.label",
-			"foldLevelAction.label"
-		],
-		"vs/base/browser/ui/aria/aria": [
-			"repeated",
-			"repeatedNtimes"
 		],
 		"vs/workbench/browser/workbench": [
 			"loaderErrorNative"
@@ -3857,25 +3857,6 @@
 			"welcomePage.buttonHoverBackground",
 			"welcomePage.background"
 		],
-		"vs/workbench/api/browser/mainThreadEditors": [
-			"diffLeftRightLabel"
-		],
-		"vs/workbench/api/browser/mainThreadExtensionService": [
-			"reload window",
-			"reload",
-			"disabledDep",
-			"enable dep",
-			"uninstalledDep",
-			"install missing dep",
-			"unknownDep"
-		],
-		"vs/workbench/api/browser/mainThreadWorkspace": [
-			"folderStatusMessageAddSingleFolder",
-			"folderStatusMessageAddMultipleFolders",
-			"folderStatusMessageRemoveSingleFolder",
-			"folderStatusMessageRemoveMultipleFolders",
-			"folderStatusChangeFolder"
-		],
 		"vs/editor/contrib/linesOperations/linesOperations": [
 			"lines.copyUp",
 			{
@@ -3975,6 +3956,25 @@
 		],
 		"vs/editor/contrib/rename/renameInputField": [
 			"renameAriaLabel"
+		],
+		"vs/workbench/api/browser/mainThreadEditors": [
+			"diffLeftRightLabel"
+		],
+		"vs/workbench/api/browser/mainThreadExtensionService": [
+			"reload window",
+			"reload",
+			"disabledDep",
+			"enable dep",
+			"uninstalledDep",
+			"install missing dep",
+			"unknownDep"
+		],
+		"vs/workbench/api/browser/mainThreadWorkspace": [
+			"folderStatusMessageAddSingleFolder",
+			"folderStatusMessageAddMultipleFolders",
+			"folderStatusMessageRemoveSingleFolder",
+			"folderStatusMessageRemoveMultipleFolders",
+			"folderStatusChangeFolder"
 		],
 		"vs/workbench/electron-browser/actions/helpActions": [
 			"keybindingsReference",
@@ -4329,12 +4329,6 @@
 			"canNotResolveSelectedText",
 			"noValueForCommand"
 		],
-		"vs/workbench/api/browser/mainThreadSaveParticipant": [
-			"timeout.formatOnSave",
-			"codeActionsOnSave.didTimeout",
-			"timeout.onWillSave",
-			"saveParticipants"
-		],
 		"vs/editor/contrib/codeAction/codeActionCommands": [
 			"quickFixWithKb",
 			"quickFix",
@@ -4363,6 +4357,12 @@
 		],
 		"vs/editor/contrib/message/messageController": [
 			"editor.readonly"
+		],
+		"vs/workbench/api/browser/mainThreadSaveParticipant": [
+			"timeout.formatOnSave",
+			"codeActionsOnSave.didTimeout",
+			"timeout.onWillSave",
+			"saveParticipants"
 		],
 		"vs/workbench/services/configuration/browser/configurationService": [
 			"unsupportedApplicationSetting",
@@ -4432,6 +4432,27 @@
 			"overviewRulerAddedForeground",
 			"overviewRulerDeletedForeground"
 		],
+		"vs/workbench/contrib/debug/browser/breakpointsView": [
+			"breakpointsSection",
+			"Logpoint",
+			"Breakpoint",
+			"editBreakpoint",
+			"removeBreakpoint",
+			"functionBreakpointsNotSupported",
+			"functionBreakpointPlaceholder",
+			"functionBreakPointInputAriaLabel",
+			"disabledLogpoint",
+			"disabledBreakpoint",
+			"unverifiedLogpoint",
+			"unverifiedBreakopint",
+			"functionBreakpointUnsupported",
+			"logBreakpointUnsupported",
+			"logMessage",
+			"conditionalBreakpointUnsupported",
+			"hitBreakpointUnsupported",
+			"expression",
+			"hitCount"
+		],
 		"vs/workbench/contrib/debug/browser/callStackView": [
 			"callstackSection",
 			"debugStopped",
@@ -4464,27 +4485,6 @@
 			"sessionLabel",
 			"showMoreStackFrames",
 			"loadMoreStackFrames"
-		],
-		"vs/workbench/contrib/debug/browser/breakpointsView": [
-			"breakpointsSection",
-			"Logpoint",
-			"Breakpoint",
-			"editBreakpoint",
-			"removeBreakpoint",
-			"functionBreakpointsNotSupported",
-			"functionBreakpointPlaceholder",
-			"functionBreakPointInputAriaLabel",
-			"disabledLogpoint",
-			"disabledBreakpoint",
-			"unverifiedLogpoint",
-			"unverifiedBreakopint",
-			"functionBreakpointUnsupported",
-			"logBreakpointUnsupported",
-			"logMessage",
-			"conditionalBreakpointUnsupported",
-			"hitBreakpointUnsupported",
-			"expression",
-			"hitCount"
 		],
 		"vs/workbench/contrib/debug/browser/breakpointWidget": [
 			"breakpointWidgetLogMessagePlaceholder",
@@ -4615,6 +4615,24 @@
 		"vs/base/parts/tree/browser/treeDefaults": [
 			"collapse all"
 		],
+		"vs/editor/contrib/format/format": [
+			"hint11",
+			"hintn1",
+			"hint1n",
+			"hintnn"
+		],
+		"vs/editor/contrib/goToDefinition/goToDefinitionResultsNavigation": [
+			"location.kb",
+			"location"
+		],
+		"vs/editor/contrib/gotoError/gotoErrorWidget": [
+			"problems",
+			"change",
+			"editorMarkerNavigationError",
+			"editorMarkerNavigationWarning",
+			"editorMarkerNavigationInfo",
+			"editorMarkerNavigationBackground"
+		],
 		"vs/workbench/contrib/codeEditor/browser/languageConfigurationExtensionPoint": [
 			"parseErrors",
 			"schema.openBracket",
@@ -4658,24 +4676,6 @@
 		],
 		"vs/workbench/api/browser/mainThreadTask": [
 			"task.label"
-		],
-		"vs/editor/contrib/format/format": [
-			"hint11",
-			"hintn1",
-			"hint1n",
-			"hintnn"
-		],
-		"vs/editor/contrib/goToDefinition/goToDefinitionResultsNavigation": [
-			"location.kb",
-			"location"
-		],
-		"vs/editor/contrib/gotoError/gotoErrorWidget": [
-			"problems",
-			"change",
-			"editorMarkerNavigationError",
-			"editorMarkerNavigationWarning",
-			"editorMarkerNavigationInfo",
-			"editorMarkerNavigationBackground"
 		],
 		"vs/workbench/browser/parts/views/customView": [
 			"no-dataprovider",
@@ -6425,10 +6425,6 @@
 			"configureNotification",
 			"copyNotification"
 		],
-		"vs/workbench/contrib/extensions/browser/extensionsViewer": [
-			"error",
-			"Unknown Extension"
-		],
 		"vs/workbench/contrib/extensions/electron-browser/extensionsWidgets": [
 			"ratedBySingleUser",
 			"ratedByUsers",
@@ -6438,6 +6434,10 @@
 			"extension enabled locally",
 			"viewExtensionDetailsAria",
 			"remote extension title"
+		],
+		"vs/workbench/contrib/extensions/browser/extensionsViewer": [
+			"error",
+			"Unknown Extension"
 		],
 		"vs/workbench/contrib/tasks/browser/taskQuickOpen": [
 			"tasksAriaLabel",
@@ -6550,11 +6550,11 @@
 			"miInstallingUpdate",
 			"miRestartToUpdate"
 		],
-		"vs/workbench/browser/parts/editor/binaryDiffEditor": [
-			"metadataDiff"
-		],
 		"vs/base/browser/ui/menu/menubar": [
 			"mMore"
+		],
+		"vs/workbench/browser/parts/editor/binaryDiffEditor": [
+			"metadataDiff"
 		],
 		"vs/workbench/contrib/comments/browser/commentThreadWidget": [
 			"label.collapse",
@@ -9426,13 +9426,6 @@
 			"Enable wrapping for this file",
 			"Toggle &&Word Wrap"
 		],
-		"vs/workbench/contrib/externalTerminal/electron-browser/externalTerminalService": [
-			"VS Code Console",
-			"Script '{0}' failed with exit code {1}",
-			"'{0}' not supported",
-			"Press any key to continue...",
-			"'{0}' failed with exit code {1}"
-		],
 		"vs/workbench/contrib/snippets/browser/snippetsFile": [
 			"Workspace Snippet",
 			"Global User Snippet",
@@ -9455,6 +9448,13 @@
 			"Colors in the workbench",
 			"Path to a tmTheme file (relative to the current file).",
 			"Colors for syntax highlighting"
+		],
+		"vs/workbench/contrib/externalTerminal/electron-browser/externalTerminalService": [
+			"VS Code Console",
+			"Script '{0}' failed with exit code {1}",
+			"'{0}' not supported",
+			"Press any key to continue...",
+			"'{0}' failed with exit code {1}"
 		],
 		"vs/base/browser/ui/keybindingLabel/keybindingLabel": [
 			"Unbound"
@@ -9533,9 +9533,6 @@
 			"Cannot register '{0}'. This matches property pattern '\\\\[.*\\\\]$' for describing language specific editor settings. Use 'configurationDefaults' contribution.",
 			"Cannot register '{0}'. This property is already registered."
 		],
-		"vs/workbench/api/electron-browser/mainThreadWebview": [
-			"An error occurred while restoring view:{0}"
-		],
 		"vs/editor/contrib/goToDefinition/goToDefinitionCommands": [
 			"No definition found for '{0}'",
 			"No definition found",
@@ -9589,6 +9586,9 @@
 			"Failed to open this link because it is not well-formed: {0}",
 			"Failed to open this link because its target is missing.",
 			"Open Link"
+		],
+		"vs/workbench/api/electron-browser/mainThreadWebview": [
+			"An error occurred while restoring view:{0}"
 		],
 		"vs/workbench/services/files/electron-browser/diskFileSystemProvider": [
 			"Failed to move '{0}' to the recycle bin",
@@ -10164,6 +10164,22 @@
 			"Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions after 1.0.0, please define at a minimum the major desired version. E.g. ^1.10.0, 1.10.x, 1.x.x, 2.x.x, etc.",
 			"Extension is not compatible with Code {0}. Extension requires: {1}."
 		],
+		"vs/editor/contrib/folding/folding": [
+			"Unfold",
+			"Unfold Recursively",
+			"Fold",
+			"Fold Recursively",
+			"Fold All Block Comments",
+			"Fold All Regions",
+			"Unfold All Regions",
+			"Fold All",
+			"Unfold All",
+			"Fold Level {0}"
+		],
+		"vs/base/browser/ui/aria/aria": [
+			"{0} (occurred again)",
+			"{0} (occurred {1} times)"
+		],
 		"vs/workbench/api/common/jsonValidationExtensionPoint": [
 			"Contributes json schema configuration.",
 			"The file pattern to match, for example \"package.json\" or \"*.launch\".",
@@ -10199,22 +10215,6 @@
 		],
 		"vs/workbench/api/browser/mainThreadProgress": [
 			"Manage Extension"
-		],
-		"vs/editor/contrib/folding/folding": [
-			"Unfold",
-			"Unfold Recursively",
-			"Fold",
-			"Fold Recursively",
-			"Fold All Block Comments",
-			"Fold All Regions",
-			"Unfold All Regions",
-			"Fold All",
-			"Unfold All",
-			"Fold Level {0}"
-		],
-		"vs/base/browser/ui/aria/aria": [
-			"{0} (occurred again)",
-			"{0} (occurred {1} times)"
 		],
 		"vs/workbench/browser/workbench": [
 			"Failed to load a required file. Please restart the application to try again. Details: {0}"
@@ -10534,25 +10534,6 @@
 			"Hover background color for the buttons on the Welcome page.",
 			"Background color for the Welcome page."
 		],
-		"vs/workbench/api/browser/mainThreadEditors": [
-			"{0} ⟷ {1}"
-		],
-		"vs/workbench/api/browser/mainThreadExtensionService": [
-			"Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is not loaded. Would you like to reload the window to load the extension?",
-			"Reload Window",
-			"Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is disabled. Would you like to enable the extension and reload the window?",
-			"Enable and Reload",
-			"Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is not installed. Would you like to install the extension and reload the window?",
-			"Install and Reload",
-			"Cannot activate the '{0}' extension because it depends on an unknown '{1}' extension ."
-		],
-		"vs/workbench/api/browser/mainThreadWorkspace": [
-			"Extension '{0}' added 1 folder to the workspace",
-			"Extension '{0}' added {1} folders to the workspace",
-			"Extension '{0}' removed 1 folder from the workspace",
-			"Extension '{0}' removed {1} folders from the workspace",
-			"Extension '{0}' changed folders of the workspace"
-		],
 		"vs/editor/contrib/linesOperations/linesOperations": [
 			"Copy Line Up",
 			"&&Copy Line Up",
@@ -10602,6 +10583,25 @@
 		],
 		"vs/editor/contrib/rename/renameInputField": [
 			"Rename input. Type new name and press Enter to commit."
+		],
+		"vs/workbench/api/browser/mainThreadEditors": [
+			"{0} ⟷ {1}"
+		],
+		"vs/workbench/api/browser/mainThreadExtensionService": [
+			"Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is not loaded. Would you like to reload the window to load the extension?",
+			"Reload Window",
+			"Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is disabled. Would you like to enable the extension and reload the window?",
+			"Enable and Reload",
+			"Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is not installed. Would you like to install the extension and reload the window?",
+			"Install and Reload",
+			"Cannot activate the '{0}' extension because it depends on an unknown '{1}' extension ."
+		],
+		"vs/workbench/api/browser/mainThreadWorkspace": [
+			"Extension '{0}' added 1 folder to the workspace",
+			"Extension '{0}' added {1} folders to the workspace",
+			"Extension '{0}' removed 1 folder from the workspace",
+			"Extension '{0}' removed {1} folders from the workspace",
+			"Extension '{0}' changed folders of the workspace"
 		],
 		"vs/workbench/electron-browser/actions/helpActions": [
 			"Keyboard Shortcuts Reference",
@@ -10841,12 +10841,6 @@
 			"'{0}' can not be resolved. Make sure to have some text selected in the active editor.",
 			"'{0}' can not be resolved because the command has no value."
 		],
-		"vs/workbench/api/browser/mainThreadSaveParticipant": [
-			"Aborted format on save after {0}ms",
-			"Aborted codeActionsOnSave after {0}ms",
-			"Aborted onWillSaveTextDocument-event after 1750ms",
-			"Running Save Participants..."
-		],
 		"vs/editor/contrib/codeAction/codeActionCommands": [
 			"Show Fixes ({0})",
 			"Show Fixes",
@@ -10875,6 +10869,12 @@
 		],
 		"vs/editor/contrib/message/messageController": [
 			"Cannot edit in read-only editor"
+		],
+		"vs/workbench/api/browser/mainThreadSaveParticipant": [
+			"Aborted format on save after {0}ms",
+			"Aborted codeActionsOnSave after {0}ms",
+			"Aborted onWillSaveTextDocument-event after 1750ms",
+			"Running Save Participants..."
 		],
 		"vs/workbench/services/configuration/browser/configurationService": [
 			"This setting can be applied only in application user settings",
@@ -10934,24 +10934,6 @@
 			"Overview ruler marker color for added content.",
 			"Overview ruler marker color for deleted content."
 		],
-		"vs/workbench/contrib/debug/browser/callStackView": [
-			"Call Stack Section",
-			"Paused on {0}",
-			"Debug Call Stack",
-			"Show More Stack Frames",
-			"Session",
-			"Paused",
-			"Running",
-			"Thread",
-			"Load More Stack Frames",
-			"Show {0} More: {1}",
-			"Show {0} More Stack Frames",
-			"Thread {0}, callstack, debug",
-			"Stack Frame {0} line {1} {2}, callstack, debug",
-			"Debug Session {0}",
-			"Show {0} More Stack Frames",
-			"Load More Stack Frames"
-		],
 		"vs/workbench/contrib/debug/browser/breakpointsView": [
 			"Breakpoints Section",
 			"Logpoint",
@@ -10972,6 +10954,24 @@
 			"Hit conditional breakpoints not supported by this debug type",
 			"Expression: {0}",
 			"Hit Count: {0}"
+		],
+		"vs/workbench/contrib/debug/browser/callStackView": [
+			"Call Stack Section",
+			"Paused on {0}",
+			"Debug Call Stack",
+			"Show More Stack Frames",
+			"Session",
+			"Paused",
+			"Running",
+			"Thread",
+			"Load More Stack Frames",
+			"Show {0} More: {1}",
+			"Show {0} More Stack Frames",
+			"Thread {0}, callstack, debug",
+			"Stack Frame {0} line {1} {2}, callstack, debug",
+			"Debug Session {0}",
+			"Show {0} More Stack Frames",
+			"Load More Stack Frames"
 		],
 		"vs/workbench/contrib/debug/browser/breakpointWidget": [
 			"Message to log when breakpoint is hit. Expressions within {} are interpolated. 'Enter' to accept, 'esc' to cancel.",
@@ -11082,6 +11082,24 @@
 		"vs/base/parts/tree/browser/treeDefaults": [
 			"Collapse All"
 		],
+		"vs/editor/contrib/format/format": [
+			"Made 1 formatting edit on line {0}",
+			"Made {0} formatting edits on line {1}",
+			"Made 1 formatting edit between lines {0} and {1}",
+			"Made {0} formatting edits between lines {1} and {2}"
+		],
+		"vs/editor/contrib/goToDefinition/goToDefinitionResultsNavigation": [
+			"Symbol {0} of {1}, {2} for next",
+			"Symbol {0} of {1}"
+		],
+		"vs/editor/contrib/gotoError/gotoErrorWidget": [
+			"{0} of {1} problems",
+			"{0} of {1} problem",
+			"Editor marker navigation widget error color.",
+			"Editor marker navigation widget warning color.",
+			"Editor marker navigation widget info color.",
+			"Editor marker navigation widget background."
+		],
 		"vs/workbench/contrib/codeEditor/browser/languageConfigurationExtensionPoint": [
 			"Errors parsing {0}: {1}",
 			"The opening bracket character or string sequence.",
@@ -11125,24 +11143,6 @@
 		],
 		"vs/workbench/api/browser/mainThreadTask": [
 			"{0}: {1}"
-		],
-		"vs/editor/contrib/format/format": [
-			"Made 1 formatting edit on line {0}",
-			"Made {0} formatting edits on line {1}",
-			"Made 1 formatting edit between lines {0} and {1}",
-			"Made {0} formatting edits between lines {1} and {2}"
-		],
-		"vs/editor/contrib/goToDefinition/goToDefinitionResultsNavigation": [
-			"Symbol {0} of {1}, {2} for next",
-			"Symbol {0} of {1}"
-		],
-		"vs/editor/contrib/gotoError/gotoErrorWidget": [
-			"{0} of {1} problems",
-			"{0} of {1} problem",
-			"Editor marker navigation widget error color.",
-			"Editor marker navigation widget warning color.",
-			"Editor marker navigation widget info color.",
-			"Editor marker navigation widget background."
 		],
 		"vs/workbench/browser/parts/views/customView": [
 			"There is no data provider registered that can provide view data.",
@@ -12446,10 +12446,6 @@
 			"Configure Notification",
 			"Copy Text"
 		],
-		"vs/workbench/contrib/extensions/browser/extensionsViewer": [
-			"Error",
-			"Unknown Extension:"
-		],
 		"vs/workbench/contrib/extensions/electron-browser/extensionsWidgets": [
 			"Rated by 1 user",
 			"Rated by {0} users",
@@ -12459,6 +12455,10 @@
 			"Extension is enabled locally.",
 			"{0}. Press enter for extension details.",
 			"Extension in {0}"
+		],
+		"vs/workbench/contrib/extensions/browser/extensionsViewer": [
+			"Error",
+			"Unknown Extension:"
 		],
 		"vs/workbench/contrib/tasks/browser/taskQuickOpen": [
 			"Type the name of a task to run",
@@ -12516,11 +12516,11 @@
 			"Installing Update...",
 			"Restart to &&Update"
 		],
-		"vs/workbench/browser/parts/editor/binaryDiffEditor": [
-			"{0} ↔ {1}"
-		],
 		"vs/base/browser/ui/menu/menubar": [
 			"..."
+		],
+		"vs/workbench/browser/parts/editor/binaryDiffEditor": [
+			"{0} ↔ {1}"
 		],
 		"vs/workbench/contrib/comments/browser/commentThreadWidget": [
 			"Collapse",

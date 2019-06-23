@@ -1,6 +1,6 @@
 {
-  "name": "on-demand-credit-list",
-  "version": "0.0.1",
+  "name": "ondemand-site-credit-list",
+  "version": "0.0.3",
   "private": true,
   "engines": {
     "node": ">=0.10.0"

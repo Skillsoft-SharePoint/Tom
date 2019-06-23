@@ -54,6 +54,9 @@ import {
   ISPList
 } from '../../../lib/webparts/onDemandCreditList/OnDemandCreditListWebPart';
 */
+import {
+    triggerCsvDownload
+} from '../../../temp/workbench-packages/@microsoft_sp-loader/lib/DeveloperTools/Components/DeveloperModules/TraceDisplay/TraceList/CsvRenderer';
 
 import { SPHttpClient, SPHttpClientResponse } from '@microsoft/sp-http';
 
@@ -211,13 +214,14 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
         */
         let sameCustomer: boolean = false;
         let x: number = 0;
+        let _totalOpsforCust: number = 0;
+        let _ReadyForTotal: boolean = false;
 
         //Totals Vars
         let _totalCredits:number = 0;
         let _totalUsed:number = 0;
         let _totalRemaining:number = 0;
-
-     
+   
       //html += `<h3>Section 1</h3>`;
           //preHTML += `<div id='Start Custom List'>`;
   
@@ -237,7 +241,22 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
 
           //Dialog.alert(result.length.toString());
 
-          if (result.length > 1){sameCustomer=true; x += 1;}else{x=0;};
+          if (result.length > 1){
+            _totalOpsforCust=result.length;
+            sameCustomer=true; 
+            _totalCredits= Number(item["# of Credits Purchased"]);
+            _totalUsed += Number(item["# of Credits for this Element"]);
+            _totalRemaining += Number(item["Credit Remaining"]);
+
+            x += 1;
+            if (x==_totalOpsforCust){
+              _ReadyForTotal=true;
+            }
+
+          }else{
+            x=0;
+            _ReadyForTotal=false;
+          };
           /*
         
           sameCustomer = this.checkCustomer(curCustomner);
@@ -245,6 +264,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
           // Set Table start HTML
             if (sameCustomer == false) {
               preHTML += this.dataRow(item.L_x002d_Customer,item.Opportunity_x0020_ID,true);
+
             } else {
               //multi
               if (x=1){
@@ -259,6 +279,10 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
             preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,false);
           // Set totals
             preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,true);
+            if (_ReadyForTotal == true ){
+              preHTML += this.dataRow('Totals','For All Oppurtunities',false);
+              preHTML += this.fillDataRow('Totals',_totalCredits.toString(),_totalUsed.toString(),_totalRemaining.toString(),true);
+            }
           // Table End
             preHTML += `</table>`;
   
@@ -268,7 +292,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
             }
   
           // Set Customer
-          curCustomner = item.L_x002d_Customer.toString();
+          //curCustomner = item.L_x002d_Customer.toString();
             //let test = items.find((item[1]));
           });
   
