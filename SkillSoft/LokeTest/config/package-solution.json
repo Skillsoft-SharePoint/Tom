@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "loke-test-client-side-solution",
+    "id": "45987072-4153-46e3-8e56-87efcbeef240",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/loke-test.sppkg"
+  }
+}

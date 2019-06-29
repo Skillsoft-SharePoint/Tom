@@ -54,10 +54,11 @@ import {
   ISPList
 } from '../../../lib/webparts/onDemandCreditList/OnDemandCreditListWebPart';
 */
+/*
 import {
     triggerCsvDownload
 } from '../../../temp/workbench-packages/@microsoft_sp-loader/lib/DeveloperTools/Components/DeveloperModules/TraceDisplay/TraceList/CsvRenderer';
-
+*/
 import { SPHttpClient, SPHttpClientResponse } from '@microsoft/sp-http';
 
 /*********************************************/
@@ -229,7 +230,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
           datatable = this.tableHTML();
   
       // Start list div
-          preHTML += `<div id='DIV to hold list data' class="accordion" >`; //style="height:auto !important;"
+          preHTML += `<div id='DIV to hold list data' class="accordion" style="height:auto !important;">`; //style="height:auto !important;"
  
       // Start Loop //
         items.forEach((item: ISPList) => {
@@ -269,7 +270,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
               //multi
               if (x=1){
                 preHTML += `<h3 id='Header'> ${item.L_x002d_Customer} </h3>
-                    <div id='DIV after header'>`;
+                    <div id='DIVafterheader'>`;
               }
               preHTML += this.dataRow(item.L_x002d_Customer,item.Opportunity_x0020_ID,false);
               //Dialog.alert('ELSE');
@@ -300,6 +301,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
       preHTML += `</div>`;
   
       this.domElement.innerHTML = preHTML;
+      
   
       const accordionOptions: JQueryUI.AccordionOptions = {
         animate: true,
@@ -339,7 +341,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
       //single
       if (singleCustomer==true){
         dataHTML += `<h3 id='Header'> ${customer} </h3>
-                    <div id='DIV after header'>`;
+                    <div id='DIVafterheader' height='auto' style='height:auto !important'>`;
         dataHTML += `<h4 id='Opportunity'>${Opportunity} </h4>`;
         dataHTML += this.tableHTML();
       }else{

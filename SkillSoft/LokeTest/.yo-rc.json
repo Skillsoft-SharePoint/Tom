@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.1",
+    "libraryName": "loke-test",
+    "libraryId": "45987072-4153-46e3-8e56-87efcbeef240",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}
