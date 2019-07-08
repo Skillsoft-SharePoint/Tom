@@ -45,20 +45,12 @@ export interface ISPList {
   "L_x002d_CreditsPurchased": string;
   "L_x002d_CreditRemaining": string;
   "Opportunity_x0020_ID": string;
+  "Service_x0020_Type": string;
 }
 
 // import classes
 import MockHttpClient from './MockHTTPSClient';
-/*
-import {
-  ISPList
-} from '../../../lib/webparts/onDemandCreditList/OnDemandCreditListWebPart';
-*/
-/*
-import {
-    triggerCsvDownload
-} from '../../../temp/workbench-packages/@microsoft_sp-loader/lib/DeveloperTools/Components/DeveloperModules/TraceDisplay/TraceList/CsvRenderer';
-*/
+
 import { SPHttpClient, SPHttpClientResponse } from '@microsoft/sp-http';
 
 /*********************************************/
@@ -68,51 +60,7 @@ import { SPHttpClient, SPHttpClientResponse } from '@microsoft/sp-http';
 export interface IOnDemandCreditListWebPartProps {
   description: string;
 }
-/*
-//
-Getting and updating a collection using filter
-import pnp from "sp-pnp-js";
 
-// you are getting back a collection here
-pnp.sp.web.lists.getByTitle("MyList").items.top(1).filter("Title eq 'A Title'").get().then((items: any[]) => {
-    // see if we got something
-    if (items.length > 0) {
-        pnp.sp.web.lists.getByTitle("MyList").items.getById(items[0].Id).update({
-            Title: "Updated Title",
-        }).then(result => {
-            // here you will have updated the item
-            console.log(JSON.stringify(result));
-        });
-    }
-});
-
-// Functional Array
-  let fruits: Array<string>;
-    fruits = ['Apple', 'Orange', 'Banana']; 
-    fruits.push('test');
-    let find = fruits.indexOf('Apple');
-
-//Filter array of objects, which property matches value, returns array:
-var jsObjects = [
-   {a: 1, b: 2}, 
-   {a: 3, b: 4}, 
-   {a: 5, b: 6}, 
-   {a: 7, b: 8}
-];
-
-var result = jsObjects.filter(obj => {
-  return obj.b === 6
-})
-See the MDN Docs on Array.prototype.filter()
-
-Show code snippet
-
-Find the value of the first element/object in the array, otherwise undefined is returned.
-
-var result = jsObjects.find(obj => {
-  return obj.b === 6
-})
-*/
 
 /*********************************************/
 /************** Start Web Part    ***********/
@@ -152,10 +100,10 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
       const listData: ISPLists = {
         value:
           [
-            { ["Customer"]: 'Customer One', ["# of Credits Purchased"]: 8, ["# of Credits for this Element"]: 4, Comments: 'Test One', ["Credit Remaining"]: 4, ["L_x002d_Customer"]: 'Test', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234' },
-            { ["Customer"]: 'Customer Two', ["# of Credits Purchased"]: 10, ["# of Credits for this Element"]: 5, Comments: 'Test Two', ["Credit Remaining"]: 5, ["L_x002d_Customer"]: 'Test two', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234' },
-            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234' },
-            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4321' },
+            { ["Customer"]: 'Customer One', ["# of Credits Purchased"]: 8, ["# of Credits for this Element"]: 4, Comments: 'Test One', ["Credit Remaining"]: 4, ["L_x002d_Customer"]: 'Test', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type":'Test 1' },
+            { ["Customer"]: 'Customer Two', ["# of Credits Purchased"]: 10, ["# of Credits for this Element"]: 5, Comments: 'Test Two', ["Credit Remaining"]: 5, ["L_x002d_Customer"]: 'Test two', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234',"Service_x0020_Type":'Test 2' },
+            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234' ,"Service_x0020_Type":'Test 3'},
+            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4321' ,"Service_x0020_Type":'Test 4'},
           ]
       };
       return listData;
@@ -230,7 +178,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
           datatable = this.tableHTML();
   
       // Start list div
-          preHTML += `<div id='DIV to hold list data' class="accordion" style="height:auto !important;">`; //style="height:auto !important;"
+          preHTML += `<div id="DIV to hold list data" class="accordion" style="height:auto !important;">`; //class="accordion" style="height:auto !important;"
  
       // Start Loop //
         items.forEach((item: ISPList) => {
@@ -245,7 +193,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
           if (result.length > 1){
             _totalOpsforCust=result.length;
             sameCustomer=true; 
-            _totalCredits= Number(item["# of Credits Purchased"]);
+            _totalCredits = Number(item["# of Credits Purchased"]);
             _totalUsed += Number(item["# of Credits for this Element"]);
             _totalRemaining += Number(item["Credit Remaining"]);
 
@@ -269,7 +217,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
             } else {
               //multi
               if (x=1){
-                preHTML += `<h3 id='Header'> ${item.L_x002d_Customer} </h3>
+                preHTML += `<h3 id='Header'> test ${item.L_x002d_Customer} </h3>
                     <div id='DIVafterheader'>`;
               }
               preHTML += this.dataRow(item.L_x002d_Customer,item.Opportunity_x0020_ID,false);
@@ -277,12 +225,12 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
             }
   
           // Set table data
-            preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,false);
+            preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,false,item.Service_x0020_Type);
           // Set totals
-            preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,true);
+            preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,true, item.Service_x0020_Type);
             if (_ReadyForTotal == true ){
               preHTML += this.dataRow('Totals','For All Oppurtunities',false);
-              preHTML += this.fillDataRow('Totals',_totalCredits.toString(),_totalUsed.toString(),_totalRemaining.toString(),true);
+              preHTML += this.fillDataRow('Totals',_totalCredits.toString(),_totalUsed.toString(),_totalRemaining.toString(),true,item.Service_x0020_Type);
             }
           // Table End
             preHTML += `</table>`;
@@ -359,36 +307,44 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
       tablehead += `<table id='TAble Start' class="TFtable" width=100% style="border-collapse: collapse;">`;
       // Table Header //
       tablehead += ` <th  align="left">
-                      Credits Purchased</th><th>Credits Used
+                      Credits Purchased
+                    </th>
+                    <th>Credits Used
                     </th>
                     <th  align="left">
                       Credit Remaining
                     </th>
                     <th  align="left">
                       Comemnts
+                    </th>
+                    <th align="left">
+                      Service Type
                     </th>`;
         return tablehead;
     }
   
-    private fillDataRow(curCstomer: string, curPurchased: string, curUsed: string, curRemaing: string, totals: boolean) {
+    private fillDataRow(curCstomer: string, curPurchased: string, curUsed: string, curRemaing: string, totals: boolean, ServiceType: string) {
       let TableHTML: string = '';
   
-      if (totals == true) {
+      if (totals != true) {
         // Data Row Start
         TableHTML += `<tr id='Table ROW'>`;
   
         // Cell Start
         TableHTML += `  
-                      <td width='25%'>
+                      <td width='15%'>
                         ${curPurchased}
                       </td> 
-                      <td width='25%'>
+                      <td width='15%'>
                         ${curUsed}
                       </td>
-                      <td width='30%'>
+                      <td width='15%'>
                         ${curRemaing}
-                      </td>  
-                      <td width='20%'>
+                      </td> 
+                      <td width='40%'>
+                        comments
+                      </td> 
+                      <td width='15%'>
                         empty
                       </td>  
                   `;
@@ -401,18 +357,21 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
         // Totals Row
         TableHTML += `
               <tr id='Total ROW'>
-                  <td>
-                    Total Credits : ${curPurchased}
+                  <td width='15%'>
+                    ${curPurchased}
                   </td> 
-                  <td>
-                    Credits Used : ${curUsed}
+                  <td width='15%'>
+                    ${curUsed}
                   </td>
-                  <td>
-                    Credits Remaining : ${curRemaing}
-                  </td>
-                  <td>
-                    <!-- Empty -->
-                  </td>
+                  <td width='15%'>
+                    ${curRemaing}
+                  </td> 
+                  <td width='40%'>
+                    comments
+                  </td> 
+                  <td width='15%'>
+                    empty
+                  </td>  
               </tr>`;
       }
   

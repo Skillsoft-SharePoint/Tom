@@ -1,7 +1,7 @@
 {
 	"name": "node-debug",
 	"displayName": "Node Debug (legacy)",
-	"version": "1.35.2",
+	"version": "1.35.3",
 	"publisher": "ms-vscode",
 	"description": "%extension.description%",
 	"icon": "images/node-debug-icon.png",
@@ -76,6 +76,17 @@
 	"main": "./dist/extension.js",
 	"activationEvents": ["onDebugInitialConfigurations", "onDebugResolve:node", "onCommand:extension.pickNodeProcess", "onCommand:extension.node-debug.toggleSkippingFile", "onCommand:extension.node-debug.pickLoadedScript", "onCommand:extension.node-debug.attachNodeProcess", "onCommand:extension.node-debug.startAutoAttach", "onCommand:extension.node-debug.startWithStopOnEntry"],
 	"contributes": {
+		"configuration": {
+			"title": "Node debug",
+			"properties": {
+				"debug.node.showUseWslIsDeprecatedWarning": {
+					"scope": "window",
+					"type": "boolean",
+					"description": "%debug.node.showUseWslIsDeprecatedWarning.description%",
+					"default": true
+				}
+			}
+		},
 		"menus": {
 			"debug/callstack/context": [{
 				"command": "extension.node-debug.toggleSkippingFile",
@@ -381,7 +392,8 @@
 						"useWSL": {
 							"type": "boolean",
 							"description": "%node.launch.useWSL.description%",
-							"default": true
+							"default": true,
+							"deprecationMessage": "%node.launch.useWSL.deprecation%"
 						},
 						"trace": {
 							"type": ["boolean", "string"],

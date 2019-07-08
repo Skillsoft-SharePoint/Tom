@@ -51,7 +51,7 @@
 		"rust-lang.rust": "{**/*.rs,**/*.rslib}",
 		"ms-vscode.cpptools": "{**/*.c,**/*.cpp,**/*.cc,**/.cxx,**/*.hh,**/*.hpp,**/*.hxx,**/*.h}",
 		"DavidAnson.vscode-markdownlint": "{**/*.md}",
-		"PeterJausovec.vscode-docker": "{**/dockerfile,**/Dockerfile,**/docker-compose.yml,**/docker-compose.*.yml}",
+		"ms-azuretools.vscode-docker": "{**/dockerfile,**/Dockerfile,**/docker-compose.yml,**/docker-compose.*.yml}",
 		"EditorConfig.EditorConfig": "{**/.editorconfig}",
 		"HookyQR.beautify": "{**/.jsbeautifyrc,**/*.js,**/*.jsx,**/*.es6,**/.eslintrc.*,**/.babelrc,**/jsconfig.json}",
 		"donjayamanne.githistory": "{**/.gitignore,**/.git}",
@@ -101,7 +101,7 @@
 			"name": "C/C++",
 			"pattern": "{**/*.c,**/*.cpp,**/*.cc,**/.cxx,**/*.hh,**/*.hpp,**/*.hxx,**/*.h}"
 		},
-		"PeterJausovec.vscode-docker": {
+		"ms-azuretools.vscode-docker": {
 			"name": "Docker",
 			"pattern": "{**/dockerfile,**/Dockerfile,**/docker-compose.yml,**/docker-compose.*.yml}"
 		},
@@ -193,14 +193,14 @@
 			"windowsPath": "%APPDATA%\\npm\\now.cmd",
 			"recommendations": [
 				"ms-azuretools.vscode-azureappservice",
-				"PeterJausovec.vscode-docker"
+				"ms-azuretools.vscode-docker"
 			]
 		},
 		"docker": {
 			"friendlyName": "Docker",
 			"windowsPath": "%ProgramFiles%\\Docker\\Docker\\Resources\\bin\\docker.exe",
 			"recommendations": [
-				"PeterJausovec.vscode-docker",
+				"ms-azuretools.vscode-docker",
 				"ms-kubernetes-tools.vscode-kubernetes-tools",
 				"azuredevspaces.azds"
 			]
@@ -209,7 +209,7 @@
 			"friendlyName": "Kubernetes",
 			"windowsPath": "%ProgramFiles%\\Docker\\Docker\\Resources\\bin\\kubectl.exe",
 			"recommendations": [
-				"PeterJausovec.vscode-docker",
+				"ms-azuretools.vscode-docker",
 				"ms-kubernetes-tools.vscode-kubernetes-tools",
 				"azuredevspaces.azds"
 			]
@@ -285,6 +285,48 @@
 			"friendlyName": "Maven",
 			"recommendations": [
 				"vscjava.vscode-maven"
+			]
+		},
+		"Microsoft Edge": {
+			"friendlyName": "Microsoft Edge",
+			"windowsPath": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Edge\\Application\\msedge.exe",
+			"recommendations": [
+				"msjsdiag.debugger-for-edge"
+			]
+		},
+		"Microsoft Edge Dev": {
+			"friendlyName": "Microsoft Edge Dev",
+			"windowsPath": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Edge Dev\\Application\\msedge.exe",
+			"recommendations": [
+				"msjsdiag.debugger-for-edge"
+			]
+		},
+		"Microsoft Edge Beta": {
+			"friendlyName": "Microsoft Edge Beta",
+			"windowsPath": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Edge Beta\\Application\\msedge.exe",
+			"recommendations": [
+				"msjsdiag.debugger-for-edge"
+			]
+		},
+		"Microsoft Edge Canary": {
+			"friendlyName": "Microsoft Edge Canary",
+			"windowsPath": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Edge SxS\\Application\\msedge.exe",
+			"recommendations": [
+				"msjsdiag.debugger-for-edge"
+			]
+		},
+		"react-native": {
+			"friendlyName": "React Native",
+			"windowsPath": "%APPDATA%\\npm\\react-native-cli",
+			"recommendations": [
+				"vsmobile.vscode-react-native"
+			]
+		},
+		"cordova": {
+			"friendlyName": "Cordova",
+			"windowsPath": "%APPDATA%\\npm\\cordova",
+			"recommendations": [
+				"vsmobile.cordova-tools"
 			]
 		}
 	},
@@ -631,9 +673,6 @@
 	"npsSurveyUrl": "https://www.research.net/r/Z2RMYRJ",
 	"checksumFailMoreInfoUrl": "https://go.microsoft.com/fwlink/?LinkId=828886",
 	"electronRepository": "Microsoft/vscode-electron-prebuilt",
-	"dependencies": {
-		"vsda": "git+https://monacotools.visualstudio.com/DefaultCollection/_git/vscode-debug-handshake#31bf016d04d013bb9b86117232e53e3ebb015c27"
-	},
 	"settingsSearchUrl": "https://bingsettingssearch.trafficmanager.net/api/Search",
 	"surveys": [
 		{
@@ -705,16 +744,16 @@
 		"techer.open-in-browser",
 		"vincaslt.highlight-matching-tag",
 		"wayou.vscode-todo-highlight",
-		"peterjausovec.vscode-docker"
+		"ms-azuretools.vscode-docker"
 	],
-	"commit": "c7d83e57cd18f18026a8162d042843bda1bcf21f",
-	"date": "2019-06-12T14:30:02.622Z",
+	"commit": "0f3794b38477eea13fb47fbe15a42798e6129338",
+	"date": "2019-07-03T13:25:46.372Z",
 	"checksums": {
-		"vs/workbench/workbench.main.js": "gza/VFpG8HqBN88VxgEoTQ",
-		"vs/workbench/workbench.main.css": "j9ibVLOix+mmSPyPo2JwFg",
+		"vs/workbench/workbench.main.js": "v+OA7yclMFVsQsaLcjJhwA",
+		"vs/workbench/workbench.main.css": "1NrWzsIUD9r8OiOWmPgpGA",
 		"vs/code/electron-browser/workbench/workbench.html": "11dqox2lEU1323gr8Bp89w",
-		"vs/code/electron-browser/workbench/workbench.js": "IFaIILksrxjCK9xzvmmHZQ"
+		"vs/code/electron-browser/workbench/workbench.js": "oRGsOXP17UC7AyVvG4e9dw"
 	},
-	"settingsSearchBuildId": 1350100499350,
+	"settingsSearchBuildId": 1360000512820,
 	"target": "user"
 }
