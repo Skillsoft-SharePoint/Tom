@@ -180,21 +180,20 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
           if (result.length > 1){
             x ++
             if (x==1){
-              preHTML += `
-              <div>
-                <div id='customerHeader'>
-                  Milt - Customer 
-                </div>
-              `
+              preHTML += `<div id='Header'>`
+              // customer header
+              preHTML +=`<div id='CustomerHeader'> ${item.L_x002d_Customer} </div>`
+
+              // Create details for each oppurtunity
                   result.forEach((sameCus: ISPList) =>{
-                    
-                    preHTML += `
-                    <div id='oppurtunityHeader'>${sameCus.Opportunity_x0020_ID}
-                    </div>
+                    // Op Header
+                    preHTML += `<div id='OpportunityHeader'>${sameCus.Opportunity_x0020_ID} </div>`
+                    preHTML += this.fillDataRow(sameCus.L_x002d_CreditsPurchased,sameCus.L_x002d_CreditRemaining,sameCus.L_x002d_CreditRemaining,false,sameCus.Service_x0020_Type,sameCus.Element,sameCus.LOE)
+                    /*`
                     <div id='details'>
                       Details
                     </div>
-                    `
+                    `*/
                   })
                 preHTML +=`
                 <div id='Total'>
@@ -251,8 +250,8 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
     
         //single
         if (singleCustomer==true){
-          dataHTML += `<h3 id='Header'> ${customer} </h3>
-                      <div id='DIVafterheader' height='auto' style='height:auto !important'>`;
+          dataHTML += `<h3 id='Header'> ${customer} </h3>`
+                      //<div id='DIVafterheader' height='auto' style='height:auto !important'>`;
           dataHTML += `<h4 id='Opportunity'>${Opportunity} </h4>`;
           dataHTML += this.tableHeaderHTML();
         }else{
@@ -267,37 +266,42 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
       private tableHeaderHTML(){
         // Start Table
         let tablehead:string = '';
-        tablehead += `<table id='TAble Start' class="TFtable" width=100% style="border-collapse: collapse;">`;
+        //tablehead += ``;
         // Table Header //
-        tablehead += ` <th  align="left">
-                        Credits Purchased
-                      </th>
-                      <th>Credits Used
-                      </th>
-                      <th  align="left">
-                        Credit Remaining
-                      </th>
-                      <th  align="left">
-                        Comemnts
-                      </th>
-                      <th align="left">
-                        Service Type
-                      </th>
-                      <th>
-                        Element
-                      </th>
-                      <th>
-                        LOE
-                      </th>`;
+        tablehead += `
+                      <table id='ColumnHeaders' class="TFtable" width=100% style="border-collapse: collapse;">
+                        <th  align="left">
+                          Credits Purchased
+                        </th>
+                        <th>Credits Used
+                        </th>
+                        <th  align="left">
+                          Credit Remaining
+                        </th>
+                        <th  align="left">
+                          Comemnts
+                        </th>
+                        <th align="left">
+                          Service Type
+                        </th>
+                        <th>
+                          Element
+                        </th>
+                        <th>
+                          LOE
+                        </th>
+                      </table>`;
+                      
           return tablehead;
       }
 // fillDataRow function  
-      private fillDataRow(curCstomer: string, curPurchased: string, curUsed: string, curRemaing: string, totals: boolean, ServiceType: string,Element: string,LOE: string) {
+      private fillDataRow(curPurchased: string, curUsed: string, curRemaing: string, totals: boolean, ServiceType: string,Element: string,LOE: string) {
         let TableHTML: string = '';
     
-        if (totals != true) {
+        //if (totals != true) {
           // Data Row Start
-          TableHTML += `<tr id='Table ROW'>`;
+          TableHTML += `<table>
+                        <tr id='Table ROW'>`;
     
           // Cell Start
           TableHTML += `  
@@ -325,10 +329,12 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
                     `;
           // Cell End L_x002d_CreditsForElement
     
-          TableHTML += `</tr>`;
+          TableHTML += `</tr>
+                    </table>`;
           // Data Row End   
           // Set </table> in calling function
-        } else {
+        //} else {
+          /*
           // Totals Row
           TableHTML += `
                 <tr>
@@ -357,7 +363,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
                           ${LOE}
                         </td>
                 </tr>`;
-        }
+        }*/
     
         return TableHTML;
       }
