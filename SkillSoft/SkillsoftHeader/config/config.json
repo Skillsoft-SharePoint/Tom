@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "skillsoft-header-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/skillsoftHeader/SkillsoftHeaderApplicationCustomizer.js",
+          "manifest": "./src/extensions/skillsoftHeader/SkillsoftHeaderApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SkillsoftHeaderApplicationCustomizerStrings": "lib/extensions/skillsoftHeader/loc/{locale}.js"
+  }
+}

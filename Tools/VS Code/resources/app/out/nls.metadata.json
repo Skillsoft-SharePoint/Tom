@@ -425,9 +425,6 @@
 			"focusSideBar",
 			"viewCategory"
 		],
-		"vs/workbench/contrib/files/browser/explorerViewlet": [
-			"folders"
-		],
 		"vs/workbench/contrib/quickopen/browser/quickopen.contribution": [
 			"view",
 			"commandsHandlerDescriptionDefault",
@@ -462,6 +459,9 @@
 				]
 			},
 			"commandPalette"
+		],
+		"vs/workbench/contrib/files/browser/explorerViewlet": [
+			"folders"
 		],
 		"vs/workbench/contrib/search/browser/openAnythingHandler": [
 			"fileAndTypeResults",
@@ -621,25 +621,6 @@
 			"aborted",
 			"shellCommand"
 		],
-		"vs/workbench/contrib/watermark/browser/watermark": [
-			"watermark.showCommands",
-			"watermark.quickOpen",
-			"watermark.openFile",
-			"watermark.openFolder",
-			"watermark.openFileFolder",
-			"watermark.openRecent",
-			"watermark.newUntitledFile",
-			{
-				"key": "watermark.toggleTerminal",
-				"comment": [
-					"toggle is a verb here"
-				]
-			},
-			"watermark.findInFiles",
-			"watermark.startDebugging",
-			"workbenchConfigurationTitle",
-			"tips.enabled"
-		],
 		"vs/workbench/contrib/themes/browser/themes.contribution": [
 			"selectTheme.label",
 			"themes.category.light",
@@ -669,6 +650,25 @@
 			},
 			"selectTheme.label",
 			"themes.selectIconTheme.label"
+		],
+		"vs/workbench/contrib/watermark/browser/watermark": [
+			"watermark.showCommands",
+			"watermark.quickOpen",
+			"watermark.openFile",
+			"watermark.openFolder",
+			"watermark.openFileFolder",
+			"watermark.openRecent",
+			"watermark.newUntitledFile",
+			{
+				"key": "watermark.toggleTerminal",
+				"comment": [
+					"toggle is a verb here"
+				]
+			},
+			"watermark.findInFiles",
+			"watermark.startDebugging",
+			"workbenchConfigurationTitle",
+			"tips.enabled"
 		],
 		"vs/workbench/contrib/welcome/overlay/browser/welcomeOverlay": [
 			"welcomeOverlay.explorer",
@@ -788,6 +788,7 @@
 			"closeEmptyGroups",
 			"revealIfOpen",
 			"swipeToNavigate",
+			"mouseBackForwardToNavigate",
 			"restoreViewState",
 			"centeredLayoutAutoResize",
 			"commandHistory",
@@ -2171,6 +2172,9 @@
 			"compositePart.hideSideBarLabel",
 			"collapse"
 		],
+		"vs/workbench/contrib/debug/common/debug": [
+			"internalConsoleOptions"
+		],
 		"vs/workbench/contrib/debug/browser/debugEditorContribution": [
 			"logPoint",
 			"breakpoint",
@@ -2206,9 +2210,6 @@
 			"enable",
 			"cancel",
 			"addConfiguration"
-		],
-		"vs/workbench/contrib/debug/common/debug": [
-			"internalConsoleOptions"
 		],
 		"vs/workbench/contrib/debug/node/terminalSupport": [
 			"debug.terminal.title"
@@ -2253,18 +2254,6 @@
 		],
 		"vs/editor/common/modes/modesRegistry": [
 			"plainText.alias"
-		],
-		"vs/workbench/contrib/terminal/common/terminalShellConfig": [
-			"terminalIntegratedConfigurationTitle",
-			"terminal.integrated.shell.linux",
-			"terminal.integrated.shell.linux.noDefault",
-			"terminal.integrated.shell.osx",
-			"terminal.integrated.shell.osx.noDefault",
-			"terminal.integrated.shell.windows",
-			"terminal.integrated.shell.windows.noDefault"
-		],
-		"vs/workbench/contrib/terminal/common/terminal": [
-			"terminalCategory"
 		],
 		"vs/workbench/contrib/terminal/browser/terminal.contribution": [
 			"quickOpen.terminal",
@@ -2314,6 +2303,18 @@
 			"terminal",
 			"terminal",
 			"viewCategory"
+		],
+		"vs/workbench/contrib/terminal/common/terminalShellConfig": [
+			"terminalIntegratedConfigurationTitle",
+			"terminal.integrated.shell.linux",
+			"terminal.integrated.shell.linux.noDefault",
+			"terminal.integrated.shell.osx",
+			"terminal.integrated.shell.osx.noDefault",
+			"terminal.integrated.shell.windows",
+			"terminal.integrated.shell.windows.noDefault"
+		],
+		"vs/workbench/contrib/terminal/common/terminal": [
+			"terminalCategory"
 		],
 		"vs/workbench/contrib/emmet/browser/actions/showEmmetCommands": [
 			"showEmmetCommands",
@@ -2652,6 +2653,10 @@
 			"scmPendingChangesBadge",
 			"status.scm"
 		],
+		"vs/workbench/browser/quickopen": [
+			"noResultsMatching",
+			"noResultsFound2"
+		],
 		"vs/workbench/contrib/debug/browser/repl": [
 			"replAriaLabel",
 			"copy",
@@ -2674,10 +2679,6 @@
 			"selectRepl",
 			"clearRepl",
 			"debugConsoleCleared"
-		],
-		"vs/workbench/browser/quickopen": [
-			"noResultsMatching",
-			"noResultsFound2"
 		],
 		"vs/workbench/contrib/markers/browser/messages": [
 			"viewCategory",
@@ -2821,9 +2822,6 @@
 			"snippetSuggest.longLabel",
 			"snippetSuggest.longLabel"
 		],
-		"vs/base/browser/ui/keybindingLabel/keybindingLabel": [
-			"unbound"
-		],
 		"vs/workbench/services/themes/common/colorThemeSchema": [
 			"schema.token.settings",
 			"schema.token.foreground",
@@ -2836,6 +2834,9 @@
 			"schema.workbenchColors",
 			"schema.tokenColors.path",
 			"schema.colors"
+		],
+		"vs/base/browser/ui/keybindingLabel/keybindingLabel": [
+			"unbound"
 		],
 		"vs/workbench/contrib/welcome/gettingStarted/electron-browser/telemetryOptOut": [
 			"telemetryOptOut.optOutNotice",
@@ -3076,19 +3077,6 @@
 			"installAndRestartMessage",
 			"installAndRestart"
 		],
-		"vs/workbench/browser/parts/views/viewsViewlet": [
-			"hideView"
-		],
-		"vs/workbench/contrib/files/browser/views/emptyView": [
-			"noWorkspace",
-			"explorerSection",
-			"noWorkspaceHelp",
-			"addFolder",
-			"remoteNoFolderHelp",
-			"connecting",
-			"noFolderHelp",
-			"openFolder"
-		],
 		"vs/workbench/contrib/quickopen/browser/gotoLineHandler": [
 			"gotoLine",
 			"gotoLineLabelEmptyWithLimit",
@@ -3109,6 +3097,19 @@
 			"logChannel",
 			"openView",
 			"quickOpenView"
+		],
+		"vs/workbench/browser/parts/views/viewsViewlet": [
+			"hideView"
+		],
+		"vs/workbench/contrib/files/browser/views/emptyView": [
+			"noWorkspace",
+			"explorerSection",
+			"noWorkspaceHelp",
+			"addFolder",
+			"remoteNoFolderHelp",
+			"connecting",
+			"noFolderHelp",
+			"openFolder"
 		],
 		"vs/workbench/contrib/files/browser/editors/binaryFileEditor": [
 			"binaryFileEditor"
@@ -3133,20 +3134,6 @@
 			"source control",
 			"viewletTitle"
 		],
-		"vs/workbench/contrib/debug/browser/debugActionViewItems": [
-			"debugLaunchConfigurations",
-			"noConfigurations",
-			"addConfigTo",
-			"addConfiguration",
-			"debugSession"
-		],
-		"vs/workbench/contrib/debug/browser/debugToolBar": [
-			"debugToolBarBackground",
-			"debugToolBarBorder"
-		],
-		"vs/platform/actions/browser/menuEntryActionViewItem": [
-			"titleAndKb"
-		],
 		"vs/workbench/contrib/debug/browser/debugActions": [
 			"openLaunchJson",
 			"launchJsonNeedsConfigurtion",
@@ -3170,6 +3157,20 @@
 		"vs/base/parts/quickopen/browser/quickOpenModel": [
 			"quickOpenAriaLabelEntry",
 			"quickOpenAriaLabel"
+		],
+		"vs/workbench/contrib/debug/browser/debugActionViewItems": [
+			"debugLaunchConfigurations",
+			"noConfigurations",
+			"addConfigTo",
+			"addConfiguration",
+			"debugSession"
+		],
+		"vs/platform/actions/browser/menuEntryActionViewItem": [
+			"titleAndKb"
+		],
+		"vs/workbench/contrib/debug/browser/debugToolBar": [
+			"debugToolBarBackground",
+			"debugToolBarBorder"
 		],
 		"vs/workbench/browser/parts/editor/textResourceEditor": [
 			"textEditor",
@@ -3856,6 +3857,19 @@
 			"compositeActive",
 			"toggle"
 		],
+		"vs/workbench/contrib/quickopen/browser/commandsHandler": [
+			"showTriggerActions",
+			"clearCommandHistory",
+			"showCommands.label",
+			"entryAriaLabelWithKey",
+			"entryAriaLabel",
+			"actionNotEnabled",
+			"canNotRun",
+			"recentlyUsed",
+			"morecCommands",
+			"cat.title",
+			"noCommandsMatching"
+		],
 		"vs/workbench/contrib/files/browser/views/explorerView": [
 			"explorerSection",
 			"treeAriaLabel"
@@ -3874,19 +3888,6 @@
 				]
 			},
 			"dirtyCounter"
-		],
-		"vs/workbench/contrib/quickopen/browser/commandsHandler": [
-			"showTriggerActions",
-			"clearCommandHistory",
-			"showCommands.label",
-			"entryAriaLabelWithKey",
-			"entryAriaLabel",
-			"actionNotEnabled",
-			"canNotRun",
-			"recentlyUsed",
-			"morecCommands",
-			"cat.title",
-			"noCommandsMatching"
 		],
 		"vs/workbench/contrib/files/browser/saveErrorHandler": [
 			"userGuide",
@@ -4100,9 +4101,6 @@
 			"unresponsive-exthost",
 			"show"
 		],
-		"vs/workbench/contrib/terminal/node/terminalRemote": [
-			"workbench.action.terminal.newLocal"
-		],
 		"vs/workbench/contrib/terminal/common/terminalMenu": [
 			{
 				"key": "miToggleIntegratedTerminal",
@@ -4134,6 +4132,9 @@
 					"&& denotes a mnemonic"
 				]
 			}
+		],
+		"vs/workbench/contrib/terminal/node/terminalRemote": [
+			"workbench.action.terminal.newLocal"
 		],
 		"vs/workbench/contrib/welcome/page/browser/welcomePage": [
 			"welcomePage",
@@ -7952,9 +7953,6 @@
 			"Focus into Side Bar",
 			"View"
 		],
-		"vs/workbench/contrib/files/browser/explorerViewlet": [
-			"Folders"
-		],
 		"vs/workbench/contrib/quickopen/browser/quickopen.contribution": [
 			"View",
 			"Show and Run Commands",
@@ -7969,6 +7967,9 @@
 			"Go to &&Symbol in File...",
 			"Go to &&Line/Column...",
 			"Command Palette..."
+		],
+		"vs/workbench/contrib/files/browser/explorerViewlet": [
+			"Folders"
 		],
 		"vs/workbench/contrib/search/browser/openAnythingHandler": [
 			"file and symbol results",
@@ -8078,20 +8079,6 @@
 			"Aborted",
 			"Shell Command"
 		],
-		"vs/workbench/contrib/watermark/browser/watermark": [
-			"Show All Commands",
-			"Go to File",
-			"Open File",
-			"Open Folder",
-			"Open File or Folder",
-			"Open Recent",
-			"New Untitled File",
-			"Toggle Terminal",
-			"Find in Files",
-			"Start Debugging",
-			"Workbench",
-			"When enabled, will show the watermark tips when no editor is open."
-		],
 		"vs/workbench/contrib/themes/browser/themes.contribution": [
 			"Color Theme",
 			"light themes",
@@ -8111,6 +8098,20 @@
 			"File &&Icon Theme",
 			"Color Theme",
 			"File Icon Theme"
+		],
+		"vs/workbench/contrib/watermark/browser/watermark": [
+			"Show All Commands",
+			"Go to File",
+			"Open File",
+			"Open Folder",
+			"Open File or Folder",
+			"Open Recent",
+			"New Untitled File",
+			"Toggle Terminal",
+			"Find in Files",
+			"Start Debugging",
+			"Workbench",
+			"When enabled, will show the watermark tips when no editor is open."
 		],
 		"vs/workbench/contrib/welcome/overlay/browser/welcomeOverlay": [
 			"File explorer",
@@ -8210,6 +8211,7 @@
 			"Controls the behavior of empty editor groups when the last tab in the group is closed. When enabled, empty groups will automatically close. When disabled, empty groups will remain part of the grid.",
 			"Controls whether an editor is revealed in any of the visible groups if opened. If disabled, an editor will prefer to open in the currently active editor group. If enabled, an already opened editor will be revealed instead of opened again in the currently active editor group. Note that there are some cases where this setting is ignored, e.g. when forcing an editor to open in a specific group or to the side of the currently active group.",
 			"Navigate between open files using three-finger swipe horizontally.",
+			"Navigate between open files using mouse buttons four and five if provided.",
 			"Restores the last view state (e.g. scroll position) when re-opening files after they have been closed.",
 			"Controls if the centered layout should automatically resize to maximum width when more than one group is open. Once only one group is open it will resize back to the original centered width.",
 			"Controls the number of recently used commands to keep in history for the command palette. Set to 0 to disable command history.",
@@ -9100,6 +9102,9 @@
 			"Hide Side Bar",
 			"Collapse All"
 		],
+		"vs/workbench/contrib/debug/common/debug": [
+			"Controls when the internal debug console should open."
+		],
 		"vs/workbench/contrib/debug/browser/debugEditorContribution": [
 			"Logpoint",
 			"Breakpoint",
@@ -9135,9 +9140,6 @@
 			"Enable",
 			"Cancel",
 			"Add Configuration..."
-		],
-		"vs/workbench/contrib/debug/common/debug": [
-			"Controls when the internal debug console should open."
 		],
 		"vs/workbench/contrib/debug/node/terminalSupport": [
 			"debuggee"
@@ -9182,18 +9184,6 @@
 		],
 		"vs/editor/common/modes/modesRegistry": [
 			"Plain Text"
-		],
-		"vs/workbench/contrib/terminal/common/terminalShellConfig": [
-			"Integrated Terminal",
-			"The path of the shell that the terminal uses on Linux (default: {0}). [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).",
-			"The path of the shell that the terminal uses on Linux. [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).",
-			"The path of the shell that the terminal uses on macOS (default: {0}). [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).",
-			"The path of the shell that the terminal uses on macOS. [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).",
-			"The path of the shell that the terminal uses on Windows (default: {0}). [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).",
-			"The path of the shell that the terminal uses on Windows. [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration)."
-		],
-		"vs/workbench/contrib/terminal/common/terminal": [
-			"Terminal"
 		],
 		"vs/workbench/contrib/terminal/browser/terminal.contribution": [
 			"Show All Opened Terminals",
@@ -9243,6 +9233,18 @@
 			"Terminal",
 			"Terminal",
 			"View"
+		],
+		"vs/workbench/contrib/terminal/common/terminalShellConfig": [
+			"Integrated Terminal",
+			"The path of the shell that the terminal uses on Linux (default: {0}). [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).",
+			"The path of the shell that the terminal uses on Linux. [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).",
+			"The path of the shell that the terminal uses on macOS (default: {0}). [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).",
+			"The path of the shell that the terminal uses on macOS. [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).",
+			"The path of the shell that the terminal uses on Windows (default: {0}). [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration).",
+			"The path of the shell that the terminal uses on Windows. [Read more about configuring the shell](https://code.visualstudio.com/docs/editor/integrated-terminal#_configuration)."
+		],
+		"vs/workbench/contrib/terminal/common/terminal": [
+			"Terminal"
 		],
 		"vs/workbench/contrib/emmet/browser/actions/showEmmetCommands": [
 			"Show Emmet Commands",
@@ -9479,6 +9481,10 @@
 			"{0} pending changes",
 			"Source Control"
 		],
+		"vs/workbench/browser/quickopen": [
+			"No results matching",
+			"No results found"
+		],
 		"vs/workbench/contrib/debug/browser/repl": [
 			"Read Eval Print Loop Panel",
 			"Copy",
@@ -9496,10 +9502,6 @@
 			"Select Debug Console",
 			"Clear Console",
 			"Debug console was cleared"
-		],
-		"vs/workbench/browser/quickopen": [
-			"No results matching",
-			"No results found"
 		],
 		"vs/workbench/contrib/markers/browser/messages": [
 			"View",
@@ -9633,9 +9635,6 @@
 			"{0}, {1}",
 			"{0}, {1}"
 		],
-		"vs/base/browser/ui/keybindingLabel/keybindingLabel": [
-			"Unbound"
-		],
 		"vs/workbench/services/themes/common/colorThemeSchema": [
 			"Colors and styles for the token.",
 			"Foreground color for the token.",
@@ -9648,6 +9647,9 @@
 			"Colors in the workbench",
 			"Path to a tmTheme file (relative to the current file).",
 			"Colors for syntax highlighting"
+		],
+		"vs/base/browser/ui/keybindingLabel/keybindingLabel": [
+			"Unbound"
 		],
 		"vs/workbench/contrib/welcome/gettingStarted/electron-browser/telemetryOptOut": [
 			"Help improve VS Code by allowing Microsoft to collect usage data. Read our [privacy statement]({0}) and learn how to [opt out]({1}).",
@@ -9833,19 +9835,6 @@
 			"Install language pack to change the display language to {0}.",
 			"Install and Restart"
 		],
-		"vs/workbench/browser/parts/views/viewsViewlet": [
-			"Hide"
-		],
-		"vs/workbench/contrib/files/browser/views/emptyView": [
-			"No Folder Opened",
-			"Files Explorer Section",
-			"You have not yet added a folder to the workspace.",
-			"Add Folder",
-			"Connected to {0}",
-			"Connecting...",
-			"You have not yet opened a folder.",
-			"Open Folder"
-		],
 		"vs/workbench/contrib/quickopen/browser/gotoLineHandler": [
 			"Go to Line...",
 			"Current Line: {0}. Type a line number between 1 and {1} to navigate to.",
@@ -9866,6 +9855,19 @@
 			"Log ({0})",
 			"Open View",
 			"Quick Open View"
+		],
+		"vs/workbench/browser/parts/views/viewsViewlet": [
+			"Hide"
+		],
+		"vs/workbench/contrib/files/browser/views/emptyView": [
+			"No Folder Opened",
+			"Files Explorer Section",
+			"You have not yet added a folder to the workspace.",
+			"Add Folder",
+			"Connected to {0}",
+			"Connecting...",
+			"You have not yet opened a folder.",
+			"Open Folder"
 		],
 		"vs/workbench/contrib/files/browser/editors/binaryFileEditor": [
 			"Binary File Viewer"
@@ -9890,20 +9892,6 @@
 			"Source Control",
 			"{0}: {1}"
 		],
-		"vs/workbench/contrib/debug/browser/debugActionViewItems": [
-			"Debug Launch Configurations",
-			"No Configurations",
-			"Add Config ({0})...",
-			"Add Configuration...",
-			"Debug Session"
-		],
-		"vs/workbench/contrib/debug/browser/debugToolBar": [
-			"Debug toolbar background color.",
-			"Debug toolbar border color."
-		],
-		"vs/platform/actions/browser/menuEntryActionViewItem": [
-			"{0} ({1})"
-		],
 		"vs/workbench/contrib/debug/browser/debugActions": [
 			"Open {0}",
 			"Configure or Fix 'launch.json'",
@@ -9927,6 +9915,20 @@
 		"vs/base/parts/quickopen/browser/quickOpenModel": [
 			"{0}, picker",
 			"picker"
+		],
+		"vs/workbench/contrib/debug/browser/debugActionViewItems": [
+			"Debug Launch Configurations",
+			"No Configurations",
+			"Add Config ({0})...",
+			"Add Configuration...",
+			"Debug Session"
+		],
+		"vs/platform/actions/browser/menuEntryActionViewItem": [
+			"{0} ({1})"
+		],
+		"vs/workbench/contrib/debug/browser/debugToolBar": [
+			"Debug toolbar background color.",
+			"Debug toolbar border color."
 		],
 		"vs/workbench/browser/parts/editor/textResourceEditor": [
 			"Text Editor",
@@ -10572,15 +10574,6 @@
 			"{0} active",
 			"Toggle View Pinned"
 		],
-		"vs/workbench/contrib/files/browser/views/explorerView": [
-			"Files Explorer Section",
-			"Files Explorer"
-		],
-		"vs/workbench/contrib/files/browser/views/openEditorsView": [
-			"Open Editors",
-			"Open Editors Section",
-			"{0} unsaved"
-		],
 		"vs/workbench/contrib/quickopen/browser/commandsHandler": [
 			"Show All Commands",
 			"Clear Command History",
@@ -10593,6 +10586,15 @@
 			"other commands",
 			"{0}: {1}",
 			"No commands matching"
+		],
+		"vs/workbench/contrib/files/browser/views/explorerView": [
+			"Files Explorer Section",
+			"Files Explorer"
+		],
+		"vs/workbench/contrib/files/browser/views/openEditorsView": [
+			"Open Editors",
+			"Open Editors Section",
+			"{0} unsaved"
 		],
 		"vs/workbench/contrib/files/browser/saveErrorHandler": [
 			"Use the actions in the editor tool bar to either undo your changes or overwrite the content of the file with your changes.",
@@ -10801,15 +10803,15 @@
 			"The extension '{0}' took a very long time to complete its last operation and it has prevented other extensions from running.",
 			"Show Extensions"
 		],
-		"vs/workbench/contrib/terminal/node/terminalRemote": [
-			"Create New Integrated Terminal (Local)"
-		],
 		"vs/workbench/contrib/terminal/common/terminalMenu": [
 			"&&Terminal",
 			"&&New Terminal",
 			"&&Split Terminal",
 			"Run &&Active File",
 			"Run &&Selected Text"
+		],
+		"vs/workbench/contrib/terminal/node/terminalRemote": [
+			"Create New Integrated Terminal (Local)"
 		],
 		"vs/workbench/contrib/welcome/page/browser/welcomePage": [
 			"Welcome",

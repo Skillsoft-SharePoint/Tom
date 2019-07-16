@@ -746,14 +746,14 @@
 		"wayou.vscode-todo-highlight",
 		"ms-azuretools.vscode-docker"
 	],
-	"commit": "0f3794b38477eea13fb47fbe15a42798e6129338",
-	"date": "2019-07-03T13:25:46.372Z",
+	"commit": "2213894ea0415ee8c85c5eea0d0ff81ecc191529",
+	"date": "2019-07-08T22:59:35.033Z",
 	"checksums": {
-		"vs/workbench/workbench.main.js": "v+OA7yclMFVsQsaLcjJhwA",
-		"vs/workbench/workbench.main.css": "1NrWzsIUD9r8OiOWmPgpGA",
+		"vs/workbench/workbench.main.js": "gAPBB1NM7TdhBqKKKrvt1Q",
+		"vs/workbench/workbench.main.css": "UK9A0+q0kYyH100EZ/hNIg",
 		"vs/code/electron-browser/workbench/workbench.html": "11dqox2lEU1323gr8Bp89w",
-		"vs/code/electron-browser/workbench/workbench.js": "oRGsOXP17UC7AyVvG4e9dw"
+		"vs/code/electron-browser/workbench/workbench.js": "WmcKGrw2DOpia2CwFDZZgQ"
 	},
-	"settingsSearchBuildId": 1360000512820,
+	"settingsSearchBuildId": 1360100513090,
 	"target": "user"
 }

@@ -46,6 +46,8 @@ export interface ISPList {
   "L_x002d_CreditRemaining": string;
   "Opportunity_x0020_ID": string;
   "Service_x0020_Type": string;
+  "Element": string;
+  "LOE": string;
 }
 
 // import classes
@@ -100,10 +102,10 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
       const listData: ISPLists = {
         value:
           [
-            { ["Customer"]: 'Customer One', ["# of Credits Purchased"]: 8, ["# of Credits for this Element"]: 4, Comments: 'Test One', ["Credit Remaining"]: 4, ["L_x002d_Customer"]: 'Test', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type":'Test 1' },
-            { ["Customer"]: 'Customer Two', ["# of Credits Purchased"]: 10, ["# of Credits for this Element"]: 5, Comments: 'Test Two', ["Credit Remaining"]: 5, ["L_x002d_Customer"]: 'Test two', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234',"Service_x0020_Type":'Test 2' },
-            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234' ,"Service_x0020_Type":'Test 3'},
-            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4321' ,"Service_x0020_Type":'Test 4'},
+            { ["Customer"]: 'Customer One', ["# of Credits Purchased"]: 8, ["# of Credits for this Element"]: 4, Comments: 'Test One', ["Credit Remaining"]: 4, ["L_x002d_Customer"]: 'Test', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type":'Test 1' ,"Element": 'Element', "LOE": 'LOE'},
+            { ["Customer"]: 'Customer Two', ["# of Credits Purchased"]: 10, ["# of Credits for this Element"]: 5, Comments: 'Test Two', ["Credit Remaining"]: 5, ["L_x002d_Customer"]: 'Test two', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234',"Service_x0020_Type":'Test 2',"Element": 'Element', "LOE": 'LOE'},
+            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234' ,"Service_x0020_Type":'Test 3',"Element": 'Element', "LOE": 'LOE'},
+            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4321' ,"Service_x0020_Type":'Test 4',"Element": 'Element', "LOE": 'LOE'},
           ]
       };
       return listData;
@@ -153,14 +155,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
       // Start Table //
         let preHTML: string = '';
         let datatable: string = '';
-        /*
-        let postHTML: string = '';
-        //let div: string = '';
-        let curCustomner: string = '';
-        let customerHeader: string = '';
-        let customerDiv: string = '';
-        let oppurtunityHeader: string = '';
-        */
+        
         let sameCustomer: boolean = false;
         let x: number = 0;
         let _totalOpsforCust: number = 0;
@@ -170,9 +165,6 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
         let _totalCredits:number = 0;
         let _totalUsed:number = 0;
         let _totalRemaining:number = 0;
-   
-      //html += `<h3>Section 1</h3>`;
-          //preHTML += `<div id='Start Custom List'>`;
   
        // Start Table
           datatable = this.tableHTML();
@@ -185,8 +177,8 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
           //preHTML += `<div> --->${item.L_x002d_Customer}<--- </div>`;
 
           var result = items.filter(obj => {
-            return obj.L_x002d_Customer === item.L_x002d_Customer
-          })
+            return obj.L_x002d_Customer === item.L_x002d_Customer;
+          });
 
           //Dialog.alert(result.length.toString());
 
@@ -203,9 +195,19 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
             }
 
           }else{
-            x=0;
-            _ReadyForTotal=false;
-          };
+
+              _totalCredits = 0;
+              _totalUsed = 0;
+              _totalRemaining = 0;
+
+            
+              _totalCredits = Number(item["# of Credits Purchased"]);
+              _totalUsed = Number(item["# of Credits for this Element"]);
+              _totalRemaining = Number(item["Credit Remaining"]);
+              x=0;
+              _ReadyForTotal=true;
+            
+          }
           /*
         
           sameCustomer = this.checkCustomer(curCustomner);
@@ -216,21 +218,25 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
 
             } else {
               //multi
-              if (x=1){
-                preHTML += `<h3 id='Header'> test ${item.L_x002d_Customer} </h3>
+              if (x==1){
+                preHTML += `<h3 id='Header'> multi pass numer=${x}, ${item.L_x002d_Customer} </h3>
                     <div id='DIVafterheader'>`;
+              }
+              else{
+                preHTML +=`<div id='DIVafterheader'>`;
               }
               preHTML += this.dataRow(item.L_x002d_Customer,item.Opportunity_x0020_ID,false);
               //Dialog.alert('ELSE');
             }
   
           // Set table data
-            preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,false,item.Service_x0020_Type);
+            preHTML += this.fillDataRow(item.L_x002d_Customer,_totalCredits.toString(),_totalUsed.toString(),_totalRemaining.toString(),false,item.Service_x0020_Type,item.Element,item.LOE);
           // Set totals
-            preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,true, item.Service_x0020_Type);
+            //preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,true, item.Service_x0020_Type);
             if (_ReadyForTotal == true ){
-              preHTML += this.dataRow('Totals','For All Oppurtunities',false);
-              preHTML += this.fillDataRow('Totals',_totalCredits.toString(),_totalUsed.toString(),_totalRemaining.toString(),true,item.Service_x0020_Type);
+              //preHTML += this.dataRow('Totals','For All Oppurtunities',false);
+              preHTML += this.fillDataRow('Totals',_totalCredits.toString(),_totalUsed.toString(),_totalRemaining.toString(),true,item.Service_x0020_Type,item.Element,item.LOE);
+              //preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,true,item.Service_x0020_Type,item.Element,item.LOE);
             }
           // Table End
             preHTML += `</table>`;
@@ -294,7 +300,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
         dataHTML += this.tableHTML();
       }else{
         //Multi
-        dataHTML += `Same Customer -- start`;
+        //dataHTML += `Same Customer -- start`;
         dataHTML += `<h4 id='Opportunity'>${Opportunity} </h4>`;
         dataHTML += this.tableHTML();
       }
@@ -319,11 +325,17 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
                     </th>
                     <th align="left">
                       Service Type
+                    </th>
+                    <th>
+                      Element
+                    </th>
+                    <th>
+                      LOE
                     </th>`;
         return tablehead;
     }
   
-    private fillDataRow(curCstomer: string, curPurchased: string, curUsed: string, curRemaing: string, totals: boolean, ServiceType: string) {
+    private fillDataRow(curCstomer: string, curPurchased: string, curUsed: string, curRemaing: string, totals: boolean, ServiceType: string,Element: string,LOE: string) {
       let TableHTML: string = '';
   
       if (totals != true) {
@@ -345,8 +357,14 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
                         comments
                       </td> 
                       <td width='15%'>
-                        empty
+                        ${ServiceType}
                       </td>  
+                      <td>
+                        ${Element}
+                      </td>
+                      <td>
+                        ${LOE}
+                      </td>
                   `;
         // Cell End L_x002d_CreditsForElement
   
@@ -356,22 +374,31 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
       } else {
         // Totals Row
         TableHTML += `
+              <tr>
+                <td colspan="2"> Totals </td>
+              </tr>
               <tr id='Total ROW'>
-                  <td width='15%'>
-                    ${curPurchased}
-                  </td> 
-                  <td width='15%'>
-                    ${curUsed}
-                  </td>
-                  <td width='15%'>
-                    ${curRemaing}
-                  </td> 
-                  <td width='40%'>
-                    comments
-                  </td> 
-                  <td width='15%'>
-                    empty
-                  </td>  
+                      <td width='15%'>
+                        ${curPurchased}
+                      </td> 
+                      <td width='15%'>
+                        ${curUsed}
+                      </td>
+                      <td width='15%'>
+                        ${curRemaing}
+                      </td> 
+                      <td width='40%'>
+                        comments
+                      </td> 
+                      <td width='15%'>
+                        ${ServiceType}
+                      </td>  
+                      <td>
+                        ${Element}
+                      </td>
+                      <td>
+                        ${LOE}
+                      </td>
               </tr>`;
       }
   
