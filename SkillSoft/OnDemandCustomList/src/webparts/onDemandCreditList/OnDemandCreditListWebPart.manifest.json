@@ -17,10 +17,10 @@
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
     "group": { "default": "Other" },
     "title": { "default": "OnDemandCreditList" },
-    "description": { "default": "Use to show credits remaining" },
+    "description": { "default": "Use to show credits remaining on the https://skillsoft.sharepoint.com/sites/ondemandrequests site." },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "Used to show totals for OnDemand Cridits purchased/used/remaining by Oppurtunity ID"
+      "description": "Used to show totals for OnDemand Credits remaining on the https://skillsoft.sharepoint.com/sites/ondemandrequests site by purchased/used/remaining and Oppurtunity ID"
     }
   }]
 }

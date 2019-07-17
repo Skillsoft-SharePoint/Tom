@@ -84,12 +84,17 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
   /************** Start Render Part  ***********/
   /*********************************************/
   public render(): void {
-    
+
     //Dialog.alert('hello');
 
     this._renderListAsync();
-   
+
+
   }
+
+
+
+
   /*********************************************/
   /************** End Render Part    ***********/
   /*********************************************/
@@ -98,18 +103,30 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
   /********** Start open files, then render the items */
   //Set Up Debug Data for Debugging//
   private _getMockListData(): Promise<ISPLists> {
+    /*
+    return this.context.spHttpClient.get(`https://skillsoft.sharepoint.com/sites/ondemandrequests/_api/web/lists/GetByTitle('On Demand Tracking')/Items?&$orderby=L_x002d_Customer `, SPHttpClient.configurations.v1)
+    
+    .then((response: SPHttpClientResponse) => {
+      debugger;
+      console.log(this.context.pageContext.web.absoluteUrl);
+      console.log('succes');
+      return response.json();
+    });
+    */
+  
     return MockHttpClient.get(this.context.pageContext.web.absoluteUrl).then(() => {
       const listData: ISPLists = {
         value:
           [
-            { ["Customer"]: 'Customer One', ["# of Credits Purchased"]: 8, ["# of Credits for this Element"]: 4, Comments: 'Test One', ["Credit Remaining"]: 4, ["L_x002d_Customer"]: 'Test', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type":'Test 1' ,"Element": 'Element', "LOE": 'LOE'},
-            { ["Customer"]: 'Customer Two', ["# of Credits Purchased"]: 10, ["# of Credits for this Element"]: 5, Comments: 'Test Two', ["Credit Remaining"]: 5, ["L_x002d_Customer"]: 'Test two', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234',"Service_x0020_Type":'Test 2',"Element": 'Element', "LOE": 'LOE'},
-            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234' ,"Service_x0020_Type":'Test 3',"Element": 'Element', "LOE": 'LOE'},
-            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4321' ,"Service_x0020_Type":'Test 4',"Element": 'Element', "LOE": 'LOE'},
+            { ["Customer"]: 'Customer One', ["# of Credits Purchased"]: 8, ["# of Credits for this Element"]: 4, Comments: 'Test One', ["Credit Remaining"]: 4, ["L_x002d_Customer"]: 'Test', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type": 'Test 1', "Element": 'Element', "LOE": 'LOE' },
+            { ["Customer"]: 'Customer Two', ["# of Credits Purchased"]: 10, ["# of Credits for this Element"]: 5, Comments: 'Test Two', ["Credit Remaining"]: 5, ["L_x002d_Customer"]: 'Test two', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type": 'Test 2', "Element": 'Element', "LOE": 'LOE' },
+            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type": 'Test 3', "Element": 'Element', "LOE": 'LOE' },
+            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4321', "Service_x0020_Type": 'Test 4', "Element": 'Element', "LOE": 'LOE' },
           ]
       };
       return listData;
     }) as Promise<ISPLists>;
+    
   }
   //End Debug Data//
 
@@ -150,228 +167,210 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
   }
   // Endcheck for Debug or Live //
 
-    // Build HTML from data //
-    private _renderList(items: ISPList[]): void {
-// Vars //
-        let preHTML: string = '';
-        let datatable: string = '';
-        
-        let sameCustomer: boolean = false;
-        let x: number = 0;
-        let _totalOpsforCust: number = 0;
-        let _ReadyForTotal: boolean = false;
+  // Build HTML from data //
+  private _renderList(items: ISPList[]): void {
+    // Vars //
+    let preHTML: string = '';
+    let datatable: string = '';
 
-//Totals Vars
-        let _totalCredits:number = 0;
-        let _totalUsed:number = 0;
-        let _totalRemaining:number = 0;
-// Start Loop //
-        items.forEach((item: ISPList) => {
-            //call
-              //  customerHeader ONCE
-              //  oppurtunityHeader EACH
-              //  details EACH
-              //  Totals ONCE            
+    let sameCustomer: boolean = false;
+    let x: number = 0;
+    let _totalOpsforCust: number = 0;
+    let _ReadyForTotal: boolean = false;
 
-          var result = items.filter(obj => {
-            return obj.L_x002d_Customer === item.L_x002d_Customer;
+    // Start Loop //
+    items.forEach((item: ISPList) => {
+      //call
+      //  customerHeader ONCE
+      //  oppurtunityHeader EACH
+      //  details EACH
+      //  Totals ONCE            
+
+      var result = items.filter(obj => {
+        return obj.L_x002d_Customer === item.L_x002d_Customer;
+      });
+      //Multiple Customer
+      if (result.length > 1) {
+        x++;
+        if (x == 1) {
+          //preHTML +=`<div><button id='test' type="submit" onClick=${this.btnTest} >Test</button></div>`
+          preHTML += `<div id='Header' class='SS_Header' style='border-bottom-style:solid; border-bottom-width:1px;color: inherit !important;'>`; //class="accordion"
+          // customer header
+          preHTML += `<div id='CustomerHeader' class='SS_CustomerHeader' style='font-size: large;font-weight: 500;color: inherit !important;'> ${item.L_x002d_Customer} </div>`;
+
+          // Totals Vars
+          let _totalCredits: number = 0;
+          let _totalUsed: number = 0;
+          let _totalRemaining: number = 0;
+          
+          // Create details for each oppurtunity
+          result.forEach((sameCus: ISPList) => {
+
+            // Add up Totals
+            _totalCredits = Number(sameCus["# of Credits Purchased"]);
+            _totalUsed += Number(sameCus["# of Credits for this Element"]);
+            _totalRemaining += Number(sameCus["Credit Remaining"]);
+
+            // Op Header
+            preHTML += `<div id='OpportunityHeader' class='SS_OpportunityHeader' style='padding-left:10px;color: inherit !important;'>Oppurtunity ID: ${sameCus.Opportunity_x0020_ID} </div>`;
+           
+            // Details
+            preHTML += `<div id='Details' class='SS_Details' style='padding-left:20px;color: inherit !important;'>`;
+            preHTML += this.fillDataRow(sameCus.L_x002d_CreditsPurchased, sameCus.L_x002d_CreditRemaining, sameCus.L_x002d_CreditRemaining, false, sameCus.Comments, sameCus.Service_x0020_Type, sameCus.Element, sameCus.LOE);
+            preHTML += `</div>`;
+
           });
-//Multiple Customer
-          if (result.length > 1){
-            x ++
-            if (x==1){
-              preHTML += `<div id='Header'>`
-              // customer header
-              preHTML +=`<div id='CustomerHeader'> ${item.L_x002d_Customer} </div>`
+          preHTML += `
+                        <div id='Total' class='SS_Total' style='padding-left:10px;    color: inherit !important;'>
+                            Totals </div>`;
+          preHTML += `<div id='Details' class='SS_Details' style='padding-left:20px;    color: inherit !important;'>`;
+          preHTML += this.fillDataRowTotals(_totalCredits.toString(), _totalUsed.toString(), _totalRemaining.toString());
+          preHTML += `</div>
+                    </div
+                  </div>`;
+        }
 
-              // Create details for each oppurtunity
-                  result.forEach((sameCus: ISPList) =>{
-                    // Op Header
-                    preHTML += `<div id='OpportunityHeader'>${sameCus.Opportunity_x0020_ID} </div>`
-                    preHTML += this.fillDataRow(sameCus.L_x002d_CreditsPurchased,sameCus.L_x002d_CreditRemaining,sameCus.L_x002d_CreditRemaining,false,sameCus.Service_x0020_Type,sameCus.Element,sameCus.LOE)
-                    /*`
-                    <div id='details'>
-                      Details
-                    </div>
-                    `*/
-                  })
-                preHTML +=`
-                <div id='Total'>
-                  Total
-                </div>
-                `
-                preHTML += `</div`
-              }
+        // Single Customer              
+      } else {
+        //call
+        //  customerHeader
+        preHTML += `<div id='Header' class='SS_Header' style='border-bottom-style:solid; border-bottom-width:1px;    color: inherit !important;'>`; //class="accordion"
+        // customer header
+        preHTML += `<div id='CustomerHeader' class='SS_CustomerHeader' style='font-size: large;font-weight: 500;    color: inherit !important;'> ${item.L_x002d_Customer} </div>`;
+        //  oppurtunityHeader
+        preHTML += `<div id='OpportunityHeader' class='SS_OpportunityHeader' style='padding-left:10px;    color: inherit !important;'>Oppurtunity ID: ${item.Opportunity_x0020_ID} </div>`;
+        //preHTML += `<div id='OppurtunityColumns' class='SS_OppurtunityColumns'>`;
+        //preHTML += this.tableHeaderHTML();
+        //preHTML += `</div>`;
+        //  details  
+        preHTML += `<div id='Details' class='SS_Details' style='padding-left:20px;    color: inherit !important;'>`;
+        preHTML += this.fillDataRow(item.L_x002d_CreditsPurchased, item.L_x002d_CreditRemaining, item.L_x002d_CreditRemaining, false, item.Comments, item.Service_x0020_Type, item.Element, item.LOE);
+        preHTML += `</div>
+                      </div>`;
+      }
+      //preHTML = ``
+    });
+
+    // End Loop //
+
+    // Write HTML  
+    this.domElement.innerHTML = preHTML;
+
+
+    // Add Accordian
+    const accordionOptions: JQueryUI.AccordionOptions = {
+      animate: true,
+      collapsible: true,
+      icons: {
+        header: 'ui-icon-circle-arrow-e',
+        activeHeader: 'ui-icon-circle-arrow-s'
+      }
+    };
+
+    jQuery('.accordion', this.domElement).accordion(accordionOptions);
+  }
+
+  // fillDataRow function  
+  private fillDataRow(curPurchased: string, curUsed: string, curRemaing: string, totals: boolean, Comments: string, ServiceType: string, Element: string, LOE: string) {
+    let TableHTML: string = '';
+
+    //if (totals != true) {
+    // Data Row Start
+    TableHTML += `
+          <table id='ColumnHeaders' class="TFtable" width=100% style="border-collapse: collapse;">
+            <tr>
+              <td  align="left">
+                Credits Purchased
+              </td>
+              <td align="left">
+                Credits Used
+              </td>
+              <td  align="left">
+                Credit Remaining
+              </td>
               
-// Single Customer              
-          }else{
-              //call
-              //  customerHeader
-              //  oppurtunityHeader
-              //  details  
-              preHTML += `
-              <div>
-              <div id='customerHeader'>
-                  Single - Customer
-              </div>
-              <div id='oppurtunityHeader'>
-                  Op Header
-              </div>
-              <div id='details'>
-                  Details
-              </div>
-          </div>
-              `          
-          }
-          //preHTML = ``
-          });
-  
-// End Loop //
+              <td  align="left">
+                Comemnts
+              </td>
+              <td align="left">
+                Service Type
+              </td>
+              <td align="left">
+                Element
+              </td>
+              <td align="left">
+                LOE
+              </td>
+              
+            </tr>
 
-// Write HTML  
-      this.domElement.innerHTML = preHTML;
-      
-// Add Accordian
-      const accordionOptions: JQueryUI.AccordionOptions = {
-        animate: true,
-        collapsible: true,
-        icons: {
-          header: 'ui-icon-circle-arrow-e',
-          activeHeader: 'ui-icon-circle-arrow-s'
-        }
-      };
-  
-      jQuery('.accordion', this.domElement).accordion(accordionOptions);
-    }
- 
-// Data Row Function  
-      private dataRow (customer: string, Opportunity: string, singleCustomer: boolean){
-        let dataHTML:string = '';
-    
-        //single
-        if (singleCustomer==true){
-          dataHTML += `<h3 id='Header'> ${customer} </h3>`
-                      //<div id='DIVafterheader' height='auto' style='height:auto !important'>`;
-          dataHTML += `<h4 id='Opportunity'>${Opportunity} </h4>`;
-          dataHTML += this.tableHeaderHTML();
-        }else{
-          //Multi
-          //dataHTML += `Same Customer -- start`;
-          dataHTML += `<h4 id='Opportunity'>${Opportunity} </h4>`;
-          dataHTML += this.tableHeaderHTML();
-        }
-        return dataHTML;
-      }
-// tableHeaderHTML Function
-      private tableHeaderHTML(){
-        // Start Table
-        let tablehead:string = '';
-        //tablehead += ``;
-        // Table Header //
-        tablehead += `
-                      <table id='ColumnHeaders' class="TFtable" width=100% style="border-collapse: collapse;">
-                        <th  align="left">
+            <tr id='Table ROW'> 
+              <td >
+                ${curPurchased}
+              </td> 
+              <td >
+                ${curUsed}
+              </td>
+              <td >
+                ${curRemaing}
+              </td>
+              
+              <td >
+                ${Comments}
+              </td> 
+              <td >
+                 ${ServiceType}
+              </td>  
+              <td >
+                ${Element}
+              </td>
+              <td >
+                ${LOE}
+              </td>
+              
+            </tr>
+          </table>`;
+
+    return TableHTML;
+  }
+
+  private fillDataRowTotals(curPurchased: string, curUsed: string, curRemaing: string, ) {
+    let TableHTML: string = '';
+
+    //if (totals != true) {
+    // Data Row Start
+
+    TableHTML += ` 
+                    <table id='ColumnHeaders' class="TFtable" width=100% style="border-collapse: collapse;">
+                      <tr>
+                        <td  align="left">
                           Credits Purchased
-                        </th>
-                        <th>Credits Used
-                        </th>
-                        <th  align="left">
+                        </td>
+                        <td align="left">
+                          Credits Used
+                        </td>
+                        <td  align="left">
                           Credit Remaining
-                        </th>
-                        <th  align="left">
-                          Comemnts
-                        </th>
-                        <th align="left">
-                          Service Type
-                        </th>
-                        <th>
-                          Element
-                        </th>
-                        <th>
-                          LOE
-                        </th>
-                      </table>`;
-                      
-          return tablehead;
-      }
-// fillDataRow function  
-      private fillDataRow(curPurchased: string, curUsed: string, curRemaing: string, totals: boolean, ServiceType: string,Element: string,LOE: string) {
-        let TableHTML: string = '';
-    
-        //if (totals != true) {
-          // Data Row Start
-          TableHTML += `<table>
-                        <tr id='Table ROW'>`;
-    
-          // Cell Start
-          TableHTML += `  
-                        <td width='15%'>
+                        </td>
+                      </tr>
+                      <tr id='Total ROW'> 
+                        <td >
                           ${curPurchased}
                         </td> 
-                        <td width='15%'>
+                        <td>
                           ${curUsed}
                         </td>
-                        <td width='15%'>
+                        <td>
                           ${curRemaing}
                         </td> 
-                        <td width='40%'>
-                          comments
-                        </td> 
-                        <td width='15%'>
-                          ${ServiceType}
-                        </td>  
-                        <td>
-                          ${Element}
-                        </td>
-                        <td>
-                          ${LOE}
-                        </td>
-                    `;
-          // Cell End L_x002d_CreditsForElement
-    
-          TableHTML += `</tr>
+                      </tr>
                     </table>`;
-          // Data Row End   
-          // Set </table> in calling function
-        //} else {
-          /*
-          // Totals Row
-          TableHTML += `
-                <tr>
-                  <td colspan="2"> Totals </td>
-                </tr>
-                <tr id='Total ROW'>
-                        <td width='15%'>
-                          ${curPurchased}
-                        </td> 
-                        <td width='15%'>
-                          ${curUsed}
-                        </td>
-                        <td width='15%'>
-                          ${curRemaing}
-                        </td> 
-                        <td width='40%'>
-                          comments
-                        </td> 
-                        <td width='15%'>
-                          ${ServiceType}
-                        </td>  
-                        <td>
-                          ${Element}
-                        </td>
-                        <td>
-                          ${LOE}
-                        </td>
-                </tr>`;
-        }*/
-    
-        return TableHTML;
-      }
-  
-  
+
+    return TableHTML;
+  }
   /*********************************************/
 
-// DataVersion
+  // DataVersion
   protected get dataVersion(): Version {
     return Version.parse('1.0');
   }
@@ -403,94 +402,4 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
 /************** End Web Part       ***********/
 /*********************************************/
 
-/************** ORiginal Loop ****************/
-/*
-       // Start Table
-       datatable = this.tableHTML();
-  
-       // Start list div
-           preHTML += `<div id="DIV to hold list data" class="accordion" style="height:auto !important;">`; //class="accordion" style="height:auto !important;"
-  
-       // Start Loop //
-         items.forEach((item: ISPList) => {
-           //preHTML += `<div> --->${item.L_x002d_Customer}<--- </div>`;
- 
-           var result = items.filter(obj => {
-             return obj.L_x002d_Customer === item.L_x002d_Customer;
-           });
- 
-           //Dialog.alert(result.length.toString());
- 
-           if (result.length > 1){
-             _totalOpsforCust=result.length;
-             sameCustomer=true; 
-             _totalCredits = Number(item["# of Credits Purchased"]);
-             _totalUsed += Number(item["# of Credits for this Element"]);
-             _totalRemaining += Number(item["Credit Remaining"]);
- 
-             x += 1;
-             if (x==_totalOpsforCust){
-               _ReadyForTotal=true;
-             }
- 
-           }else{
- 
-               _totalCredits = 0;
-               _totalUsed = 0;
-               _totalRemaining = 0;
- 
-             
-               _totalCredits = Number(item["# of Credits Purchased"]);
-               _totalUsed = Number(item["# of Credits for this Element"]);
-               _totalRemaining = Number(item["Credit Remaining"]);
-               x=0;
-               _ReadyForTotal=true;
-             
-           }
-           
-         
-           //sameCustomer = this.checkCustomer(curCustomner);
-           
-           // Set Table start HTML
-             if (sameCustomer == false) {
-               preHTML += this.dataRow(item.L_x002d_Customer,item.Opportunity_x0020_ID,true);
- 
-             } else {
-               //multi
-               if (x==1){
-                 preHTML += `<h3 id='Header'> multi pass numer=${x}, ${item.L_x002d_Customer} </h3>
-                     <div id='DIVafterheader'>`;
-               }
-               else{
-                 preHTML +=`<div id='DIVafterheader'>`;
-               }
-               preHTML += this.dataRow(item.L_x002d_Customer,item.Opportunity_x0020_ID,false);
-               //Dialog.alert('ELSE');
-             }
-   
-           // Set table data
-             preHTML += this.fillDataRow(item.L_x002d_Customer,_totalCredits.toString(),_totalUsed.toString(),_totalRemaining.toString(),false,item.Service_x0020_Type,item.Element,item.LOE);
-           // Set totals
-             //preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,true, item.Service_x0020_Type);
-             if (_ReadyForTotal == true ){
-               //preHTML += this.dataRow('Totals','For All Oppurtunities',false);
-               preHTML += this.fillDataRow('Totals',_totalCredits.toString(),_totalUsed.toString(),_totalRemaining.toString(),true,item.Service_x0020_Type,item.Element,item.LOE);
-               //preHTML += this.fillDataRow(item.L_x002d_Customer,item.L_x002d_CreditsPurchased,item.L_x002d_CreditsForElement,item.L_x002d_CreditRemaining,true,item.Service_x0020_Type,item.Element,item.LOE);
-             }
-           // Table End
-             preHTML += `</table>`;
-   
-           // set indiviual end </div> for each unique customer
-             if (sameCustomer == false) {
-               preHTML += `</div>`;
-             }
-   
-           // Set Customer
-           //curCustomner = item.L_x002d_Customer.toString();
-             //let test = items.find((item[1]));
-           });
-   
-       // End Loop //
-       preHTML += `</div>`;
- 
-       */
+

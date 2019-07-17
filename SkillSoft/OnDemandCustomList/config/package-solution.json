@@ -3,7 +3,7 @@
   "solution": {
     "name": "on-demand-credit-list",
     "id": "5d02452e-574f-4258-adf9-25571fa10232",
-    "version": "1.0.0.0",
+    "version": "1.0.0.7",
     "includeClientSideAssets": true
   },
   "paths": {
