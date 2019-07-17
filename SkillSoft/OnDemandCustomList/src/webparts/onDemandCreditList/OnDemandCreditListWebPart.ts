@@ -190,6 +190,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
         return obj.L_x002d_Customer === item.L_x002d_Customer;
       });
       //Multiple Customer
+      //x=0;
       if (result.length > 1) {
         x++;
         if (x == 1) {
@@ -207,11 +208,19 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
           result.forEach((sameCus: ISPList) => {
 
             // Add up Totals
-            _totalCredits = Number(sameCus["# of Credits Purchased"]);
-            _totalUsed += Number(sameCus["# of Credits for this Element"]);
-            _totalRemaining += Number(sameCus["Credit Remaining"]);
+            _totalCredits = Number(sameCus["L_x002d_CreditsPurchased"]);
+            _totalUsed += Number(sameCus["L_x002d_CreditRemaining"]);
+            _totalRemaining += Number(sameCus["L_x002d_CreditRemaining"]);
 
             // Op Header
+            var OPresult = items.filter(obj => {
+              return obj.Opportunity_x0020_ID === item.Service_x0020_Type;
+            });
+            if (OPresult.length > 1){
+              OPresult.forEach((sameOP: ISPList) => {
+
+              })
+            }
             preHTML += `<div id='OpportunityHeader' class='SS_OpportunityHeader' style='padding-left:10px;color: inherit !important;'>Oppurtunity ID: ${sameCus.Opportunity_x0020_ID} </div>`;
            
             // Details
@@ -232,6 +241,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
 
         // Single Customer              
       } else {
+        x=0;
         //call
         //  customerHeader
         preHTML += `<div id='Header' class='SS_Header' style='border-bottom-style:solid; border-bottom-width:1px;    color: inherit !important;'>`; //class="accordion"
