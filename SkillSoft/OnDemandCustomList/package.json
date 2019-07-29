@@ -19,6 +19,7 @@
     "@types/jquery": "^2.0.53",
     "@types/jqueryui": "^1.12.7",
     "@types/webpack-env": "1.13.1",
+    "gulp-update": "0.0.2",
     "jquery": "^2.2.4",
     "jqueryui": "^1.11.1"
   },

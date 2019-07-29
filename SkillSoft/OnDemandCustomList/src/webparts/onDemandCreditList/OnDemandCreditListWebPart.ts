@@ -119,13 +119,13 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
         value:
           [
             { ["Customer"]: 'Customer One', ["# of Credits Purchased"]: 8, ["# of Credits for this Element"]: 4, Comments: 'Test One', ["Credit Remaining"]: 4, ["L_x002d_Customer"]: 'Test', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type": 'Test 1', "Element": 'Element', "LOE": 'LOE' },
-            { ["Customer"]: 'Customer Two', ["# of Credits Purchased"]: 10, ["# of Credits for this Element"]: 5, Comments: 'Test Two', ["Credit Remaining"]: 5, ["L_x002d_Customer"]: 'Test two', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type": 'Test 2', "Element": 'Element', "LOE": 'LOE' },
-            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type": 'Test 3', "Element": 'Element', "LOE": 'LOE' },
+            { ["Customer"]: 'Customer Two', ["# of Credits Purchased"]: 10, ["# of Credits for this Element"]: 5, Comments: 'Test Two', ["Credit Remaining"]: 5, ["L_x002d_Customer"]: 'Test two', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1624', "Service_x0020_Type": 'Test 2', "Element": 'Element', "LOE": 'LOE' },
+            { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1294', "Service_x0020_Type": 'Test 3', "Element": 'Element', "LOE": 'LOE' },
             { ["Customer"]: 'Customer Three', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test three', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4321', "Service_x0020_Type": 'Test 4', "Element": 'Element', "LOE": 'LOE' },
-            { ["Customer"]: 'Customer Four', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test Four', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type": 'Test 3', "Element": 'Element', "LOE": 'LOE' },
-            { ["Customer"]: 'Customer Four', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test Four', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4321', "Service_x0020_Type": 'Test 4', "Element": 'Element', "LOE": 'LOE' },
-            { ["Customer"]: 'Customer Four', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test Four', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1234', "Service_x0020_Type": 'Test 3', "Element": 'Element', "LOE": 'LOE' },
-            { ["Customer"]: 'Customer Four', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test Four', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4321', "Service_x0020_Type": 'Test 4', "Element": 'Element', "LOE": 'LOE' },
+            { ["Customer"]: 'Customer Four', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test Four', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '1284', "Service_x0020_Type": 'Test 3', "Element": 'Element', "LOE": 'LOE' },
+            { ["Customer"]: 'Customer Four', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test Four', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4391', "Service_x0020_Type": 'Test 4', "Element": 'Element', "LOE": 'LOE' },
+            { ["Customer"]: 'Customer Four', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test Four', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4391', "Service_x0020_Type": 'Test 3', "Element": 'Element', "LOE": 'LOE' },
+            { ["Customer"]: 'Customer Four', ["# of Credits Purchased"]: 12, ["# of Credits for this Element"]: 6, Comments: 'Test Three', ["Credit Remaining"]: 6, ["L_x002d_Customer"]: 'Test Four', ["L_x002d_CreditsPurchased"]: '5', ["L_x002d_CreditsForElement"]: '3', ["L_x002d_CreditRemaining"]: '2', "Opportunity_x0020_ID": '4111', "Service_x0020_Type": 'Test 4', "Element": 'Element', "LOE": 'LOE' },
 
           ]
       };
@@ -219,23 +219,26 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
             _totalRemaining += Number(sameCus["L_x002d_CreditRemaining"]);
 
             // Op Header
-                /*
-                var OPresult = items.filter(obj => {
-                  return obj.Opportunity_x0020_ID === item.Service_x0020_Type;
+                
+                var OPresult = result.filter(objOP => {
+                  return objOP.Opportunity_x0020_ID === item.Opportunity_x0020_ID;
                 });
                 if (OPresult.length > 1){
+                  y++;
                   OPresult.forEach((sameOP: ISPList) => {
-                    y++;
                     if (y == 1){
                       preHTML += `<div id='OpportunityHeader' class='SS_OpportunityHeader' style='padding-left:10px;color: inherit !important;'>Oppurtunity ID: ${sameCus.Opportunity_x0020_ID} </div>`;
                     }
 
                   })
+                  if (y == result.length){
+                    y=0;
+                  }   
                 } else {
                   preHTML += `<div id='OpportunityHeader' class='SS_OpportunityHeader' style='padding-left:10px;color: inherit !important;'>Oppurtunity ID: ${sameCus.Opportunity_x0020_ID} </div>`;
                 }
-                */
-            preHTML += `<div id='OpportunityHeader' class='SS_OpportunityHeader' style='padding-left:10px;color: inherit !important;'>Oppurtunity ID: ${sameCus.Opportunity_x0020_ID} </div>`;
+                
+            //preHTML += `<div id='OpportunityHeader' class='SS_OpportunityHeader' style='padding-left:10px;color: inherit !important;'>Oppurtunity ID: ${sameCus.Opportunity_x0020_ID} </div>`;
            
             // Details
             preHTML += `<div id='Details' class='SS_Details' style='padding-left:20px;color: inherit !important;'>`;
@@ -319,19 +322,6 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
                 Credit Remaining
               </td>
               
-              <td  align="left">
-                Comemnts
-              </td>
-              <td align="left">
-                Service Type
-              </td>
-              <td align="left">
-                Element
-              </td>
-              <td align="left">
-                LOE
-              </td>
-              
             </tr>
 
             <tr id='Table ROW'> 
@@ -345,6 +335,25 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
                 ${curRemaing}
               </td>
               
+            </tr>
+          </table>`;
+
+          // Columns removed
+          /*
+              <td  align="left">
+                Comemnts
+              </td>
+              <td align="left">
+                Service Type
+              </td>
+              <td align="left">
+                Element
+              </td>
+              <td align="left">
+                LOE
+              </td>  
+              
+                            
               <td >
                 ${Comments}
               </td> 
@@ -357,9 +366,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
               <td >
                 ${LOE}
               </td>
-              
-            </tr>
-          </table>`;
+          */
 
     return TableHTML;
   }
