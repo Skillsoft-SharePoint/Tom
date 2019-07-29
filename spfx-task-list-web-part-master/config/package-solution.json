@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-task-list-web-part-master-client-side-solution",
+    "id": "d46fe2cd-b455-4cf1-8e00-dfc455ac77d2",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-task-list-web-part-master.sppkg"
+  }
+}

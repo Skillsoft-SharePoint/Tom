@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spfx-task-list-web-part-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spfxTaskListWebPart/SpfxTaskListWebPartWebPart.js",
+          "manifest": "./src/webparts/spfxTaskListWebPart/SpfxTaskListWebPartWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpfxTaskListWebPartWebPartStrings": "lib/webparts/spfxTaskListWebPart/loc/{locale}.js"
+  }
+}
