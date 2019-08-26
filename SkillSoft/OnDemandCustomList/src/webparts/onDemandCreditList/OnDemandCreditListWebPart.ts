@@ -216,7 +216,10 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
             // Add up Totals
             _totalCredits = Number(sameCus["L_x002d_CreditsPurchased"]);
             _totalUsed += Number(sameCus["L_x002d_CreditRemaining"]);
-            _totalRemaining += Number(sameCus["L_x002d_CreditRemaining"]);
+           // _totalRemaining += Number(sameCus["L_x002d_CreditsPurchased"])-Number(sameCus["L_x002d_CreditRemaining"]);
+           _totalRemaining=_totalCredits-_totalUsed;
+
+            Dialog.alert(_totalRemaining.toString());
 
             // Op Header
                 
@@ -230,7 +233,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
                       preHTML += `<div id='OpportunityHeader' class='SS_OpportunityHeader' style='padding-left:10px;color: inherit !important;'>Oppurtunity ID: ${sameCus.Opportunity_x0020_ID} </div>`;
                     }
 
-                  })
+                  });
                   if (y == result.length){
                     y=0;
                   }   
@@ -242,7 +245,7 @@ export default class OnDemandCreditListWebPart extends BaseClientSideWebPart<IOn
            
             // Details
             preHTML += `<div id='Details' class='SS_Details' style='padding-left:20px;color: inherit !important;'>`;
-            preHTML += this.fillDataRow(sameCus.L_x002d_CreditsPurchased, sameCus.L_x002d_CreditRemaining, sameCus.L_x002d_CreditRemaining, false, sameCus.Comments, sameCus.Service_x0020_Type, sameCus.Element, sameCus.LOE);
+            preHTML += this.fillDataRow(sameCus.L_x002d_CreditsPurchased, _totalRemaining.toString(), sameCus.L_x002d_CreditRemaining, false, sameCus.Comments, sameCus.Service_x0020_Type, sameCus.Element, sameCus.LOE);
             preHTML += `</div>`;
 
           });

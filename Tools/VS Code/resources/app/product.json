@@ -36,7 +36,7 @@
 	},
 	"extensionTips": {
 		"ms-vscode.csharp": "{**/*.cs,**/project.json,**/global.json,**/*.csproj,**/*.cshtml,**/*.sln,**/appsettings.json}",
-		"msjsdiag.debugger-for-chrome": "{**/*.ts,**/*.tsx**/*.js,**/*.jsx,**/*.es6,**/.babelrc}",
+		"msjsdiag.debugger-for-chrome": "{**/*.ts,**/*.tsx,**/*.js,**/*.jsx,**/*.es6,**/.babelrc}",
 		"ms-vscode.Go": "**/*.go",
 		"ms-vscode.PowerShell": "{**/*.ps,**/*.ps1,**/*.ps.config,**/*.ps1.config}",
 		"austin.code-gnu-global": "{**/*.c,**/*.cpp,**/*.h}",
@@ -62,6 +62,8 @@
 		"shinnn.stylelint": "{**/.stylelintrc,**/stylelint.config.js}",
 		"eg2.vscode-npm-script": "{**/package.json}",
 		"ms-mssql.mssql": "{**/*.sql}",
+		"bajdzis.vscode-database": "{**/*.sql}",
+		"mtxr.sqltools": "{**/*.sql}",
 		"usqlextpublisher.usql-vscode-ext": "{**/*.usql}",
 		"ms-vscode.sublime-keybindings": "{**/.sublime-project,**/.sublime-workspace}",
 		"k--kato.intellij-idea-keybindings": "{**/.idea}",
@@ -74,7 +76,8 @@
 		"ms-azuretools.vscode-azureterraform": "**/*.tf",
 		"mauve.terraform": "**/*.tf",
 		"vsciot-vscode.vscode-arduino": "**/*.ino",
-		"ms-kubernetes-tools.vscode-kubernetes-tools ": "{**/Chart.yaml}"
+		"ms-kubernetes-tools.vscode-kubernetes-tools": "{**/Chart.yaml}",
+		"GoogleCloudTools.cloudcode": "{**/skaffold.yaml}"
 	},
 	"extensionImportantTips": {
 		"ms-vscode.csharp": {
@@ -91,7 +94,8 @@
 		},
 		"vscjava.vscode-java-pack": {
 			"name": "Java",
-			"pattern": "{**/*.java}"
+			"pattern": "{**/*.java}",
+			"isExtensionPack": true
 		},
 		"ms-vscode.PowerShell": {
 			"name": "PowerShell",
@@ -168,17 +172,18 @@
 		},
 		"mysql": {
 			"friendlyName": "MySQL",
-			"windowsPath": "%ProgramFiles%\\MySQL\\MySQL Server 5.7\\bin\\mysqld.exe",
+			"windowsPath": "%ProgramFiles%\\MySQL\\MySQL Server 8.0\\bin\\mysqld.exe",
 			"recommendations": [
-				"ms-mssql.mssql",
-				"bajdzis.vscode-database"
+				"bajdzis.vscode-database",
+				"mtxr.sqltools"
 			]
 		},
 		"postgres": {
 			"friendlyName": "PostgreSQL",
-			"windowsPath": "%ProgramFiles%\\PostgreSQL\\9.6\\bin\\psql.exe",
+			"windowsPath": "%ProgramFiles%\\PostgreSQL\\11\\bin\\psql.exe",
 			"recommendations": [
-				"ms-mssql.mssql",
+				"ms-ossdata.vscode-postgresql",
+				"mtxr.sqltools",
 				"bajdzis.vscode-database"
 			]
 		},
@@ -202,7 +207,8 @@
 			"recommendations": [
 				"ms-azuretools.vscode-docker",
 				"ms-kubernetes-tools.vscode-kubernetes-tools",
-				"azuredevspaces.azds"
+				"azuredevspaces.azds",
+				"GoogleCloudTools.cloudcode"
 			]
 		},
 		"kubectl": {
@@ -211,7 +217,8 @@
 			"recommendations": [
 				"ms-azuretools.vscode-docker",
 				"ms-kubernetes-tools.vscode-kubernetes-tools",
-				"azuredevspaces.azds"
+				"azuredevspaces.azds",
+				"GoogleCloudTools.cloudcode"
 			]
 		},
 		"ng": {
@@ -276,7 +283,7 @@
 		},
 		"vi": {
 			"friendlyName": "VIM",
-			"windowsPath": "%ProgramFiles(x86)\\Vim\\vim80\\gvim.exe",
+			"windowsPath": "%ProgramFiles(x86)%\\Vim\\vim80\\gvim.exe",
 			"recommendations": [
 				"vscodevim.vim"
 			]
@@ -327,6 +334,38 @@
 			"windowsPath": "%APPDATA%\\npm\\cordova",
 			"recommendations": [
 				"vsmobile.cordova-tools"
+			]
+		},
+		"gcloud": {
+			"friendlyName": "Google GCloud CLI",
+			"windowsPath": "%ProgramFiles(x86)%\\Google\\Cloud SDK\\google-cloud-sdk\\bin\\gcloud.cmd",
+			"recommendations": [
+				"GoogleCloudTools.cloudcode"
+			]
+		},
+		"skaffold": {
+			"friendlyName": "Skaffold Code to Cluster",
+			"recommendations": [
+				"ms-azuretools.vscode-docker",
+				"ms-kubernetes-tools.vscode-kubernetes-tools",
+				"GoogleCloudTools.cloudcode"
+			]
+		},
+		"minikube": {
+			"friendlyName": "MiniKube Local Kubernetes Cluster",
+			"recommendations": [
+				"ms-azuretools.vscode-docker",
+				"ms-kubernetes-tools.vscode-kubernetes-tools",
+				"GoogleCloudTools.cloudcode"
+			]
+		},
+		"wsl": {
+			"friendlyName": "Remote WSL",
+			"windowsPath": "%WINDIR%\\system32\\wsl.exe",
+			"exeFriendlyName": "Windows Linux Subsystem (WSL)",
+			"important": true,
+			"recommendations": [
+				"ms-vscode-remote.remote-wsl"
 			]
 		}
 	},
@@ -694,7 +733,7 @@
 			"surveyUrl": "https://www.research.net/r/vscodejava",
 			"languageId": "java",
 			"editCount": 10,
-			"userProbability": 0.15
+			"userProbability": 0.3
 		},
 		{
 			"surveyId": "javascript.1",
@@ -746,14 +785,14 @@
 		"wayou.vscode-todo-highlight",
 		"ms-azuretools.vscode-docker"
 	],
-	"commit": "2213894ea0415ee8c85c5eea0d0ff81ecc191529",
-	"date": "2019-07-08T22:59:35.033Z",
+	"commit": "f06011ac164ae4dc8e753a3fe7f9549844d15e35",
+	"date": "2019-08-15T16:17:55.855Z",
 	"checksums": {
-		"vs/workbench/workbench.main.js": "gAPBB1NM7TdhBqKKKrvt1Q",
-		"vs/workbench/workbench.main.css": "UK9A0+q0kYyH100EZ/hNIg",
-		"vs/code/electron-browser/workbench/workbench.html": "11dqox2lEU1323gr8Bp89w",
-		"vs/code/electron-browser/workbench/workbench.js": "WmcKGrw2DOpia2CwFDZZgQ"
+		"vs/workbench/workbench.main.js": "K/qQVTyrQLXuEI6tomy8mw",
+		"vs/workbench/workbench.main.css": "aVbQeRs21xB939CMFRUaKg",
+		"vs/code/electron-browser/workbench/workbench.html": "wVPQPIr79d5JJAHm1CtbHw",
+		"vs/code/electron-browser/workbench/workbench.js": "KWjrX5o/X/Y1SURyGFFlbQ"
 	},
-	"settingsSearchBuildId": 1360100513090,
+	"settingsSearchBuildId": 1370100532930,
 	"target": "user"
 }

@@ -3,7 +3,7 @@
   "displayName": "Reference Search View",
   "icon": "media/icon.png",
   "description": "Reference Search results as separate, stable view in the sidebar",
-  "version": "0.0.27",
+  "version": "0.0.29",
   "publisher": "ms-vscode",
   "engines": {
     "vscode": "^1.30.0"
@@ -204,7 +204,7 @@
     "@types/node": "^7.0.43",
     "ts-loader": "^5.3.3",
     "typescript": "^3.1.6",
-    "vscode": "^1.1.21",
+    "vscode": "1.1.35",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3"
   },

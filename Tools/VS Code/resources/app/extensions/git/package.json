@@ -70,8 +70,8 @@
       "title": "%command.openFile%",
       "category": "Git",
       "icon": {
-        "light": "resources/icons/light/open-file-mono.svg",
-        "dark": "resources/icons/dark/open-file-mono.svg"
+        "light": "resources/icons/light/open-file.svg",
+        "dark": "resources/icons/dark/open-file.svg"
       }
     }, {
       "command": "git.openHEADFile",
@@ -986,12 +986,18 @@
         },
         "git.ignoredRepositories": {
           "type": "array",
+          "items": {
+            "type": "string"
+          },
           "default": [],
           "scope": "window",
           "description": "%config.ignoredRepositories%"
         },
         "git.scanRepositories": {
           "type": "array",
+          "items": {
+            "type": "string"
+          },
           "default": [],
           "scope": "resource",
           "description": "%config.scanRepositories%"
